@@ -1,0 +1,15 @@
+{
+	"tabWidth": 4,
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": true,
+	"jsxSingleQuote": true,
+	"bracketSpacing": true,
+	"bracketSameLine": false,
+	"jsxBracketSameLine": false,
+	"arrowParens": "avoid",
+	"trailingComma": "none",
+	"printWidth": 160,
+	"plugins": ["prettier-plugin-brace-style"],
+	"braceStyle": "allman"
+}
