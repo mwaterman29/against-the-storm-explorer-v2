@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import NavDropdown from '@/components/NavDropdown';
 
 export const metadata: Metadata = {
 	title: 'Against The Storm Explorer',
@@ -16,16 +17,14 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className='h-dvh w-dvw overflow-hidden'>
-				<div className='w-full flex flex-row items-center justify-between min-h-12 bg-slate-700 px-4'>
-					<div>
-						nav here
-					</div>
+				<div className='w-full flex flex-row items-center justify-between min-h-12 bg-slate-800 px-4'>
+					<NavDropdown />
 					<div className='flex flex-row items-center'>
-						<p className='text-xl'>Against The Storm Explorer</p>
-						<sup>V2</sup>
+						<p className='text-xl text-color-tan'>Against The Storm Explorer</p>
+						<sup className='text-perk-orange'>V2</sup>
 					</div>
 					<div>
-						settings here``
+						settings here
 					</div>
 				</div>
 				{children}

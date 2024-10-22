@@ -11,3 +11,13 @@ body {
     --radius: 0.5rem;
   }
 }
+
+svg {
+  width: 1em;
+  height: 1em;
+}
+
+svg:not(.svg-exclude-fill)
+{
+fill: currentColor
+}
