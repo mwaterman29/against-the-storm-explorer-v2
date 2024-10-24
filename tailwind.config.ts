@@ -25,6 +25,9 @@ const config: Config = {
   			'decoration-blue': '#6099f0',
   			'decoration-yellow': '#ccdd44',
 
+			//stormforged red
+			'perk-stormforged': '#a30825',
+
 			//yoinked from wiki not sure if useful
 			  'ats-default': '#dedede',
 			  'ats-dark': '#0e0f0a',
