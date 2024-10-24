@@ -589,7 +589,7 @@
     "label": "Baptism of Fire",
     "description": "While the Hearth is corrupted, you’re unable to sacrifice resources.",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1390,7 +1390,7 @@
     "label": "Hauling Cart",
     "description": "An automated rainpunk cart will be assigned to every warehouse in the settlement to help transport resources between buildings.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1399,7 +1399,7 @@
     "label": "Hauling Cart",
     "description": "An automated rainpunk cart will be assigned to every warehouse in the settlement to help transport resources between buildings.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1435,7 +1435,7 @@
     "label": "Efficient Brewing",
     "description": "+50% to amount of goods produced in the Brewery.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1453,7 +1453,7 @@
     "label": "Efficient Brewing",
     "description": "+50% to amount of goods produced in the Flawless Brewery.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1642,7 +1642,7 @@
     "label": "Advanced Herbalism",
     "description": "+25% to amount of goods produced in the Hallowed Herb Garden.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1651,7 +1651,7 @@
     "label": "Advanced Herbalism",
     "description": "+25% to amount of goods produced in the Herb Garden.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1660,7 +1660,7 @@
     "label": "Advanced Herbalism",
     "description": "+50% to amount of goods produced in the Hallowed Herb Garden.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1669,7 +1669,7 @@
     "label": "Advanced Herbalism",
     "description": "+50% to amount of goods produced in the Herb Garden.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1741,7 +1741,7 @@
     "label": "Large Baskets",
     "description": "+25% to amount of goods produced in the Plantation.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -1930,7 +1930,7 @@
     "label": "Farming Tools",
     "description": "+50% to amount of goods produced in the Hallowed Small Farm.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -2326,7 +2326,7 @@
     "label": "Advanced Herbalism",
     "description": "+25% to amount of goods produced in the Herb Garden.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -2344,7 +2344,7 @@
     "label": "Crowded Houses",
     "description": "All houses have room for 1 more villager.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -2551,7 +2551,7 @@
     "label": "Export Specialization",
     "description": "Gain +2 to production yields for all packs of goods.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3010,7 +3010,7 @@
     "label": "Without Restrictions",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3559,7 +3559,7 @@
     "label": "Industrialized Agriculture",
     "description": "New farming methods are very effective, but cause a lot of pollution. (‑1 to Global Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3577,7 +3577,7 @@
     "label": "Ancient Artifact",
     "description": "A strange device left behind by the Great Civilization. When soaked in rainwater, it radiates warm light and brings encouragement to those around it. (+2 to Global Resolve)",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3595,7 +3595,7 @@
     "label": "Ancient Artifact",
     "description": "A strange device left behind by the Great Civilization. When soaked in rainwater, it radiates warm light and brings encouragement to those around it. (+3 to Global Resolve)",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3622,7 +3622,7 @@
     "label": "Exploration Expedition",
     "description": "There’s something truly magical about setting one's foot in a place that’s been hidden for millennia. (+5 to Global Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3676,7 +3676,7 @@
     "label": "Generous Rations",
     "description": "A surplus of food makes the villagers happy. (+5 to Global Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3721,7 +3721,7 @@
     "label": "Rebellious Spirit",
     "description": "The people are feeling oddly rebellious. (+1 to Global Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3748,7 +3748,7 @@
     "label": "Prosperous Archaeology",
     "description": "The people are enjoying living in a prosperous settlement. (+1 to Global Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3757,7 +3757,7 @@
     "label": "Prosperous Settlement",
     "description": "The people are enjoying living in a prosperous settlement. (+1 to Global Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3766,7 +3766,7 @@
     "label": "Friendly Relations",
     "description": "The people are enjoying living in a prosperous settlement. (+1 to Global Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -3775,7 +3775,7 @@
     "label": "Woodcutter's Song",
     "description": "The woodcutters' song lifts people's spirits. (+3 to Global Resolve)",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8617,7 +8617,7 @@
     "label": "Ale Delivery Line",
     "description": "3 <sprite name=\"[needs] ale\"> Ale per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8662,7 +8662,7 @@
     "label": "Barrel Delivery Line",
     "description": "3 <sprite name=\"[vessel] barrels\"> Barrels per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8716,7 +8716,7 @@
     "label": "Clay Delivery Line",
     "description": "10 <sprite name=\"[mat raw] clay\"> Clay per minute.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8734,7 +8734,7 @@
     "label": "Clay Delivery Line",
     "description": "5 <sprite name=\"[mat raw] clay\"> Clay per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8851,7 +8851,7 @@
     "label": "Egg Delivery Line",
     "description": "10 <sprite name=\"[food raw] eggs\"> Eggs per minute.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8869,7 +8869,7 @@
     "label": "Egg Delivery Line",
     "description": "3 <sprite name=\"[food raw] eggs\"> Eggs per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8887,7 +8887,7 @@
     "label": "Fiber Delivery Line",
     "description": "10 <sprite name=\"[mat raw] plant fibre\"> Plant Fiber per minute.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8914,7 +8914,7 @@
     "label": "Fiber Delivery Line",
     "description": "5 <sprite name=\"[mat raw] plant fibre\"> Plant Fiber per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8950,7 +8950,7 @@
     "label": "Grain Delivery Line",
     "description": "10 <sprite name=\"[food raw] grain\"> Grain per minute.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8959,7 +8959,7 @@
     "label": "Grain Delivery Line",
     "description": "15 <sprite name=\"[food raw] grain\"> Grain per minute.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -8977,7 +8977,7 @@
     "label": "Grain Delivery Line",
     "description": "5 <sprite name=\"[food raw] grain\"> Grain per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9148,7 +9148,7 @@
     "label": "Oil Delivery Line",
     "description": "10 <sprite name=\"[crafting] oil\"> Oil per minute.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9247,7 +9247,7 @@
     "label": "Root Delivery Line",
     "description": "10 <sprite name=\"[food raw] roots\"> Roots per minute.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9265,7 +9265,7 @@
     "label": "Root Delivery Line",
     "description": "5 <sprite name=\"[food raw] roots\"> Roots per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9454,7 +9454,7 @@
     "label": "Barrel Delivery Line",
     "description": "5 <sprite name=\"[vessel] barrels\"> Barrels per minute.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9544,7 +9544,7 @@
     "label": "Large Berry Baskets",
     "description": "+1 to <sprite name=\"[food raw] berries\"> Berries production. Gain an additional <sprite name=\"[food raw] berries\"> Berries every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9562,7 +9562,7 @@
     "label": "Large Berry Baskets",
     "description": "+3 to <sprite name=\"[food raw] berries\"> Berries production. Gain an additional <sprite name=\"[food raw] berries\"> Berries every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9571,7 +9571,7 @@
     "label": "Large Berry Baskets",
     "description": "+5 to <sprite name=\"[food raw] berries\"> Berries production. Gain an additional <sprite name=\"[food raw] berries\"> Berries every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9697,7 +9697,7 @@
     "label": "Steel Shovels",
     "description": "+1 to <sprite name=\"[mat raw] clay\"> Clay production. Gain an additional <sprite name=\"[mat raw] clay\"> Clay every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9715,7 +9715,7 @@
     "label": "Steel Shovels",
     "description": "+3 to <sprite name=\"[mat raw] clay\"> Clay production. Gain an additional <sprite name=\"[mat raw] clay\"> Clay every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -9724,7 +9724,7 @@
     "label": "Steel Shovels",
     "description": "+5 to <sprite name=\"[mat raw] clay\"> Clay production. Gain an additional <sprite name=\"[mat raw] clay\"> Clay every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10120,7 +10120,7 @@
     "label": "Sharp Sickles",
     "description": "+1 to <sprite name=\"[food raw] herbs\"> Herbs production. Gain an additional <sprite name=\"[food raw] herbs\"> Herbs every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10138,7 +10138,7 @@
     "label": "Sharp Sickles",
     "description": "+3 to <sprite name=\"[food raw] herbs\"> Herbs production. Gain an additional <sprite name=\"[food raw] herbs\"> Herbs every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10147,7 +10147,7 @@
     "label": "Sharp Sickles",
     "description": "+5 to <sprite name=\"[food raw] herbs\"> Herbs production. Gain an additional <sprite name=\"[food raw] herbs\"> Herbs every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10264,7 +10264,7 @@
     "label": "Salted Jerky",
     "description": "+1 to <sprite name=\"[food processed] jerky\"> Jerky production. Gain an additional <sprite name=\"[food processed] jerky\"> Jerky every yield (from gathering, farming, fishing, or production).",
     "tier": "Uncommon",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10273,7 +10273,7 @@
     "label": "Salted Jerky",
     "description": "+2 to <sprite name=\"[food processed] jerky\"> Jerky production. Gain an additional <sprite name=\"[food processed] jerky\"> Jerky every yield (from gathering, farming, fishing, or production).",
     "tier": "Uncommon",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10282,7 +10282,7 @@
     "label": "Salted Jerky",
     "description": "+3 to <sprite name=\"[food processed] jerky\"> Jerky production. Gain an additional <sprite name=\"[food processed] jerky\"> Jerky every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10300,7 +10300,7 @@
     "label": "Tanning Racks",
     "description": "+1 to <sprite name=\"[mat raw] leather\"> Leather production. Gain an additional <sprite name=\"[mat raw] leather\"> Leather every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10318,7 +10318,7 @@
     "label": "Tanning Racks",
     "description": "+3 to <sprite name=\"[mat raw] leather\"> Leather production. Gain an additional <sprite name=\"[mat raw] leather\"> Leather every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10327,7 +10327,7 @@
     "label": "Tanning Racks",
     "description": "+5 to <sprite name=\"[mat raw] leather\"> Leather production. Gain an additional <sprite name=\"[mat raw] leather\"> Leather every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10336,7 +10336,7 @@
     "label": "Nets",
     "description": "+1 to <sprite name=\"[food raw] meat\"> Meat production. Gain an additional <sprite name=\"[food raw] meat\"> Meat every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10354,7 +10354,7 @@
     "label": "Nets",
     "description": "+3 to <sprite name=\"[food raw] meat\"> Meat production. Gain an additional <sprite name=\"[food raw] meat\"> Meat every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10363,7 +10363,7 @@
     "label": "Nets",
     "description": "+5 to <sprite name=\"[food raw] meat\"> Meat production. Gain an additional <sprite name=\"[food raw] meat\"> Meat every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10768,7 +10768,7 @@
     "label": "Leather Gloves",
     "description": "+1 to <sprite name=\"[mat raw] reeds\"> Reed production. Gain an additional <sprite name=\"[mat raw] reeds\"> Reed every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10786,7 +10786,7 @@
     "label": "Leather Gloves",
     "description": "+3 to <sprite name=\"[mat raw] reeds\"> Reed production. Gain an additional <sprite name=\"[mat raw] reeds\"> Reed every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -10795,7 +10795,7 @@
     "label": "Leather Gloves",
     "description": "+5 to <sprite name=\"[mat raw] reeds\"> Reed production. Gain an additional <sprite name=\"[mat raw] reeds\"> Reed every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11002,7 +11002,7 @@
     "label": "Steel Pickaxes",
     "description": "+1 to <sprite name=\"[mat raw] stone\"> Stone production. Gain an additional <sprite name=\"[mat raw] stone\"> Stone every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11020,7 +11020,7 @@
     "label": "Steel Pickaxes",
     "description": "+3 to <sprite name=\"[mat raw] stone\"> Stone production. Gain an additional <sprite name=\"[mat raw] stone\"> Stone every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11029,7 +11029,7 @@
     "label": "Steel Pickaxes",
     "description": "+5 to <sprite name=\"[mat raw] stone\"> Stone production. Gain an additional <sprite name=\"[mat raw] stone\"> Stone every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11155,7 +11155,7 @@
     "label": "Giant Vegetables",
     "description": "+1 to <sprite name=\"[food raw] vegetables\"> Vegetables production. Gain an additional <sprite name=\"[food raw] vegetables\"> Vegetables every yield (from gathering, farming, fishing, or production).",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11173,7 +11173,7 @@
     "label": "Giant Vegetables",
     "description": "+3 to <sprite name=\"[food raw] vegetables\"> Vegetables production. Gain an additional <sprite name=\"[food raw] vegetables\"> Vegetables every yield (from gathering, farming, fishing, or production).",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11182,7 +11182,7 @@
     "label": "Giant Vegetables",
     "description": "+5 to <sprite name=\"[food raw] vegetables\"> Vegetables production. Gain an additional <sprite name=\"[food raw] vegetables\"> Vegetables every yield (from gathering, farming, fishing, or production).",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11605,7 +11605,7 @@
     "label": "Firekeeper's Armor",
     "description": "Allows firekeepers to combat corruption more efficiently. Every burned cyst removes an additional 10% corruption.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11794,7 +11794,7 @@
     "label": "Value Added Tax",
     "description": "Gain 2 <sprite name=\"[valuable] amber\"> Amber for every 6 <sprite name=\"[packs] pack of trade goods\"> Pack of Trade Goods produced.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11929,7 +11929,7 @@
     "label": "Carpenter's Tools",
     "description": "Additional tools allow for increased yields. Gain 1 <sprite name=\"[packs] pack of building materials\"> Pack of Building Materials for every 10 <sprite name=\"[mat processed] planks\"> Planks produced.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -11983,7 +11983,7 @@
     "label": "Copper Extractor",
     "description": "Machinery specialized in extracting copper from petrified trees. Gain 1 <sprite name=\"[metal] copper ore\"> Copper Ore for every 5 <sprite name=\"[mat raw] wood\"> Wood produced.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -12181,7 +12181,7 @@
     "label": "Secure Perimeter",
     "description": "Securing the deadliest corners of the forest will make it a lot less terrifying. Every discovered Forbidden Glade lowers the Hostility gained from Dangerous and Forbidden Glades by 2, and from small glades by 1. (the bonus is added retroactively)",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -12469,7 +12469,7 @@
     "label": "Woodpecker Technique",
     "description": "Gain 2 <sprite name=\"[food raw] insects\"> Insects every time woodcutters cut down a tree during the Storm.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -12541,7 +12541,7 @@
     "label": "Ancient Pact",
     "description": ">Missing key<",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -12955,7 +12955,7 @@
     "label": "Baptism of Fire",
     "description": "While the Hearth is corrupted, you’re unable to sacrifice resources.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -13414,7 +13414,7 @@
     "label": "Woodpecker Technique",
     "description": "Gain 5 <sprite name=\"[food raw] insects\"> Insects every time woodcutters cut down a tree during the Storm.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -13909,7 +13909,7 @@
     "label": "Flame Amulets",
     "description": "An artifact infused with the power of the Holy Flame. Hostility from woodcutters is decreased by 8.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -14881,7 +14881,7 @@
     "label": "Rain Pumps",
     "description": "Brewery production is 50% quicker.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -14890,7 +14890,7 @@
     "label": "Rain Pumps",
     "description": "Flawless Brewery production is 50% quicker.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -14926,7 +14926,7 @@
     "label": "Driving Water",
     "description": "Woodcutting is a lot easier. Woodcutters' Camp production is 10% quicker.",
     "tier": "Uncommon",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -14935,7 +14935,7 @@
     "label": "Reinforced Axes",
     "description": "Woodcutting is a lot easier. Woodcutters' Camp production is 15% quicker.",
     "tier": "Uncommon",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -14944,7 +14944,7 @@
     "label": "Reinforced Axes",
     "description": "Woodcutting is a lot easier. Woodcutters' Camp production is 30% quicker.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15214,7 +15214,7 @@
     "label": "Vineyard Town",
     "description": "The settlement specializes in wine production, and Beavers love that. (+1 to Beavers Resolve)",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15628,7 +15628,7 @@
     "label": "Forge Trip Hammer",
     "description": "<sprite name=\"[mat processed] parts\"> Parts (<sprite name=grade3>) can be produced at the Crude Workstation",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15637,7 +15637,7 @@
     "label": "Forge Trip Hammer",
     "description": "<sprite name=\"[mat processed] parts\"> Parts (<sprite name=grade3>) can be produced in the Smithy",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15754,7 +15754,7 @@
     "label": "Master Blueprint",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15763,7 +15763,7 @@
     "label": "Master Blueprint",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15772,7 +15772,7 @@
     "label": "Cooking Steam",
     "description": "If you leave rainwater for a while, it will begin to release a pleasant and warm vapor. Food production speed is increased by {0} for every {1} units of Drizzle Water stored.",
     "tier": "Rare",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15871,7 +15871,7 @@
     "label": "Metallurgic Proficiency",
     "description": "Increases the production speed of Copper Bars, Crystalized Dew, and all recipes that use metal ingots by 66%.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -15880,7 +15880,7 @@
     "label": "Metallurgic Proficiency",
     "description": "Increases the production speed of Copper Bars, Crystalized Dew, and all recipes that use metal ingots by 66%.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -16015,7 +16015,7 @@
     "label": "Farsight",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -17851,7 +17851,7 @@
     "label": "Frequent Caravans",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -17977,7 +17977,7 @@
     "label": "Blight Filter",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -18166,7 +18166,7 @@
     "label": "Fiery Wrath",
     "description": "Resources you sacrifice in the Ancient Hearth burn 3% longer for every Impatience Point you have.",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -18175,7 +18175,7 @@
     "label": "Fiery Wrath",
     "description": "Resources you sacrifice in the Ancient Hearth burn 5% longer for every Impatience Point you have.",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -18562,7 +18562,7 @@
     "label": "Deserted Caravans",
     "description": "Traders are afraid, and will not visit this area. Neither trading nor trade routes are available.",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -18589,7 +18589,7 @@
     "label": "Market Shift Plan",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -18625,7 +18625,7 @@
     "label": "Stormwalker Training",
     "description": "Your villagers learn how to travel the wilderness from the very best - the Royal Stormwalkers. All trade routes are faster by 5%.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -18778,7 +18778,7 @@
     "label": "Exploration Expedition",
     "description": ">Missing key<",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -18796,7 +18796,7 @@
     "label": "Hidden from the Queen",
     "description": "The crown doesn't need to know everything. Impatience doesn't grow when villagers leave or die.",
     "tier": "Legendary",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -19120,7 +19120,7 @@
     "label": "Travel Rations",
     "description": "With provisions, haulers don't have to return to the Hearth as often. Increases time between breaks for haulers by +50%.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -19129,7 +19129,7 @@
     "label": "Travel Rations",
     "description": "With provisions, haulers don't have to return to the Hearth as often. Increases time between breaks for haulers by +50%.",
     "tier": "Epic",
-    "type": "Cornerstone",
+    "type": "Perk",
     "biomeLock": [],
     "soldBy": []
   },
@@ -19156,7 +19156,7 @@
     "label": "Flame Amulets",
     "description": "Woodcutters have a +20% chance of producing twice the normal yield.",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
@@ -19165,7 +19165,7 @@
     "label": "Flame Amulets",
     "description": "Woodcutters have a +20% chance of producing twice the normal yield.",
     "tier": "None",
-    "type": "Cornerstone",
+    "type": "Effect",
     "biomeLock": [],
     "soldBy": []
   },
