@@ -1,7 +1,11 @@
+'use client';
+
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import * as EffectsData from '@/data/effects.json';
 import { cn } from '@/lib/utils';
 import { Cornerstone } from '@/types/Cornerstone';
+import { RootState } from '@/redux/store';
+import { useSelector } from 'react-redux';
 
 //ts assumption for object will enumerate keys, but the JSON import wont, so assign generally string indexable object
 type si = { [key: string]: string };
@@ -39,7 +43,11 @@ const CornerstoneComponent = ({ cornerstone }: { cornerstone: Cornerstone }) =>
 			</div>
 
 			<div className='flex flex-col gap-2'>
-				<p className={cn('text-lg font-bold', textMapping[cornerstone.tier])}>{cornerstone.label}</p>
+				<div className='flex flex-row items-center gap-2'>
+					<p className={cn('text-lg font-bold', textMapping[cornerstone.tier])}>{cornerstone.label}</p>
+					{cornerstone.tags.includes('tutorial') && <span className='text-xs text-perk-blue'>Tutorial</span>}
+					{cornerstone.tags.includes('hidden') && <span className='text-xs text-perk-blue'>Hidden</span>}
+				</div>
 				<p className=''>{cornerstone.description}</p>
 			</div>
 		</div>
@@ -48,21 +56,48 @@ const CornerstoneComponent = ({ cornerstone }: { cornerstone: Cornerstone }) =>
 
 const CornerstonesPage = () =>
 {
-	const cornerstones: Cornerstone[] = EffectsData.filter(effect => effect.type === 'Cornerstone');
-	const stormforged = cornerstones.filter(cornerstone => cornerstone.tier === 'Mythic');
-	const annual = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary' || cornerstone.tier === 'Epic');
-	const legendary = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary');
-	const epic = cornerstones.filter(cornerstone => cornerstone.tier === 'Epic');
+	let cornerstones: Cornerstone[] = EffectsData.filter(effect => effect.type === 'Cornerstone');
+
+	//Account for settings
+	const showTutorial = useSelector((state: RootState) => state.settings.showTutorial);
+	const showInternal = useSelector((state: RootState) => state.settings.showInternal);
+
+	if (!showTutorial)
+	{
+		cornerstones = cornerstones.filter(cornerstone => !cornerstone.tags.includes('tutorial'));
+	}
+
+	if (!showInternal)
+	{
+		cornerstones = cornerstones.filter(cornerstone => !cornerstone.tags.includes('hidden'));
+	}
+
+	//Sort by tags length, then alphabetically
+	cornerstones.sort((a, b) =>
+	{
+		const tagLengthDifference = a.tags.length - b.tags.length;
+		if (tagLengthDifference !== 0)
+		{
+			return tagLengthDifference;
+		}
+		return a.label.localeCompare(b.label);
+	});
+
+	let stormforged = cornerstones.filter(cornerstone => cornerstone.tier === 'Mythic');
+	let annual = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary' || cornerstone.tier === 'Epic');
+	let legendary = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary');
+	let epic = cornerstones.filter(cornerstone => cornerstone.tier === 'Epic');
 
 	return (
-		<div className='flex flex-col gap-2 p-2 overflow-y-auto max-h-full bg-slate-900 text-slate-300'>
+		<div className='flex flex-col gap-2 p-2 overflow-y-auto max-h-[calc(100dvh-48px)] bg-slate-900 text-slate-300'>
 			<Collapsible>
 				<CollapsibleTrigger className='flex flex-col items-start'>
 					<p className='text-xl text-white'>
 						<span className='text-perk-stormforged font-bold'>Stormforged</span> Cornerstones
 					</p>
 					<p>
-						<span className='text-perk-stormforged font-bold'>Stormforged</span> Cornerstones are only available from the Forsaken Altar, during the storm.
+						<span className='text-perk-stormforged font-bold'>Stormforged</span> Cornerstones are only available from the Forsaken Altar, during the
+						storm.
 					</p>
 				</CollapsibleTrigger>
 				<CollapsibleContent className='flex flex-col gap-2'>
@@ -81,21 +116,30 @@ const CornerstonesPage = () =>
 				</CollapsibleTrigger>
 				<CollapsibleContent className='flex flex-col gap-2'>
 					<div className='flex flex-col py-2'>
-						<p className='text-white text-lg'><span className='text-perk-orange'>Legendary</span> Cornerstones</p>
-						<p className=''><span className='text-perk-orange'>Legendary</span> Cornerstones are offered at the start of <strong>even years</strong>, until after year 6.</p>
-					<p></p>
-					<hr/>
+						<p className='text-white text-lg'>
+							<span className='text-perk-orange'>Legendary</span> Cornerstones
+						</p>
+						<p className=''>
+							<span className='text-perk-orange'>Legendary</span> Cornerstones are offered at the start of <strong>even years</strong>, until
+							after year 6.
+						</p>
+						<p></p>
+						<hr />
 					</div>
 					{legendary.map((cornerstone, index) =>
 					{
 						return <CornerstoneComponent key={index} cornerstone={cornerstone} />;
 					})}
-					
+
 					<div className='flex flex-col py-2'>
-						<p className='text-white text-lg'><span className='text-perk-purple'>Epic</span> Cornerstones</p>
-						<p className=''><span className='text-perk-purple'>Epic</span> Cornerstones are offered at the start of <strong>even years</strong>.</p>
-					<p></p>
-					<hr/>
+						<p className='text-white text-lg'>
+							<span className='text-perk-purple'>Epic</span> Cornerstones
+						</p>
+						<p className=''>
+							<span className='text-perk-purple'>Epic</span> Cornerstones are offered at the start of <strong>even years</strong>.
+						</p>
+						<p></p>
+						<hr />
 					</div>
 					{epic.map((cornerstone, index) =>
 					{

@@ -745,9 +745,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "TODO NAME",
@@ -1577,9 +1575,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_HaulingCarts_Name",
@@ -1609,9 +1605,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_BakeryProd50_Name",
@@ -2413,9 +2407,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_Composite_AncientGatePerk_Name",
@@ -2425,9 +2417,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_Composite_BarrelRecipes_Name",
@@ -2509,9 +2499,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ConstructionCostForNodes_Name",
@@ -2541,9 +2529,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ExtraProdForConsumption_Name",
@@ -2563,9 +2549,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_FasterScouts_Name",
@@ -2605,9 +2589,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "LowerHostilityPerGlades_HearthEffect_Fox_Name",
@@ -2627,9 +2609,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_HaulerSpeed_Name",
@@ -2659,9 +2639,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_HousesforBreak_Name",
@@ -2681,9 +2659,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_Incantation_Name",
@@ -2773,9 +2749,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_Infestation_Name",
@@ -2875,9 +2849,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_Overflow_Name",
@@ -2897,9 +2869,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_PacksRawProd_Name",
@@ -2939,9 +2909,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_ResolveForConsumption_Name",
@@ -2961,9 +2929,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "SeasonalEffect_NodesBonuses_Name",
@@ -3013,9 +2979,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_PlagueOfBlindness_Name",
@@ -3075,9 +3039,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "ResolveEffect_VaultResolvePenalty_Name",
@@ -3697,9 +3659,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ArcheologyExtraBlueprint_Name",
@@ -9785,9 +9745,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_GoodPerMinute_Clay_Name",
@@ -9991,9 +9949,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_GoodPerMinute_Fiber_Name",
@@ -10063,9 +10019,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_GoodPerMinute_Grain_Name",
@@ -10387,9 +10341,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_GoodPerMinute_Roots_Name",
@@ -12083,9 +12035,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_LeatherGloves_Name",
@@ -12345,9 +12295,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_SteelPickaxe_Name",
@@ -12517,9 +12465,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_RawProd_Vegetables_Name",
@@ -12969,9 +12915,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_BeaconEffect_BonusHP_Name",
@@ -13101,9 +13045,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_AccidentalOil_Name",
@@ -13113,9 +13055,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_AccidentalPigment_Name",
@@ -13135,9 +13075,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_AccidentalSkewers_Name",
@@ -13147,9 +13085,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_AccidentalWine_Name",
@@ -13169,9 +13105,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_AllCampsUnlock_Child_Name",
@@ -13211,9 +13145,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_AmberForSeaMarrow_Name",
@@ -13223,9 +13155,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_AmberForTrading_Name",
@@ -13255,9 +13185,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_AmberForWater_Name",
@@ -13267,9 +13195,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Perk_AmberForWood_Name",
@@ -13279,9 +13205,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_AmberForRelics_Name",
@@ -13331,9 +13255,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_BlightRateforResolveReputation_Child_Name",
@@ -13403,9 +13325,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_KelpiesCharm_Name",
@@ -13425,9 +13345,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_DecayAltarPositive_Name",
@@ -13467,9 +13385,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_CrystalineWater_Name",
@@ -13479,9 +13395,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_EventsRewardsForBloodthirst_Name",
@@ -13551,9 +13465,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "ResolveEffect_JoyOfDiscovery_Name",
@@ -13583,9 +13495,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ExtraProductionForCorruption_Name",
@@ -13665,9 +13575,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ForbiddenforHostility_Name",
@@ -13677,9 +13585,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ForbiddenforHostility_Name",
@@ -13739,9 +13645,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_CystForFood_Name",
@@ -13771,9 +13675,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_QueenSailors_Name",
@@ -13793,9 +13695,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_HostilityforDangerousRelics_Name",
@@ -13805,9 +13705,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_HostilityforDeath_Name",
@@ -13847,9 +13745,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_BurntCysts_lower_hostility_for_blocked_sacrifice_Name",
@@ -13859,9 +13755,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_HostilityForSales_Name",
@@ -13871,9 +13765,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_HostilityForTablets_Name",
@@ -13933,9 +13825,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_BlazingAmber_Name",
@@ -13965,9 +13855,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_HubsForHostility_Name",
@@ -13977,9 +13865,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_HubsForNewcomerGoods_Name",
@@ -13989,9 +13875,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_HumanResolveForIncenseProd_Name",
@@ -14041,9 +13925,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_InsectTraps_Name",
@@ -14103,9 +13985,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_GladeKillsForInfo_Name",
@@ -14125,9 +14005,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_LocalTaxes_Name",
@@ -14167,9 +14045,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_MeatSpecialization_Name",
@@ -14199,9 +14075,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_MoreTradeOffers_Child_Name",
@@ -14291,9 +14165,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_FillingDish_Name",
@@ -14303,9 +14175,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_PotteryForGlades_Name",
@@ -14365,9 +14235,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_ReputationForLuxury_Name",
@@ -14387,9 +14255,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_InstitutionResolveForComplexFood_Name",
@@ -14419,9 +14285,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "ResolveEffect_RebeliousSpirit_Name",
@@ -14431,9 +14295,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ResolveForReputation_Name",
@@ -14453,9 +14315,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_HarmonyAltarPositive_Name",
@@ -14605,9 +14465,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "ConditionalNeedEffect_GoodsForTrade_Name",
@@ -14877,9 +14735,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_PlagueOfDeath_Name",
@@ -14899,9 +14755,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_Composite_ToolsForGladeForResolve_Name",
@@ -14911,9 +14765,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ToolsforHostility_Name",
@@ -14953,9 +14805,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_CystForGlade_Name",
@@ -15015,9 +14865,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_CarryMoreForTablets_Name",
@@ -15047,9 +14895,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_WorkingTimeForFirekeeper_Name",
@@ -15679,9 +15525,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_ColdFlame_Name",
@@ -15741,9 +15585,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_PetrifiedTreeHousing_Name",
@@ -15963,9 +15805,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_NeedPerkCoatsBreaks_Name",
@@ -16395,9 +16235,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Effect_FrogNewcomerBonus_Name",
@@ -16747,9 +16585,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "Reward_RainPumps_Name",
@@ -16841,9 +16677,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "SeasonalEffect_RottingWood_Name",
@@ -17393,9 +17227,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "ConditionalNeedEffect_MoreDepositCharges_Name",
@@ -17987,9 +17819,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "SeasonalEffect_MoreEventGoods_Name",
@@ -21079,9 +20909,7 @@
     "type": "Cornerstone",
     "biomeLock": [],
     "soldBy": [],
-    "tags": [
-      "tutorial"
-    ]
+    "tags": []
   },
   {
     "id": "ModifierEffect_TreeCuttingTime_Name",

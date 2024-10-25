@@ -10,4 +10,5 @@ export type Cornerstone =
     type: string, // 'cornerstone' | 'perk' | 'effect'
     biomeLock: string[],
     soldBy: CornerstoneSale[],
+    tags: string[]
 }
