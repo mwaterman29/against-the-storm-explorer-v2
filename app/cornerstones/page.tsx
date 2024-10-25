@@ -54,13 +54,15 @@ const CornerstonesPage = () =>
 	const legendary = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary');
 	const epic = cornerstones.filter(cornerstone => cornerstone.tier === 'Epic');
 
-
 	return (
 		<div className='flex flex-col gap-2 p-2 overflow-y-auto max-h-full bg-slate-900 text-slate-300'>
 			<Collapsible>
-				<CollapsibleTrigger>
+				<CollapsibleTrigger className='flex flex-col items-start'>
 					<p className='text-xl text-white'>
 						<span className='text-perk-stormforged font-bold'>Stormforged</span> Cornerstones
+					</p>
+					<p>
+						<span className='text-perk-stormforged font-bold'>Stormforged</span> Cornerstones are only available from the Forsaken Altar, during the storm.
 					</p>
 				</CollapsibleTrigger>
 				<CollapsibleContent className='flex flex-col gap-2'>
@@ -80,7 +82,7 @@ const CornerstonesPage = () =>
 				<CollapsibleContent className='flex flex-col gap-2'>
 					<div className='flex flex-col py-2'>
 						<p className='text-white text-lg'><span className='text-perk-orange'>Legendary</span> Cornerstones</p>
-						<p className=''><span className='text-perk-orange'>Legendary</span> Cornerstones are offered at the start of <strong>even years</strong>.</p>
+						<p className=''><span className='text-perk-orange'>Legendary</span> Cornerstones are offered at the start of <strong>even years</strong>, until after year 6.</p>
 					<p></p>
 					<hr/>
 					</div>
