@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { Cornerstone } from '@/types/Cornerstone';
 import { RootState } from '@/redux/store';
 import { useSelector } from 'react-redux';
+import { getImgSrc } from '@/utils/img/getImgSrc';
 
 //ts assumption for object will enumerate keys, but the JSON import wont, so assign generally string indexable object
 type si = { [key: string]: string };
@@ -36,10 +37,14 @@ const textMapping: si = {
 
 const CornerstoneComponent = ({ cornerstone }: { cornerstone: Cornerstone }) =>
 {
+	console.log('id', cornerstone.label, 'img', `/img/${getImgSrc(cornerstone.label)}`, 'link', encodeURI(`/img/${getImgSrc(cornerstone.label)}.png`));
+
 	return (
 		<div className={cn('border rounded-md p-4 flex flex-row gap-4', borderMapping[cornerstone.tier])}>
 			<div className={cn('h-16 aspect-square border ', innerBorderMapping[cornerstone.tier])}>
-				<img />
+				<img 
+					src={encodeURI(`/img/${getImgSrc(cornerstone.label)}.png`)}
+				/>
 			</div>
 
 			<div className='flex flex-col gap-2'>
