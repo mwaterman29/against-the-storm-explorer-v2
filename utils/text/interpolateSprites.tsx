@@ -2,6 +2,8 @@ import React from 'react';
 import { formatName } from './formatName';
 import StarFilled from '@material-symbols/svg-400/outlined/star-fill.svg';
 import Star from '@material-symbols/svg-400/outlined/star.svg';
+import { randomUUID } from 'crypto';
+import { uuid } from '../uuid';
 
 function extractSpriteName(input: string): string
 {
@@ -18,7 +20,9 @@ const patterns: Array<{ pattern: RegExp; replacer: (match: string, index: number
 			const grade = parseInt(gradeStr, 10);
 			return (
 				<span className='flex flex-row items-center' key={index}>
-					{[...Array(3)].map((_, i) => (i < grade ? <StarFilled key={i} /> : <Star key={i} />))}
+					(
+                    {[...Array(3)].map((_, i) => (i < grade ? <StarFilled key={uuid()} /> : <Star key={uuid()} />))}
+                    )
 				</span>
 			);
 		}
@@ -31,7 +35,7 @@ const patterns: Array<{ pattern: RegExp; replacer: (match: string, index: number
 			const formattedName = formatName(extractedName);
 			const imgSrc = `/img/${formattedName}.png`;
 			return (
-				<img className='h-6 w-6 aspect-square' key={index} src={imgSrc} alt={formattedName} style={{ display: 'inline', verticalAlign: 'middle' }} />
+				<img className='h-6 w-6 aspect-square' key={uuid()} src={imgSrc} alt={formattedName} style={{ display: 'inline', verticalAlign: 'middle' }} />
 			);
 		}
 	}
