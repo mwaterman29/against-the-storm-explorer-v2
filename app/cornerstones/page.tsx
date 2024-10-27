@@ -101,8 +101,20 @@ const CornerstonesPage = () =>
 	let legendary = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary');
 	let epic = cornerstones.filter(cornerstone => cornerstone.tier === 'Epic');
 
+	const test = {
+		"id": "Reward_ForgeTripHammer_Name",
+		"label": "Forge Trip Hammer (Stormforged)",
+		"description": "Powerful and precise machinery. Amber Test: <sprite name=\"[valuable] amber\"> Amber <sprite name=\"[mat processed] parts\"> Parts (<sprite name=grade3>) can be produced in the Smithy and +100% to amount of goods produced in the Smithy.",
+		"tier": "Mythic",
+		"type": "Cornerstone",
+		"biomeLock": [],
+		"soldBy": [],
+		"tags": []
+	}
+
 	return (
 		<div className='flex flex-col gap-2 p-2 overflow-y-auto max-h-[calc(100dvh-48px)] bg-slate-900 text-slate-300'>
+			<CornerstoneComponent cornerstone={test} />
 			<Collapsible>
 				<CollapsibleTrigger className='flex flex-col items-start'>
 					<p className='text-xl text-white'>
