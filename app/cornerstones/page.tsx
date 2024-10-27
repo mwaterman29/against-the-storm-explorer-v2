@@ -7,6 +7,8 @@ import { Cornerstone } from '@/types/Cornerstone';
 import { RootState } from '@/redux/store';
 import { useSelector } from 'react-redux';
 import { getImgSrc } from '@/utils/img/getImgSrc';
+import { format } from 'util';
+import { formatText } from '@/utils/text/format';
 
 //ts assumption for object will enumerate keys, but the JSON import wont, so assign generally string indexable object
 type si = { [key: string]: string };
@@ -39,6 +41,8 @@ const CornerstoneComponent = ({ cornerstone }: { cornerstone: Cornerstone }) =>
 {
 	console.log('id', cornerstone.label, 'img', `/img/${getImgSrc(cornerstone.label)}`, 'link', encodeURI(`/img/${getImgSrc(cornerstone.label)}.png`));
 
+	const formattedDescription = formatText(cornerstone.description);
+
 	return (
 		<div className={cn('border rounded-md p-4 flex flex-row gap-4', borderMapping[cornerstone.tier])}>
 			<div className={cn('h-16 aspect-square border ', innerBorderMapping[cornerstone.tier])}>
@@ -54,6 +58,10 @@ const CornerstoneComponent = ({ cornerstone }: { cornerstone: Cornerstone }) =>
 					{cornerstone.tags.includes('hidden') && <span className='text-xs text-perk-blue'>Hidden</span>}
 				</div>
 				<p className=''>{cornerstone.description}</p>
+				<hr/>
+				<div className='flex flex-wrap gap-1'>
+					{formattedDescription}
+				</div>
 			</div>
 		</div>
 	);
