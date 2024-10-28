@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import NavDropdown from '../NavDropdown';
 import SettingsDropdown from '../SettingsDropdown';
 import { TooltipProvider } from '../ui/tooltip';
+import SearchOverlay from '../Search/SearchOverlay';
 
 const RootLayoutInner = ({ children }: { children: ReactNode }) =>
 {
@@ -21,6 +22,7 @@ const RootLayoutInner = ({ children }: { children: ReactNode }) =>
 						</div>
 						<SettingsDropdown />
 					</div>
+					<SearchOverlay />
 					{children}
 				</body>
 			</Provider>

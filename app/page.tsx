@@ -1,3 +1,4 @@
+import HomeSearchTrigger from '@/components/Search/HomeSearchTrigger';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
@@ -29,18 +30,20 @@ const homeLinks = [
 const HomePage = () =>
 {
 	return (
-		<div className='w-full flex flex-col items-center'>
-			<p className='text-2xl'>A data driven, opinionated compendium for learning about and improving at Against the Storm</p>
-			<p>Search Goes Here When It's Done</p>
-			<div className='max-w-[1200px] grid grid-cols-3 gap-4'>
-				{homeLinks.map((link, index) => {
-					return (
-						<a key={index} className={cn('group flex flex-col items-start gap-2 p-4 border hover:border-2 hover:p-[15px] rounded-md', link.borderClass)} href={link.href}>
-							<p className={cn('text-2xl font-bold`', link.textClass)}>{link.title}</p>
-							<p className=''>{link.description}</p>
-						</a>
-					)
-				})}
+		<div className='flex flex-col items-center'>
+			<div className='w-full max-w-[1200px] flex flex-col items-center gap-4 p-4'>
+				<p className='text-2xl'>A data driven, opinionated compendium for learning about and improving at Against the Storm</p>
+				<HomeSearchTrigger />
+				<div className='max-w-[1200px] grid grid-cols-3 gap-4'>
+					{homeLinks.map((link, index) => {
+						return (
+							<a key={index} className={cn('group flex flex-col items-start gap-2 p-4 border hover:border-2 hover:p-[15px] rounded-md', link.borderClass)} href={link.href}>
+								<p className={cn('text-2xl font-bold`', link.textClass)}>{link.title}</p>
+								<p className=''>{link.description}</p>
+							</a>
+						)
+					})}
+				</div>
 			</div>
 		</div>
 	)
