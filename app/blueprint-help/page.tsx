@@ -11,40 +11,14 @@ import ItemIcon from '@/components/ItemIcon';
 import { items } from '@/data/items';
 import TierSpan from '@/components/TierSpan';
 import { productionBuildings as buildings } from '@/data/productionBuildings';
+import BuildingsDropdown from '@/components/BuildingsDropdown';
+import BuildingRow from '@/components/BuildingRow';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
-const BuildingRow = ({ building, onPick }: { building: any; onPick?: any }) =>
-{
-	return (
-		<div className='flex flex-row items-center gap-2 w-full'>
-			<img className='w-12 h-12' src={`/img/${building.id}.png`} />
-			<p className='w-full'>{building.id}</p>
-			{onPick && (
-				<Button className='justify-self-end' onClick={() => onPick(building)}>
-					Select
-				</Button>
-			)}
-		</div>
-	);
-};
 
-const BuildingsDropdown = ({ buildings, onPick }: { buildings: any[]; onPick?: any }) =>
-{
-	return (
-		<DropdownMenu>
-			<DropdownMenuTrigger asChild>
-				<button>Choose Building</button>
-			</DropdownMenuTrigger>
-			<DropdownMenuContent className='max-h-[40dvh] overflow-y-auto'>
-				{buildings.map(building =>
-				{
-					return <BuildingRow key={building.id} building={building} onPick={onPick} />;
-				})}
-			</DropdownMenuContent>
-		</DropdownMenu>
-	);
-};
+
+
 
 const BiomesDropdown = ({ biomes, onPick }: { biomes: any[]; onPick: any }) =>
 {
@@ -131,7 +105,7 @@ const BlueprintDraftPage = () =>
 
 	const availableBlueprints = useMemo(() =>
 	{
-		return buildings.filter(building => !blueprintsOwned.includes(building.id));
+		return buildings.filter(building => !blueprintsOwned.includes(building.id)).map(building => building.id);
 	}, [blueprintsOwned]);
 
 	const [biome, setBiome] = useState('Royal Woodlands');
@@ -211,7 +185,7 @@ const BlueprintDraftPage = () =>
 						);
 					})}
 					<div className='flex flex-row items-center gap-2'>
-						<BuildingsDropdown buildings={availableBlueprints} onPick={(building: any) => setBlueprintsOwned([...blueprintsOwned, building.id])} />
+						<BuildingsDropdown filter={availableBlueprints} onPick={(building: any) => setBlueprintsOwned([...blueprintsOwned, building.id])} />
 					</div>
 				</div>
 				<div className='grid grid-cols-4 w-full gap-4'>
@@ -226,7 +200,7 @@ const BlueprintDraftPage = () =>
 									<BuildingRow building={thisPick[index]} onPick={() => setThisPick([...thisPick.slice(0, index), undefined])} />
 								)}
 								<BuildingsDropdown
-									buildings={availableBlueprints}
+									filter={availableBlueprints}
 									onPick={(building: any) => setThisPick([...thisPick.slice(0, index), building])}
 								/>
 							</div>
