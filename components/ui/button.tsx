@@ -11,6 +11,8 @@ const buttonVariants = cva(
       variant: {
         blue:
           "bg-slate-900 text-slate-50 hover:bg-slate-800 active:bg-slate-900/90",
+        destructive:
+          "bg-red-600 text-white hover:bg-red-700 active:bg-red-600/90",
       },
       size: {
         default: "h-10 px-4 py-2",

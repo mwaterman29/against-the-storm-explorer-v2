@@ -9,6 +9,4 @@ function getImgSrc(input: string): string
 	return input.trim();
 }
 
-
-
 export { getImgSrc };

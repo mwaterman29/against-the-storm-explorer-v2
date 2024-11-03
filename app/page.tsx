@@ -24,6 +24,13 @@ const homeLinks = [
 		textClass: 'text-decoration-yellow',
 		borderClass: 'border-decoration-yellow',
 		href: '/cornerstones'
+	},
+	{
+		title: 'Blueprint Draft Assistant',
+		description: "Draft Assistant for Blueprints",
+		textClass: 'text-decoration-yellow',
+		borderClass: 'border-decoration-yellow',
+		href: '/blueprint-help'
 	}
 ]
 
