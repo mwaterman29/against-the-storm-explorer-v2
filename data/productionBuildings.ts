@@ -1,4 +1,4 @@
-[
+export const productionBuildings = [
   {
     "id": "Crude Workstation",
     "produces": [
@@ -70,7 +70,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 60
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Makeshift Post",
@@ -142,7 +144,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 56
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Woodcutters Camp",
@@ -158,7 +162,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 6
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 3
   },
   {
     "id": "Hallowed SmallFarm",
@@ -185,7 +191,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 0
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "SmallFarm",
@@ -212,7 +220,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 0
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Stonecutter's Camp",
@@ -250,7 +260,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 5
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Plantation",
@@ -277,7 +289,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 0
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Harvester Camp",
@@ -315,7 +329,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 5
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Blight Post",
@@ -341,7 +357,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 40
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Hallowed Herb Garden",
@@ -368,7 +386,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 0
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Herb Garden",
@@ -395,7 +415,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 0
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Forager's Camp",
@@ -433,7 +455,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 17
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Primitive Forager's Camp",
@@ -471,7 +495,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 25
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Grove",
@@ -498,7 +524,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 0
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 4
   },
   {
     "id": "Herbalist's Camp",
@@ -536,7 +564,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 17
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Primitive Herbalist's Camp",
@@ -574,7 +604,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 25
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Holy Temple",
@@ -594,7 +626,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Workshop",
@@ -667,7 +701,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 60
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Primitive Trapper's Camp",
@@ -705,7 +741,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 25
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Trapper's Camp",
@@ -743,7 +781,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 17
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 2
   },
   {
     "id": "Greenhouse Workshop",
@@ -778,7 +818,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Lumbermill",
@@ -848,7 +890,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Tavern",
@@ -868,7 +912,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Cooperage",
@@ -942,7 +988,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Flawless Cooperage",
@@ -1016,7 +1064,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 28
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Ranch",
@@ -1086,7 +1136,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Temple",
@@ -1106,7 +1158,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Carpenter",
@@ -1174,7 +1228,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Clay Pit Workshop",
@@ -1224,7 +1280,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 60
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 3
   },
   {
     "id": "Field Kitchen",
@@ -1339,7 +1397,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Holy Guild House",
@@ -1359,7 +1419,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Monastery",
@@ -1379,7 +1441,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Cobbler",
@@ -1445,7 +1509,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Weaver",
@@ -1513,7 +1579,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Clan Hall",
@@ -1533,7 +1601,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Bakery",
@@ -1615,7 +1685,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Clothier",
@@ -1687,7 +1759,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Cookhouse",
@@ -1771,7 +1845,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 4
   },
   {
     "id": "Forum",
@@ -1791,7 +1867,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Guild House",
@@ -1811,7 +1889,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Flawless Leatherworks",
@@ -1883,7 +1963,9 @@
         ],
         "timeInSeconds": 105
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Leatherworks",
@@ -1955,7 +2037,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Holy Market",
@@ -1975,7 +2059,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 2
   },
   {
     "id": "Market",
@@ -1995,7 +2081,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 2
   },
   {
     "id": "Mine",
@@ -2022,7 +2110,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 40
       }
-    ]
+    ],
+    "category": "Resource Gathering",
+    "workerSlots": 4
   },
   {
     "id": "Brick Oven",
@@ -2100,7 +2190,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Brickyard",
@@ -2176,7 +2268,9 @@
         ],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Smokehouse",
@@ -2266,7 +2360,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Tea Doctor",
@@ -2286,7 +2382,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Butcher",
@@ -2374,7 +2472,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Kiln",
@@ -2440,7 +2540,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Bath House",
@@ -2460,7 +2562,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Beanery",
@@ -2556,7 +2660,9 @@
         ],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Explorers Lodge",
@@ -2576,7 +2682,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 1
       }
-    ]
+    ],
+    "category": "City Buildings",
+    "workerSlots": 3
   },
   {
     "id": "Cannery",
@@ -2654,7 +2762,9 @@
         ],
         "timeInSeconds": 110
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Cellar",
@@ -2742,7 +2852,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Flawless Cellar",
@@ -2830,7 +2942,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 28
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Flawless Rain Mill",
@@ -2904,7 +3018,9 @@
         ],
         "timeInSeconds": 105
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Grill",
@@ -2992,7 +3108,9 @@
         ],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Press",
@@ -3064,7 +3182,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Provisioner",
@@ -3136,7 +3256,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Granary",
@@ -3212,7 +3334,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Stamping Mill",
@@ -3282,7 +3406,9 @@
         ],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Flawless Smelter",
@@ -3370,7 +3496,9 @@
         ],
         "timeInSeconds": 105
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Rain Mill",
@@ -3444,7 +3572,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Smelter",
@@ -3532,7 +3662,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Pantry",
@@ -3622,7 +3754,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Smithy",
@@ -3692,7 +3826,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Apothecary",
@@ -3786,7 +3922,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 2
   },
   {
     "id": "Toolshop",
@@ -3848,7 +3986,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 168
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Artisan",
@@ -3922,7 +4062,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Furnace",
@@ -4016,7 +4158,9 @@
         ],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 3
   },
   {
     "id": "Alchemist Hut",
@@ -4108,7 +4252,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Tea House",
@@ -4200,7 +4346,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Brewery",
@@ -4282,7 +4430,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 42
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Distillery",
@@ -4376,7 +4526,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Flawless Brewery",
@@ -4458,7 +4610,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 28
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Tinctury",
@@ -4538,7 +4692,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Druid",
@@ -4620,7 +4776,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Flawless Druid",
@@ -4702,7 +4860,9 @@
         ],
         "timeInSeconds": 105
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Tinkerer",
@@ -4782,7 +4942,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Manufactory",
@@ -4850,7 +5012,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Supplier",
@@ -4914,7 +5078,9 @@
         ],
         "timeInSeconds": 84
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 2
   },
   {
     "id": "Scribe",
@@ -4994,7 +5160,9 @@
         ],
         "timeInSeconds": 126
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Homestead",
@@ -5043,7 +5211,9 @@
         "ingredientsSecondCounts": [],
         "timeInSeconds": 0
       }
-    ]
+    ],
+    "category": "Food Production",
+    "workerSlots": 4
   },
   {
     "id": "Finesmith",
@@ -5092,7 +5262,9 @@
         ],
         "timeInSeconds": 60
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   },
   {
     "id": "Rainpunk Foundry",
@@ -5149,6 +5321,8 @@
         ],
         "timeInSeconds": 90
       }
-    ]
+    ],
+    "category": "Industry",
+    "workerSlots": 3
   }
 ]

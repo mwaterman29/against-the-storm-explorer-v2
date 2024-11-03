@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import * as buildings from '@/data/productionBuildings.json';
 import { biomes } from '@/data/biomes'; //import * as biomes from '@/data/biomes';
 import { cn } from '@/lib/utils';
 import { RootState } from '@/redux/store';
@@ -11,6 +10,7 @@ import { useSelector } from 'react-redux';
 import ItemIcon from '@/components/ItemIcon';
 import { items } from '@/data/items';
 import TierSpan from '@/components/TierSpan';
+import { productionBuildings as buildings } from '@/data/productionBuildings';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
