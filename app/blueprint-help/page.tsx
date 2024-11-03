@@ -9,6 +9,8 @@ import { RootState } from '@/redux/store';
 import { useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import ItemIcon from '@/components/ItemIcon';
+import { items } from '@/data/items';
+import TierSpan from '@/components/TierSpan';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
@@ -61,10 +63,65 @@ const BiomesDropdown = ({ biomes, onPick }: { biomes: any[]; onPick: any }) =>
 	);
 };
 
+function findProductionChainsWithTiers(
+	baseResources: Set<string>,
+	blueprintsOwned: string[]
+): { completedChains: string[]; completedChainsWithTiers: Record<string, number> }
+{
+	const availableResources = new Set(baseResources);
+	const itemTiers: Record<string, number> = {};
+	let previousLength = 0;
+
+	// Filter buildings to only include those owned
+	const ownedBuildings = buildings.filter(building => blueprintsOwned.includes(building.id));
+
+	/*
+	start with a set of all available resources 
+	cache length
+
+	for all recipes not in the set, check their ingredients, if any member of req first and second is in the available resources, then add it to the set
+
+	compare new length against cached length
+	if same, end
+	otherwise, repeat 
+
+	available resources is always the union of tree and deposit resources, excluding secondary for due to quantity limitations
+	*/
+	do
+	{
+		previousLength = availableResources.size;
+
+		for (const building of ownedBuildings)
+		{
+			for (const recipe of building.produces)
+			{
+				if (
+					!availableResources.has(recipe.output) &&
+					(recipe.ingredientsFirst.length === 0 || recipe.ingredientsFirst.some(ingredient => availableResources.has(ingredient))) &&
+					(recipe.ingredientsSecond.length === 0 || recipe.ingredientsSecond.some(ingredient => availableResources.has(ingredient)))
+				)
+				{
+					availableResources.add(recipe.output);
+				}
+
+				//Update tier if necessary
+				if (!itemTiers[recipe.output] || itemTiers[recipe.output] < recipe.tier)
+				{
+					itemTiers[recipe.output] = recipe.tier;
+				}
+			}
+		}
+	} while (availableResources.size > previousLength);
+
+	const completedChains = Array.from(availableResources).filter(resource => !baseResources.has(resource));
+
+	return { completedChains, completedChainsWithTiers: itemTiers };
+}
+
 const BlueprintDraftPage = () =>
 {
 	const [blueprintsOwned, setBlueprintsOwned] = useState(defaultList);
-	const [thisPick, setThisPick] = useState([]);
+	const [thisPick, setThisPick] = useState<any[]>([]);
 
 	const difficulty = useSelector((state: RootState) => state.settings.difficulty);
 	const picksPerDraft = useMemo(() =>
@@ -101,6 +158,12 @@ const BlueprintDraftPage = () =>
 		return biomes.find(b => b.name === biome);
 	}, [biome]);
 
+	const { completedChains, completedChainsWithTiers } = useMemo(() =>
+	{
+		const baseResources = new Set(biomeData?.treeItems.concat(biomeData?.depositItems));
+		return findProductionChainsWithTiers(baseResources, blueprintsOwned);
+	}, [blueprintsOwned, biomeData]);
+
 	return (
 		<div className='flex flex-col items-center gap-2 px-8'>
 			<p>Blueprint Helper</p>
@@ -114,18 +177,16 @@ const BlueprintDraftPage = () =>
 					<BiomesDropdown biomes={filteredBiomes} onPick={(biome: any) => setBiome(biome.name)} />
 					<div className='flex flex-row items-center gap-2'>
 						<p>Trees</p>
-						{biomeData?.treeItems.map((treeItem, index) => {
-							return (
-								<ItemIcon item={treeItem} size='s' key={index}/>
-							)
+						{biomeData?.treeItems.map((treeItem, index) =>
+						{
+							return <ItemIcon item={treeItem} size='s' key={index} />;
 						})}
 					</div>
 					<div className='flex flex-row items-center gap-2'>
 						<p>Deposits</p>
-						{biomeData?.depositItems.map((treeItem, index) => {
-							return (
-								<ItemIcon item={treeItem} size='s' key={index}/>
-							)
+						{biomeData?.depositItems.map((treeItem, index) =>
+						{
+							return <ItemIcon item={treeItem} size='s' key={index} />;
 						})}
 					</div>
 				</div>
@@ -168,6 +229,21 @@ const BlueprintDraftPage = () =>
 									buildings={availableBlueprints}
 									onPick={(building: any) => setThisPick([...thisPick.slice(0, index), building])}
 								/>
+							</div>
+						);
+					})}
+				</div>
+			</div>
+			<div className='flex flex-col'>
+				<p>Completed Chains</p>
+				<div className='flex flex-wrap'>
+					{completedChains.map((chain, index) =>
+					{
+						return (
+							<div className='flex flex-row items-center gap-2'>
+								<ItemIcon item={chain} size='s' key={index} />
+								<p className='text-nowrap'>{chain}</p>
+								<TierSpan tier={completedChainsWithTiers[chain]} />
 							</div>
 						);
 					})}

@@ -1,4 +1,4 @@
-[
+export const items = [
   {
     "id": "Planks",
     "label": "Planks",

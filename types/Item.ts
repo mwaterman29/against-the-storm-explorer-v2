@@ -3,7 +3,7 @@ import { ItemUsage } from "./ItemUsage"
 export type Item = {
     id: string,
     label: string,
-    usesFirst: ItemUsage[],
-    usesSecond: ItemUsage[],
+    usesFirst: string[],
+    usesSecond: string[],
     usedIn: string[]
 }
