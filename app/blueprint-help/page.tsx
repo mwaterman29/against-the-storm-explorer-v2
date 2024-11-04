@@ -16,10 +16,6 @@ import BuildingRow from '@/components/BuildingRow';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
-
-
-
-
 const BiomesDropdown = ({ biomes, onPick }: { biomes: any[]; onPick: any }) =>
 {
 	return (
@@ -92,6 +88,30 @@ function findProductionChainsWithTiers(
 	return { completedChains, completedChainsWithTiers: itemTiers };
 }
 
+function calculateDifferences(
+	baseResources: Set<string>,
+	currentBlueprints: string[],
+	newBuilding: any
+): { newResources: string[]; improvedTiers: Record<string, number> }
+{
+	const updatedBlueprints = [...currentBlueprints, newBuilding.id];
+	const { completedChainsWithTiers: currentTiers } = findProductionChainsWithTiers(baseResources, currentBlueprints);
+	const { completedChainsWithTiers: newTiers } = findProductionChainsWithTiers(baseResources, updatedBlueprints);
+
+	const newResources = Object.keys(newTiers).filter(resource => !(resource in currentTiers));
+	const improvedTiers: Record<string, number> = {};
+
+	for (const resource in newTiers)
+	{
+		if (currentTiers[resource] !== undefined && newTiers[resource] > currentTiers[resource])
+		{
+			improvedTiers[resource] = newTiers[resource];
+		}
+	}
+
+	return { newResources, improvedTiers };
+}
+
 const BlueprintDraftPage = () =>
 {
 	const [blueprintsOwned, setBlueprintsOwned] = useState(defaultList);
@@ -132,12 +152,27 @@ const BlueprintDraftPage = () =>
 		return biomes.find(b => b.name === biome);
 	}, [biome]);
 
+	const baseResources = useMemo(() => {
+		return new Set(biomeData?.treeItems.concat(biomeData?.depositItems));
+	}, [biomeData]);
+
 	const { completedChains, completedChainsWithTiers } = useMemo(() =>
 	{
-		const baseResources = new Set(biomeData?.treeItems.concat(biomeData?.depositItems));
 		return findProductionChainsWithTiers(baseResources, blueprintsOwned);
 	}, [blueprintsOwned, biomeData]);
 
+	const draftBlueprintData = useMemo(() => {
+		const data = thisPick.map(selectedBuilding => {
+			if (!selectedBuilding) {
+			  return { newResources: [], improvedTiers: {} };
+			}
+			return calculateDifferences(baseResources, blueprintsOwned, selectedBuilding);
+		  });
+
+		return data;
+		
+	}, [biomeData, blueprintsOwned, thisPick]);
+	
 	return (
 		<div className='flex flex-col items-center gap-2 px-8'>
 			<p>Blueprint Helper</p>
@@ -188,21 +223,36 @@ const BlueprintDraftPage = () =>
 						<BuildingsDropdown filter={availableBlueprints} onPick={(building: any) => setBlueprintsOwned([...blueprintsOwned, building.id])} />
 					</div>
 				</div>
+
 				<div className='grid grid-cols-4 w-full gap-4'>
 					{Array.from({ length: picksPerDraft }).map((_, index) =>
 					{
 						const colsClass = picksPerDraft === 2 ? 'col-span-2' : '';
 
+						const selectedBuilding = thisPick[index];
+						const differences = draftBlueprintData[index];
+
 						return (
-							<div key={index} className={cn('flex flex-col p-2 border rounded-md gap-2', colsClass)}>
+							<div key={index} className={`flex flex-col p-2 border rounded-md gap-2 ${colsClass}`}>
 								<p>Pick {index + 1}</p>
-								{thisPick[index] && (
-									<BuildingRow building={thisPick[index]} onPick={() => setThisPick([...thisPick.slice(0, index), undefined])} />
+								{selectedBuilding && (
+									<BuildingRow building={selectedBuilding} onPick={() => setThisPick([...thisPick.slice(0, index), undefined])} />
 								)}
 								<BuildingsDropdown
 									filter={availableBlueprints}
 									onPick={(building: any) => setThisPick([...thisPick.slice(0, index), building])}
 								/>
+								{selectedBuilding && (
+									<div>
+										<p>New Resources: {differences.newResources.join(', ')}</p>
+										<p>
+											Improved Tiers:{' '}
+											{Object.entries(differences.improvedTiers)
+												.map(([resource, tier]) => `${resource}: Tier ${tier}`)
+												.join(', ')}
+										</p>
+									</div>
+								)}
 							</div>
 						);
 					})}
