@@ -1,0 +1,1 @@
+export type BlueprintDifferences = { newResources: string[]; improvedTiers: Record<string, number> };
