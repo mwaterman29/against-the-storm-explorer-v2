@@ -17,6 +17,7 @@ import { findProductionChainsWithTiers } from '@/utils/findProductionChainsWithT
 import { calculateDifferences } from '@/utils/calculateDifferences';
 import SpeciesDropdown from '@/components/SpeciesDropdown';
 import { species } from '@/data/species';
+import SpeciesNeeds from '@/components/SpeciesNeeds';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
@@ -119,12 +120,21 @@ const BlueprintDraftPage = () =>
 					<div className='grid grid-cols-3'>
 						{selectedSpecies.map((species, index) => {
 							return (
-								<SpeciesDropdown
+								<div className='flex flex-col items-center gap-2'>
+																	<SpeciesDropdown
 									key={index}
 									selected={species}
-									onPick={(species: string) => setSelectedSpecies([...selectedSpecies, species])}
+									onPick={(species: string) => {
+										const newSpecies = [...selectedSpecies];
+										newSpecies[index] = species;
+										console.log(newSpecies);
+										setSelectedSpecies(newSpecies);
+									}}
 									filter={availableSpecies}
 									/>
+									<SpeciesNeeds species={species} labelClassName='hidden' className='grid grid-cols-3 gap-1'/>
+								</div>
+
 							)
 						})}
 					</div>
