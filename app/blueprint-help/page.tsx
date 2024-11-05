@@ -15,6 +15,8 @@ import BuildingsDropdown from '@/components/BuildingsDropdown';
 import BuildingRow from '@/components/BuildingRow';
 import { findProductionChainsWithTiers } from '@/utils/findProductionChainsWithTiers';
 import { calculateDifferences } from '@/utils/calculateDifferences';
+import SpeciesDropdown from '@/components/SpeciesDropdown';
+import { species } from '@/data/species';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
@@ -54,6 +56,17 @@ const BlueprintDraftPage = () =>
 	const [biome, setBiome] = useState('Royal Woodlands');
 	const tutorial = useSelector((state: RootState) => state.settings.showTutorial);
 	const interal = useSelector((state: RootState) => state.settings.showInternal);
+
+	const [selectedSpecies, setSelectedSpecies] = useState(
+		difficulty > 10 ? 
+		['Frog, Foxes', 'Harpy'] :
+		['Human', 'Beaver', 'Lizard']
+	);
+	const availableSpecies = useMemo(() =>
+	{
+		const allSpecies = species.map(s => s.name);
+		return allSpecies.filter(s => !selectedSpecies.includes(s));
+	}, [selectedSpecies]);
 
 	const filteredBiomes = useMemo(() =>
 	{
@@ -103,6 +116,18 @@ const BlueprintDraftPage = () =>
 			<div className='flex flex-row w-full'>
 				<div className='basis-1/3 '>
 					<p>Select your species:</p>
+					<div className='grid grid-cols-3'>
+						{selectedSpecies.map((species, index) => {
+							return (
+								<SpeciesDropdown
+									key={index}
+									selected={species}
+									onPick={(species: string) => setSelectedSpecies([...selectedSpecies, species])}
+									filter={availableSpecies}
+									/>
+							)
+						})}
+					</div>
 				</div>
 				<div className='basis-2/3'>
 					<p>Select your biome:</p>
@@ -187,7 +212,7 @@ const BlueprintDraftPage = () =>
 					{completedChains.map((chain, index) =>
 					{
 						return (
-							<div className='flex flex-row items-center gap-2'>
+							<div className='flex flex-row items-center gap-2' key={index}>
 								<ItemIcon item={chain} size='s' key={index} />
 								<p className='text-nowrap'>{chain}</p>
 								<TierSpan tier={completedChainsWithTiers[chain]} />
