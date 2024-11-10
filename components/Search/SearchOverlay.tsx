@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { setInputText, setIsOverlayOpen as setIsOverlayOpenRedux } from '@/redux/interactionSlice';
 import { RootState } from '@/redux/store';
 import { useState, useEffect, useRef } from 'react';
@@ -53,10 +54,8 @@ const SearchOverlay = () =>
 
 	return (
 		<div>
-			{/* Overlay */}
-			{isOverlayOpen && (
 				<div
-					className="fixed inset-0 bg-black bg-opacity-50 transition-all flex items-center justify-center"
+					className={cn("fixed inset-0 bg-black bg-opacity-50 transition-all duration-1000 flex items-center justify-center")}
 					onClick={() => setIsOverlayOpen(false)}
 				>
 					<div
@@ -74,7 +73,6 @@ const SearchOverlay = () =>
 						</div>
 					</div>
 				</div>
-			)}
 		</div>
 	);
 }
