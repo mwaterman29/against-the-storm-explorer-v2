@@ -59,7 +59,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Excavate",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Disturbing the Dead"
+              {
+                "label": "Disturbing the Dead",
+                "description": "Woodcutting angers the dead. Hostility increases by +5 points for every 5 fallen trees. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -131,7 +134,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Excavate",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Disturbing the Dead"
+              {
+                "label": "Disturbing the Dead",
+                "description": "Woodcutting angers the dead. Hostility increases by +5 points for every 4 fallen trees. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -203,7 +209,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Excavate",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Disturbing the Dead"
+              {
+                "label": "Disturbing the Dead",
+                "description": "Woodcutting angers the dead. Hostility increases by +5 points for every 3 fallen trees. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -275,7 +284,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Excavate",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Disturbing the Dead"
+              {
+                "label": "Disturbing the Dead",
+                "description": "Woodcutting angers the dead. Hostility increases by +5 points for every 2 fallen trees. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -300,7 +312,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ancient Burial Site",
     "workingEffects": [],
     "threats": [
-      "Life from Beneath"
+      {
+        "label": "Life from Beneath",
+        "description": "Rotten matter creeps up from underneath the Burial Site. Spawns 6 Blood Flowers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -315,7 +330,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -341,8 +359,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Seal Off",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Gate Presence",
-              "Rage of the Forest"
+              {
+                "label": "Gate Presence",
+                "description": "The mere presence of a Dark Gate makes the villagers fear for their lives. (‑4 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -361,7 +385,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -387,8 +414,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Seal Off",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Gate Presence",
-              "Rage of the Forest"
+              {
+                "label": "Gate Presence",
+                "description": "The mere presence of a Dark Gate makes the villagers fear for their lives. (‑6 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -407,7 +440,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -433,8 +469,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Seal Off",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Gate Presence",
-              "Rage of the Forest"
+              {
+                "label": "Gate Presence",
+                "description": "The mere presence of a Dark Gate makes the villagers fear for their lives. (‑8 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -453,7 +495,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -479,8 +524,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Seal Off",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Gate Presence",
-              "Rage of the Forest"
+              {
+                "label": "Gate Presence",
+                "description": "The mere presence of a Dark Gate makes the villagers fear for their lives. (‑10 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -501,7 +552,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Dark Gate",
     "workingEffects": [],
     "threats": [
-      "Death from Beyond"
+      {
+        "label": "Death from Beyond",
+        "description": "Old tales talk of horrific, bloodthirsty apparitions emerging from beyond Dark Gates. Kills 10 random villagers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -516,7 +570,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -575,7 +632,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -634,7 +694,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -693,7 +756,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -754,7 +820,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ancient Shrine",
     "workingEffects": [],
     "threats": [
-      "Curse of the Forefathers"
+      {
+        "label": "Curse of the Forefathers",
+        "description": "Disturbing the ruins of the Great Civilization can have grave consequences. Kills 5 random villagers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 120.0,
@@ -983,7 +1052,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Forgotten Temple of the Sun",
     "workingEffects": [],
     "threats": [
-      "Forced Sacrifice"
+      {
+        "label": "Forced Sacrifice",
+        "description": "The Temple demands offerings. Destroys all trade goods in the Warehouse (packs of goods, Amber, Ancient Tablets)."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 120.0,
@@ -998,7 +1070,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Robbed Dead"
+              {
+                "label": "Robbed Dead",
+                "description": "The scent of your wealth makes the robbed spirit angry. You get -3 to Global Resolve for every 10 <sprite name=\"[valuable] amber\"> Amber in the settlement's Warehouses. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1066,7 +1141,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Robbed Dead"
+              {
+                "label": "Robbed Dead",
+                "description": "The scent of your wealth makes the robbed spirit angry. You get -4 to Global Resolve for every 10 <sprite name=\"[valuable] amber\"> Amber in the settlement's Warehouses. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1134,7 +1212,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Robbed Dead"
+              {
+                "label": "Robbed Dead",
+                "description": "The scent of your wealth makes the robbed spirit angry. You get -5 to Global Resolve for every 10 <sprite name=\"[valuable] amber\"> Amber in the settlement's Warehouses. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1202,7 +1283,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Robbed Dead"
+              {
+                "label": "Robbed Dead",
+                "description": "The scent of your wealth makes the robbed spirit angry. You get -6 to Global Resolve for every 10 <sprite name=\"[valuable] amber\"> Amber in the settlement's Warehouses. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1272,8 +1356,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Forsaken Crypt",
     "workingEffects": [],
     "threats": [
-      "Buried Riches",
-      "Cleanup Duty"
+      {
+        "label": "Buried Riches",
+        "description": "What was once taken must now be given back. All stored <sprite name=\"[valuable] amber\"> Amber and <sprite name=\"[needs] wine\"> Wine will be lost."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -1288,7 +1378,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1318,7 +1411,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Bury the Entrance",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Ominous Whispers"
+              {
+                "label": "Ominous Whispers",
+                "description": "Strange voices can be heard from the sealed vault. All woodcutters and gatherers get a ‑12 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1345,7 +1441,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1375,7 +1474,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Bury the Entrance",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Ominous Whispers"
+              {
+                "label": "Ominous Whispers",
+                "description": "Strange voices can be heard from the sealed vault. All woodcutters and gatherers get a ‑12 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1402,7 +1504,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1432,7 +1537,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Bury the Entrance",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Ominous Whispers"
+              {
+                "label": "Ominous Whispers",
+                "description": "Strange voices can be heard from the sealed vault. All woodcutters and gatherers get a ‑12 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1459,7 +1567,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1489,7 +1600,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Bury the Entrance",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Ominous Whispers"
+              {
+                "label": "Ominous Whispers",
+                "description": "Strange voices can be heard from the sealed vault. All woodcutters and gatherers get a ‑12 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -1518,7 +1632,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Open Vault",
     "workingEffects": [],
     "threats": [
-      "Small Miasma Cloud"
+      {
+        "label": "Small Miasma Cloud",
+        "description": "A thick, spreading cloud of miasma. It kills every living being within a radius of 20 fields."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -1562,8 +1679,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ancient Shrine",
     "workingEffects": [],
     "threats": [
-      "Curse of the Forefathers",
-      "Curse of the Forefathers"
+      {
+        "label": "Curse of the Forefathers",
+        "description": "Disturbing the ruins of the Great Civilization can have grave consequences. Kills 3 random villagers."
+      },
+      {
+        "label": "Curse of the Forefathers",
+        "description": "Disturbing the ruins of the Great Civilization can have grave consequences. Kills 3 random villagers."
+      }
     ],
     "workerSlots": 3,
     "totalTime": 90.0,
@@ -4509,7 +4632,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Beavers"
+              {
+                "label": "Fallen Beavers",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑6 to Beavers Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4552,7 +4678,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Beavers"
+              {
+                "label": "Fallen Beavers",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑8 to Beavers Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4595,7 +4724,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Beavers"
+              {
+                "label": "Fallen Beavers",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑10 to Beavers Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4638,7 +4770,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Beavers"
+              {
+                "label": "Fallen Beavers",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑12 to Beavers Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4683,7 +4818,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fallen Beaver Traders",
     "workingEffects": [],
     "threats": [
-      "Decay"
+      {
+        "label": "Decay",
+        "description": "Spawns 2 to 3 Blood Flowers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -4698,7 +4836,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Foxes"
+              {
+                "label": "Fallen Foxes",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑6 to Foxes Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4741,7 +4882,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Foxes"
+              {
+                "label": "Fallen Foxes",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑8 to Foxes Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4784,7 +4928,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Foxes"
+              {
+                "label": "Fallen Foxes",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑10 to Foxes Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4827,7 +4974,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Foxes"
+              {
+                "label": "Fallen Foxes",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑12 to Foxes Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4872,7 +5022,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fallen Fox Scouts",
     "workingEffects": [],
     "threats": [
-      "Decay"
+      {
+        "label": "Decay",
+        "description": "Spawns 2 to 3 Blood Flowers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -4887,7 +5040,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Frogs"
+              {
+                "label": "Fallen Frogs",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑6 to Frogs Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4930,7 +5086,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Frogs"
+              {
+                "label": "Fallen Frogs",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑8 to Frogs Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -4973,7 +5132,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Frogs"
+              {
+                "label": "Fallen Frogs",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑10 to Frogs Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5016,7 +5178,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Frogs"
+              {
+                "label": "Fallen Frogs",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑12 to Frogs Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5061,7 +5226,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fallen Frog Architects",
     "workingEffects": [],
     "threats": [
-      "Decay"
+      {
+        "label": "Decay",
+        "description": "Spawns 2 to 3 Blood Flowers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -5076,7 +5244,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Harpy Scientists"
+              {
+                "label": "Fallen Harpy Scientists",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑6 to Harpies Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5119,7 +5290,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Harpy Scientists"
+              {
+                "label": "Fallen Harpy Scientists",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑8 to Harpies Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5162,7 +5336,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Harpy Scientists"
+              {
+                "label": "Fallen Harpy Scientists",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑10 to Harpies Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5205,7 +5382,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Harpy Scientists"
+              {
+                "label": "Fallen Harpy Scientists",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑12 to Harpies Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5250,7 +5430,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fallen Harpy Scientists",
     "workingEffects": [],
     "threats": [
-      "Decay"
+      {
+        "label": "Decay",
+        "description": "Spawns 2 to 3 Blood Flowers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -5265,7 +5448,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Humans"
+              {
+                "label": "Fallen Humans",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑6 to Humans Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5308,7 +5494,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Humans"
+              {
+                "label": "Fallen Humans",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑8 to Humans Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5351,7 +5540,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Humans"
+              {
+                "label": "Fallen Humans",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑10 to Humans Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5394,7 +5586,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Humans"
+              {
+                "label": "Fallen Humans",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑12 to Humans Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5439,7 +5634,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fallen Human Explorers",
     "workingEffects": [],
     "threats": [
-      "Decay"
+      {
+        "label": "Decay",
+        "description": "Spawns 2 to 3 Blood Flowers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -5454,7 +5652,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Lizards"
+              {
+                "label": "Fallen Lizards",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑6 to Lizards Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5497,7 +5698,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Lizards"
+              {
+                "label": "Fallen Lizards",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑8 to Lizards Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5540,7 +5744,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Lizards"
+              {
+                "label": "Fallen Lizards",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑10 to Lizards Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5583,7 +5790,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rob the Dead",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fallen Lizards"
+              {
+                "label": "Fallen Lizards",
+                "description": "Seeing their fallen kin has taken its toll on the villagers. (‑12 to Lizards Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5628,7 +5838,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fallen Lizard Hunters",
     "workingEffects": [],
     "threats": [
-      "Decay"
+      {
+        "label": "Decay",
+        "description": "Spawns 2 to 3 Blood Flowers."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -5643,7 +5856,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": null,
             "decisionTag": null,
             "workingEffects": [
-              "Decaying Food"
+              {
+                "label": "Decaying Food",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 2 items every 12 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5657,7 +5873,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": null,
             "decisionTag": null,
             "workingEffects": [
-              "Decaying Food"
+              {
+                "label": "Decaying Food",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 2 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5671,7 +5890,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": null,
             "decisionTag": null,
             "workingEffects": [
-              "Decaying Food"
+              {
+                "label": "Decaying Food",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 2 items every 8 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5685,7 +5907,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": null,
             "decisionTag": null,
             "workingEffects": [
-              "Decaying Food"
+              {
+                "label": "Decaying Food",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 2 items every 6 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5698,8 +5923,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Blood Flower",
     "workingEffects": [],
     "threats": [
-      "Blood Flower",
-      "Mitosis"
+      {
+        "label": "Blood Flower",
+        "description": "The odor of Blood Flowers is making people feel sick. (‑3 to Global Resolve)"
+      },
+      {
+        "label": "Mitosis",
+        "description": "Blood Flowers have a tendency to spread uncontrollably."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 150.0,
@@ -5714,7 +5945,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Growth Medium"
+              {
+                "label": "Growth Medium",
+                "description": "The Blightrot inside the Rainpunk Cauldron feeds on everything it encounters. For every 20 food produced, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5761,7 +5995,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Growth Medium"
+              {
+                "label": "Growth Medium",
+                "description": "The Blightrot inside the Rainpunk Cauldron feeds on everything it encounters. For every 20 food produced, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5808,7 +6045,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Growth Medium"
+              {
+                "label": "Growth Medium",
+                "description": "The Blightrot inside the Rainpunk Cauldron feeds on everything it encounters. For every 20 food produced, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5855,7 +6095,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Growth Medium"
+              {
+                "label": "Growth Medium",
+                "description": "The Blightrot inside the Rainpunk Cauldron feeds on everything it encounters. For every 20 food produced, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -5904,7 +6147,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Blightrot Cauldron",
     "workingEffects": [],
     "threats": [
-      "Engine Corrosion"
+      {
+        "label": "Engine Corrosion",
+        "description": "Contaminated liquid gets inside Rain Engines through underground pipes. Using water in Rain Engines generates Blightrot Cysts 50% quicker."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -6373,7 +6619,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑3 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6404,7 +6653,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑4 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6435,7 +6687,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑5 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6466,7 +6721,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑6 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6499,8 +6757,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Small Destroyed Caravan",
     "workingEffects": [],
     "threats": [
-      "Unwelcoming Region",
-      "Cleanup Duty"
+      {
+        "label": "Unwelcoming Region",
+        "description": "Traders are afraid, and will not visit this area. Neither trading nor trade routes are available."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -6515,7 +6779,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑5 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6546,7 +6813,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑6 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6577,7 +6847,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑7 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6608,7 +6881,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Loot",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Fear of the Wilds"
+              {
+                "label": "Fear of the Wilds",
+                "description": "People are afraid of whatever destroyed the caravan. (‑8 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -6641,8 +6917,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Large Destroyed Caravan",
     "workingEffects": [],
     "threats": [
-      "Unwelcoming Region",
-      "Cleanup Duty"
+      {
+        "label": "Unwelcoming Region",
+        "description": "Traders are afraid, and will not visit this area. Neither trading nor trade routes are available."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -6657,7 +6939,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Whispering Tombs"
+              {
+                "label": "Whispering Tombs",
+                "description": "Some secrets are better left untold. Get 20 Hostility every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -6705,7 +6990,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Whispering Tombs"
+              {
+                "label": "Whispering Tombs",
+                "description": "Some secrets are better left untold. Get 20 Hostility every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -6753,7 +7041,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Whispering Tombs"
+              {
+                "label": "Whispering Tombs",
+                "description": "Some secrets are better left untold. Get 20 Hostility every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -6801,7 +7092,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Whispering Tombs"
+              {
+                "label": "Whispering Tombs",
+                "description": "Some secrets are better left untold. Get 20 Hostility every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -6851,8 +7145,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Hidden Trader Cemetery",
     "workingEffects": [],
     "threats": [
-      "Tit for Tat",
-      "Cleanup Duty"
+      {
+        "label": "Tit for Tat",
+        "description": "A quick cover-up of this crime will prevent any serious consequences. Otherwise, the Merchant Guild will retaliate. All your goods are worth 50% less to traders."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -7476,7 +7776,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Persuade",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Defenseless"
+              {
+                "label": "Defenseless",
+                "description": "Villagers have heard rumors of dangerous fugitives in the area. They are worried that desperate criminals might attack them. (‑5 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -7510,7 +7813,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Persuade",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Defenseless"
+              {
+                "label": "Defenseless",
+                "description": "Villagers have heard rumors of dangerous fugitives in the area. They are worried that desperate criminals might attack them. (‑6 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -7544,7 +7850,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Persuade",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Defenseless"
+              {
+                "label": "Defenseless",
+                "description": "Villagers have heard rumors of dangerous fugitives in the area. They are worried that desperate criminals might attack them. (‑7 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -7578,7 +7887,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Persuade",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Defenseless"
+              {
+                "label": "Defenseless",
+                "description": "Villagers have heard rumors of dangerous fugitives in the area. They are worried that desperate criminals might attack them. (‑8 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -7614,8 +7926,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Escaped Convicts",
     "workingEffects": [],
     "threats": [
-      "Plundering",
-      "Cleanup Duty"
+      {
+        "label": "Plundering",
+        "description": "The convicts will not dare to attack your settlement, but they will loot whatever they can find in the forest. They destroy 3 random caches, prioritizing the ones in already discovered glades."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -7630,7 +7948,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Send Contaminated Goods",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Filthy Trick"
+              {
+                "label": "Filthy Trick",
+                "description": "The Crown won't tolerate this level of incompetence when dealing with the Blightrot. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -7657,7 +7978,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Friend or Foe"
+              {
+                "label": "Friend or Foe",
+                "description": "The forest is merciless to those who exploit it. To protect itself, it may even sometimes ally with the Blightrot. Every 120 seconds, Blightrot Cysts (1) are spawned for each earned Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -7697,7 +8021,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Send Contaminated Goods",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Filthy Trick"
+              {
+                "label": "Filthy Trick",
+                "description": "The Crown won't tolerate this level of incompetence when dealing with the Blightrot. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -7724,7 +8051,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Friend or Foe"
+              {
+                "label": "Friend or Foe",
+                "description": "The forest is merciless to those who exploit it. To protect itself, it may even sometimes ally with the Blightrot. Every 120 seconds, Blightrot Cysts (1) are spawned for each earned Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -7764,7 +8094,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Send Contaminated Goods",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Filthy Trick"
+              {
+                "label": "Filthy Trick",
+                "description": "The Crown won't tolerate this level of incompetence when dealing with the Blightrot. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -7791,7 +8124,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Friend or Foe"
+              {
+                "label": "Friend or Foe",
+                "description": "The forest is merciless to those who exploit it. To protect itself, it may even sometimes ally with the Blightrot. Every 120 seconds, Blightrot Cysts (1) are spawned for each earned Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -7831,7 +8167,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Send Contaminated Goods",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Filthy Trick"
+              {
+                "label": "Filthy Trick",
+                "description": "The Crown won't tolerate this level of incompetence when dealing with the Blightrot. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -7858,7 +8197,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Friend or Foe"
+              {
+                "label": "Friend or Foe",
+                "description": "The forest is merciless to those who exploit it. To protect itself, it may even sometimes ally with the Blightrot. Every 120 seconds, Blightrot Cysts (1) are spawned for each earned Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -7900,8 +8242,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Corrupted Caravan",
     "workingEffects": [],
     "threats": [
-      "Straight to the Hearth",
-      "Cleanup Duty"
+      {
+        "label": "Straight to the Hearth",
+        "description": "Your settlement's strongest and weakest point has become a direct target for the Blightrot. Corruption in the Ancient Hearth grows 50% quicker."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -9433,7 +9781,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blight Incantation"
+              {
+                "label": "Blight Incantation",
+                "description": "A powerful, necrotic curse. Burning Blightrot Cysts takes 10 more seconds. Hostility is increased by +15 points for every Wildfire Essence stored in the settlement's Warehouse. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9459,7 +9810,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -9494,7 +9848,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blight Incantation"
+              {
+                "label": "Blight Incantation",
+                "description": "A powerful, necrotic curse. Burning Blightrot Cysts takes 10 more seconds. Hostility is increased by +15 points for every Wildfire Essence stored in the settlement's Warehouse. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9520,7 +9877,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -9555,7 +9915,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blight Incantation"
+              {
+                "label": "Blight Incantation",
+                "description": "A powerful, necrotic curse. Burning Blightrot Cysts takes 10 more seconds. Hostility is increased by +15 points for every Wildfire Essence stored in the settlement's Warehouse. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9581,7 +9944,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -9616,7 +9982,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blight Incantation"
+              {
+                "label": "Blight Incantation",
+                "description": "A powerful, necrotic curse. Burning Blightrot Cysts takes 10 more seconds. Hostility is increased by +15 points for every Wildfire Essence stored in the settlement's Warehouse. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9642,7 +10011,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Forbidden Ritual"
+              {
+                "label": "Forbidden Ritual",
+                "description": "Horrible sacrifices are offered to the creatures trapped beneath the ancient seals. Perhaps this will keep them at rest for a while longer. Pray this never reaches the Queen's ears. Kills 1 random villager. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -9679,8 +10051,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Altar of Decay",
     "workingEffects": [],
     "threats": [
-      "The Night's Embrace",
-      "Cleanup Duty"
+      {
+        "label": "The Night's Embrace",
+        "description": "The settlement is slowly engulfed in darkness. Each Blightrot Cyst increases Hostility by +5 points during the storm."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -9728,7 +10106,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Fishmen Traps"
+              {
+                "label": "Fishmen Traps",
+                "description": "Trying to enter the Fishmen cave triggers hidden traps. A Fishmen Totem spawns every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9788,7 +10169,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Fishmen Traps"
+              {
+                "label": "Fishmen Traps",
+                "description": "Trying to enter the Fishmen cave triggers hidden traps. A Fishmen Totem spawns every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9848,7 +10232,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Fishmen Traps"
+              {
+                "label": "Fishmen Traps",
+                "description": "Trying to enter the Fishmen cave triggers hidden traps. A Fishmen Totem spawns every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9908,7 +10295,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Fishmen Traps"
+              {
+                "label": "Fishmen Traps",
+                "description": "Trying to enter the Fishmen cave triggers hidden traps. A Fishmen Totem spawns every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9937,8 +10327,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fishmen Cave",
     "workingEffects": [],
     "threats": [
-      "Fishmen Witchcraft",
-      "Cleanup Duty"
+      {
+        "label": "Fishmen Witchcraft",
+        "description": "Fishmen witches have prepared a special surprise for anyone trying to break into the cave. Spawns 3 Fishmen Totems."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -9953,7 +10349,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Lesser Cold Flame"
+              {
+                "label": "Lesser Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 50 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -9979,7 +10378,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Cold Flame"
+              {
+                "label": "Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 100 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10014,7 +10416,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Lesser Cold Flame"
+              {
+                "label": "Lesser Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 50 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10040,7 +10445,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Cold Flame"
+              {
+                "label": "Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 100 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10075,7 +10483,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Lesser Cold Flame"
+              {
+                "label": "Lesser Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 50 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10101,7 +10512,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Cold Flame"
+              {
+                "label": "Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 100 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10136,7 +10550,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Lesser Cold Flame"
+              {
+                "label": "Lesser Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 50 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10162,7 +10579,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Cold Flame"
+              {
+                "label": "Cold Flame",
+                "description": "A blinding light is aimed directly at the settlement's Hearths, turning the Holy Fire into a cold flame. Hostility is increased by 100 for each Firekeeper in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10199,8 +10619,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fishmen Lighthouse",
     "workingEffects": [],
     "threats": [
-      "Mesmerizing Light",
-      "Cleanup Duty"
+      {
+        "label": "Mesmerizing Light",
+        "description": "A strange and evil light is coming from the top of the lighthouse. It mesmerizes the settlement's scouts, causing them to work 20% slower on Glade Events. (Permanent. Won't be removed once the corresponding Glade Event is finished.)"
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -10240,7 +10666,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Hunt Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Thieving Fishmen"
+              {
+                "label": "Thieving Fishmen",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 3 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10292,7 +10721,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Hunt Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Thieving Fishmen"
+              {
+                "label": "Thieving Fishmen",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 4 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10344,7 +10776,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Hunt Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Thieving Fishmen"
+              {
+                "label": "Thieving Fishmen",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 5 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10396,7 +10831,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Hunt Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Thieving Fishmen"
+              {
+                "label": "Thieving Fishmen",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 6 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10425,7 +10863,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fishmen Outpost",
     "workingEffects": [],
     "threats": [
-      "Poisoned Food"
+      {
+        "label": "Poisoned Food",
+        "description": "Fishmen are small and cunning enough to sneak into a settlement and poison the food supply. Villagers have a +25% chance of death after eating."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -10440,7 +10881,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Foretell",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rain Sorcery"
+              {
+                "label": "Rain Sorcery",
+                "description": "A powerful spell that feeds on the insatiable anger of the forest. Hostility is increased by +50 for every scout in your settlement. This includes idle scouts and workers assigned to this event. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10470,7 +10914,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Capture",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blood Sorcery"
+              {
+                "label": "Blood Sorcery",
+                "description": "The comforts of the civilized world are disgustingly unnatural to the Fishmen. Every time 10 Complex Food, Clothing, or Service needs are fulfilled, 2 random villagers are killed. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10497,7 +10944,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Foretell",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rain Sorcery"
+              {
+                "label": "Rain Sorcery",
+                "description": "A powerful spell that feeds on the insatiable anger of the forest. Hostility is increased by +50 for every scout in your settlement. This includes idle scouts and workers assigned to this event. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10527,7 +10977,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Capture",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blood Sorcery"
+              {
+                "label": "Blood Sorcery",
+                "description": "The comforts of the civilized world are disgustingly unnatural to the Fishmen. Every time 10 Complex Food, Clothing, or Service needs are fulfilled, 2 random villagers are killed. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10554,7 +11007,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Foretell",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rain Sorcery"
+              {
+                "label": "Rain Sorcery",
+                "description": "A powerful spell that feeds on the insatiable anger of the forest. Hostility is increased by +50 for every scout in your settlement. This includes idle scouts and workers assigned to this event. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10584,7 +11040,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Capture",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blood Sorcery"
+              {
+                "label": "Blood Sorcery",
+                "description": "The comforts of the civilized world are disgustingly unnatural to the Fishmen. Every time 10 Complex Food, Clothing, or Service needs are fulfilled, 2 random villagers are killed. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10611,7 +11070,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Foretell",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rain Sorcery"
+              {
+                "label": "Rain Sorcery",
+                "description": "A powerful spell that feeds on the insatiable anger of the forest. Hostility is increased by +50 for every scout in your settlement. This includes idle scouts and workers assigned to this event. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10641,7 +11103,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Capture",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Blood Sorcery"
+              {
+                "label": "Blood Sorcery",
+                "description": "The comforts of the civilized world are disgustingly unnatural to the Fishmen. Every time 10 Complex Food, Clothing, or Service needs are fulfilled, 2 random villagers are killed. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10670,8 +11135,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fishman Soothsayer",
     "workingEffects": [],
     "threats": [
-      "Invoker",
-      "Cleanup Duty"
+      {
+        "label": "Invoker",
+        "description": "You begin to feel a growing anxiety. Something is changing in the aura. Negative Forest Mysteries require a lower Hostility level (-2) to activate during the Storm."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -10710,7 +11181,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10769,7 +11243,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10828,7 +11305,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10887,7 +11367,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -10924,8 +11407,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Rain Spirit Totem",
     "workingEffects": [],
     "threats": [
-      "Flooding",
-      "Curse of Weakness"
+      {
+        "label": "Flooding",
+        "description": "Though it may be primitive, Fishmen magic can be very effective. Destroys all roads in the settlement."
+      },
+      {
+        "label": "Curse of Weakness",
+        "description": "Villagers move 30% slower."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -10964,7 +11453,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Ritual of Denial"
+              {
+                "label": "Ritual of Denial",
+                "description": "Fishmen hate fire, and will do anything in their power to extinguish every last flame in the world. Blocks the ability to sacrifice goods in the Hearth. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -11027,7 +11519,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Ritual of Denial"
+              {
+                "label": "Ritual of Denial",
+                "description": "Fishmen hate fire, and will do anything in their power to extinguish every last flame in the world. Blocks the ability to sacrifice goods in the Hearth. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -11090,7 +11585,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Ritual of Denial"
+              {
+                "label": "Ritual of Denial",
+                "description": "Fishmen hate fire, and will do anything in their power to extinguish every last flame in the world. Blocks the ability to sacrifice goods in the Hearth. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -11153,7 +11651,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Perform Ritual",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Ritual of Denial"
+              {
+                "label": "Ritual of Denial",
+                "description": "Fishmen hate fire, and will do anything in their power to extinguish every last flame in the world. Blocks the ability to sacrifice goods in the Hearth. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -11194,8 +11695,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Totem of Denial",
     "workingEffects": [],
     "threats": [
-      "Fishmen Rituals",
-      "Cleanup Duty"
+      {
+        "label": "Fishmen Rituals",
+        "description": "Heavy clouds are gathering around the Sacrifice Totem. The storm’s duration is increased by +100%, while drizzle and clearance seasons are decreased by –50%."
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -11357,8 +11864,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Blight Fighter Captain",
     "workingEffects": [],
     "threats": [
-      "Darkest Shadows",
-      "Vanishing"
+      {
+        "label": "Darkest Shadows",
+        "description": "The offended ghost has brought misfortune upon you. Hostility is increased by 50."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -11520,8 +12033,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Suppressed Rebel",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys 6 stored <sprite name=\"[mat processed] parts\"> parts."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -11683,8 +12202,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Resentful Human",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Ale, Coats, Incense, Training Gear, Wine, Scrolls, Tea, Boots."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -11846,8 +12371,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of the Queen's Lickspittle",
     "workingEffects": [],
     "threats": [
-      "Disappointment",
-      "Vanishing"
+      {
+        "label": "Disappointment",
+        "description": "The ghosts are disappointed in you. You receive 0.5 Impatience Points."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -12009,8 +12540,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Lizard Leader",
     "workingEffects": [],
     "threats": [
-      "Blood for Blood",
-      "Vanishing"
+      {
+        "label": "Blood for Blood",
+        "description": "The Restless Spirits want revenge, or they will never find peace. Kills 3 villagers (Beavers)."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -12172,8 +12709,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Tortured Harpy",
     "workingEffects": [],
     "threats": [
-      "Blood for Blood",
-      "Vanishing"
+      {
+        "label": "Blood for Blood",
+        "description": "The Restless Spirits want revenge, or they will never find peace. Kills 3 villagers (Humans)."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -12335,8 +12878,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Beaver Engineer",
     "workingEffects": [],
     "threats": [
-      "Blood for Blood",
-      "Vanishing"
+      {
+        "label": "Blood for Blood",
+        "description": "The Restless Spirits want revenge, or they will never find peace. Kills 3 villagers (Lizards)."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -12498,8 +13047,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Poisoned Human",
     "workingEffects": [],
     "threats": [
-      "Blood for Blood",
-      "Vanishing"
+      {
+        "label": "Blood for Blood",
+        "description": "The Restless Spirits want revenge, or they will never find peace. Kills 3 villagers (Harpies)."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -12661,8 +13216,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Mad Alchemist",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Sea Marrow, Oil, Coal."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -12824,9 +13385,18 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Lizard Worker",
     "workingEffects": [],
     "threats": [
-      "Blood for Blood",
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Blood for Blood",
+        "description": "The Restless Spirits want revenge, or they will never find peace. Kills 3 villagers (Beavers)."
+      },
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Berries, Eggs, Insects, Meat, Mushrooms, Roots, Vegetables, Fish."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -12988,9 +13558,18 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Starved Harpy",
     "workingEffects": [],
     "threats": [
-      "Blood for Blood",
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Blood for Blood",
+        "description": "The Restless Spirits want revenge, or they will never find peace. Kills 3 villagers (Humans)."
+      },
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Berries, Eggs, Insects, Meat, Mushrooms, Roots, Vegetables, Fish."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -13152,8 +13731,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of an Innkeeper",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Biscuits, Jerky, Pickled Goods, Pie, Skewers, Porridge, Paste."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -13315,8 +13900,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Lizard Elder",
     "workingEffects": [],
     "threats": [
-      "Blood for Blood",
-      "Vanishing"
+      {
+        "label": "Blood for Blood",
+        "description": "The Restless Spirits want revenge, or they will never find peace. Kills 3 villagers (Foxes)."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -13478,8 +14069,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Lost Scout",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Ale, Coats, Incense, Training Gear, Wine, Scrolls, Tea, Boots."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -13641,8 +14238,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Murdered Trader",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Amber, Ancient Tablet."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -13804,8 +14407,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Deranged Scout",
     "workingEffects": [],
     "threats": [
-      "Darkest Shadows",
-      "Vanishing"
+      {
+        "label": "Darkest Shadows",
+        "description": "The offended ghost has brought misfortune upon you. Hostility is increased by 50."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -13967,8 +14576,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of Crazed Engineer",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys 6 stored <sprite name=\"[mat processed] parts\"> parts."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -14130,8 +14745,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Furious Villager",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Amber, Ancient Tablet."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -14293,8 +14914,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Scared Firekeeper",
     "workingEffects": [],
     "threats": [
-      "Darkest Shadows",
-      "Vanishing"
+      {
+        "label": "Darkest Shadows",
+        "description": "The offended ghost has brought misfortune upon you. Hostility is increased by 50."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -14456,8 +15083,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Loyal Servant",
     "workingEffects": [],
     "threats": [
-      "Scarlet Tears",
-      "Vanishing"
+      {
+        "label": "Scarlet Tears",
+        "description": "Pain and suffering speak through the phantoms of the past. Destroys all stored Tools."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -14619,7 +15252,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Defeated Viceroy",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -14781,7 +15417,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Druid",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -14943,7 +15582,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Royal Gardener",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -15105,7 +15747,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Hooded Knight",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -15267,7 +15912,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Fire Priest",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -15429,7 +16077,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Treasure Hunter",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -15591,7 +16242,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Royal Architect",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -15753,7 +16407,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Worried Carter",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -15915,7 +16572,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Storm Victim",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -16077,7 +16737,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Mourning Harpy",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -16239,7 +16902,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Terrified Woodcutter",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -16401,7 +17067,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Lizard General",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -16563,7 +17232,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of an Old Merchant",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -16725,7 +17397,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Fox Elder",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -16887,7 +17562,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Teadoctor",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -17049,7 +17727,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of an Old Stonemason",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -17211,7 +17892,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Philosopher",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -17373,7 +18057,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Homeless Man",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -17535,7 +18222,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Troublemaker",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -17697,7 +18387,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Ghost of a Fallen Newcomer",
     "workingEffects": [],
     "threats": [
-      "Vanishing"
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -17712,7 +18405,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Sensitivity"
+              {
+                "label": "Sensitivity",
+                "description": "All species become less Resilient. Resolve drops 500% faster. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -17776,7 +18472,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Sensitivity"
+              {
+                "label": "Sensitivity",
+                "description": "All species become less Resilient. Resolve drops 500% faster. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -17840,7 +18539,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Sensitivity"
+              {
+                "label": "Sensitivity",
+                "description": "All species become less Resilient. Resolve drops 500% faster. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -17904,7 +18606,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Sensitivity"
+              {
+                "label": "Sensitivity",
+                "description": "All species become less Resilient. Resolve drops 500% faster. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -17970,8 +18675,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Harmony Spirit Altar",
     "workingEffects": [],
     "threats": [
-      "Chaos",
-      "Cleanup Duty"
+      {
+        "label": "Chaos",
+        "description": "Harmony has been disturbed. (‑5 to Global Resolve)"
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -18023,8 +18734,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Heal",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Awakening",
-              "Infestation"
+              {
+                "label": "Awakening",
+                "description": "Upon awakening the Infected Mole, all dormant cysts activate and start to corrupt the Ancient Hearth. Cysts are vulnerable to Purging Fire when this effect is activated. Completing or canceling the event will not stop the corruption, and cysts will remain active until burned."
+              },
+              {
+                "label": "Infestation",
+                "description": "Blightrot becomes extremely aggressive. 8 Blightrot Cysts will spawn in the settlement. Each cyst increases Hostility by +10 points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18092,8 +18809,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Heal",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Awakening",
-              "Infestation"
+              {
+                "label": "Awakening",
+                "description": "Upon awakening the Infected Mole, all dormant cysts activate and start to corrupt the Ancient Hearth. Cysts are vulnerable to Purging Fire when this effect is activated. Completing or canceling the event will not stop the corruption, and cysts will remain active until burned."
+              },
+              {
+                "label": "Infestation",
+                "description": "Blightrot becomes extremely aggressive. 8 Blightrot Cysts will spawn in the settlement. Each cyst increases Hostility by +10 points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18161,8 +18884,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Heal",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Awakening",
-              "Infestation"
+              {
+                "label": "Awakening",
+                "description": "Upon awakening the Infected Mole, all dormant cysts activate and start to corrupt the Ancient Hearth. Cysts are vulnerable to Purging Fire when this effect is activated. Completing or canceling the event will not stop the corruption, and cysts will remain active until burned."
+              },
+              {
+                "label": "Infestation",
+                "description": "Blightrot becomes extremely aggressive. 8 Blightrot Cysts will spawn in the settlement. Each cyst increases Hostility by +10 points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18230,8 +18959,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Heal",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Awakening",
-              "Infestation"
+              {
+                "label": "Awakening",
+                "description": "Upon awakening the Infected Mole, all dormant cysts activate and start to corrupt the Ancient Hearth. Cysts are vulnerable to Purging Fire when this effect is activated. Completing or canceling the event will not stop the corruption, and cysts will remain active until burned."
+              },
+              {
+                "label": "Infestation",
+                "description": "Blightrot becomes extremely aggressive. 8 Blightrot Cysts will spawn in the settlement. Each cyst increases Hostility by +10 points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18264,7 +18999,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Infected Drainage Mole",
     "workingEffects": [],
     "threats": [
-      "Earthquake"
+      {
+        "label": "Earthquake",
+        "description": "Drainage moles are intelligent beings, but they can be very bad-tempered when hungry. Kills villagers and destroys all resource nodes, buildings, and events within a 20 field radius."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -18279,7 +19017,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Voice of the Forest"
+              {
+                "label": "Voice of the Forest",
+                "description": "Trees communicate with each other through their roots, making the forest aware of your every move. Spawns 1 Blightrot Cysts every 120 seconds for every 2 Dangerous (<sprite name=\"dangerous\">) or Forbidden Glade (<sprite name=\"forbidden\">) discovered. (the penalty is added retroactively)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -18326,7 +19067,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Voice of the Forest"
+              {
+                "label": "Voice of the Forest",
+                "description": "Trees communicate with each other through their roots, making the forest aware of your every move. Spawns 1 Blightrot Cysts every 120 seconds for every 2 Dangerous (<sprite name=\"dangerous\">) or Forbidden Glade (<sprite name=\"forbidden\">) discovered. (the penalty is added retroactively)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -18373,7 +19117,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Voice of the Forest"
+              {
+                "label": "Voice of the Forest",
+                "description": "Trees communicate with each other through their roots, making the forest aware of your every move. Spawns 1 Blightrot Cysts every 120 seconds for every 2 Dangerous (<sprite name=\"dangerous\">) or Forbidden Glade (<sprite name=\"forbidden\">) discovered. (the penalty is added retroactively)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -18420,7 +19167,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Voice of the Forest"
+              {
+                "label": "Voice of the Forest",
+                "description": "Trees communicate with each other through their roots, making the forest aware of your every move. Spawns 1 Blightrot Cysts every 120 seconds for every 2 Dangerous (<sprite name=\"dangerous\">) or Forbidden Glade (<sprite name=\"forbidden\">) discovered. (the penalty is added retroactively)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -18469,7 +19219,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Withered Tree",
     "workingEffects": [],
     "threats": [
-      "Effective Parasite"
+      {
+        "label": "Effective Parasite",
+        "description": "The Blightrot feeds on the tree's valuable nutrients, making new cysts much more resilient. Cysts burn for 5 seconds longer."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -18504,7 +19257,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Mount",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Kelpie's Charm"
+              {
+                "label": "Kelpie's Charm",
+                "description": "Villagers are under the spell of the Kelpie, controlled like marionettes. Every 90 seconds, 2 random villagers stop working and blindly walk toward the Kelpie where they hallucinate until the effect is gone. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18559,7 +19315,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Mount",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Kelpie's Charm"
+              {
+                "label": "Kelpie's Charm",
+                "description": "Villagers are under the spell of the Kelpie, controlled like marionettes. Every 90 seconds, 2 random villagers stop working and blindly walk toward the Kelpie where they hallucinate until the effect is gone. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18614,7 +19373,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Mount",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Kelpie's Charm"
+              {
+                "label": "Kelpie's Charm",
+                "description": "Villagers are under the spell of the Kelpie, controlled like marionettes. Every 90 seconds, 2 random villagers stop working and blindly walk toward the Kelpie where they hallucinate until the effect is gone. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18669,7 +19431,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Mount",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Kelpie's Charm"
+              {
+                "label": "Kelpie's Charm",
+                "description": "Villagers are under the spell of the Kelpie, controlled like marionettes. Every 90 seconds, 2 random villagers stop working and blindly walk toward the Kelpie where they hallucinate until the effect is gone. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18706,7 +19471,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "River Kelpie",
     "workingEffects": [],
     "threats": [
-      "Watery Grave"
+      {
+        "label": "Watery Grave",
+        "description": "The kelpie's eerie howl warns the villagers of a great threat. Summons a deadly wave that pulls 2 villagers underwater, drowning them."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -18721,7 +19489,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Upper Deck",
             "decisionTag": null,
             "workingEffects": [
-              "Cowardice"
+              {
+                "label": "Cowardice",
+                "description": "The Crown is disappointed in your cowardice. The knowledge obtained from the captain's maps would have been a valuable treasure for the Queen. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18752,7 +19523,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Lower Deck",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Queen's Sailors"
+              {
+                "label": "Queen's Sailors",
+                "description": "The storm wasn't gentle, even to a royal-flagged ship. When this effect is active, Hostility is increased by +110, but each ongoing trade route decreases Hostility by ‑40. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18779,7 +19553,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Upper Deck",
             "decisionTag": null,
             "workingEffects": [
-              "Cowardice"
+              {
+                "label": "Cowardice",
+                "description": "The Crown is disappointed in your cowardice. The knowledge obtained from the captain's maps would have been a valuable treasure for the Queen. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18810,7 +19587,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Lower Deck",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Queen's Sailors"
+              {
+                "label": "Queen's Sailors",
+                "description": "The storm wasn't gentle, even to a royal-flagged ship. When this effect is active, Hostility is increased by +110, but each ongoing trade route decreases Hostility by ‑40. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18837,7 +19617,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Upper Deck",
             "decisionTag": null,
             "workingEffects": [
-              "Cowardice"
+              {
+                "label": "Cowardice",
+                "description": "The Crown is disappointed in your cowardice. The knowledge obtained from the captain's maps would have been a valuable treasure for the Queen. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18868,7 +19651,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Lower Deck",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Queen's Sailors"
+              {
+                "label": "Queen's Sailors",
+                "description": "The storm wasn't gentle, even to a royal-flagged ship. When this effect is active, Hostility is increased by +110, but each ongoing trade route decreases Hostility by ‑40. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18895,7 +19681,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Upper Deck",
             "decisionTag": null,
             "workingEffects": [
-              "Cowardice"
+              {
+                "label": "Cowardice",
+                "description": "The Crown is disappointed in your cowardice. The knowledge obtained from the captain's maps would have been a valuable treasure for the Queen. You receive 0.5 Impatience Points. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              }
             ],
             "options1": [
               {
@@ -18926,7 +19715,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Search the Lower Deck",
             "decisionTag": "Loyalty",
             "workingEffects": [
-              "Queen's Sailors"
+              {
+                "label": "Queen's Sailors",
+                "description": "The storm wasn't gentle, even to a royal-flagged ship. When this effect is active, Hostility is increased by +110, but each ongoing trade route decreases Hostility by ‑40. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -18955,7 +19747,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Merchant Shipwreck",
     "workingEffects": [],
     "threats": [
-      "Captain's Curse"
+      {
+        "label": "Captain's Curse",
+        "description": "The captain is the last to leave the ship. Destroys a random Cornerstone in your possession. (Permanent. Won't be removed once the corresponding Glade Event is finished.)"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -18970,7 +19765,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Heavy Fog"
+              {
+                "label": "Heavy Fog",
+                "description": "The forest is shrouded in a thick miasma, making it impossible to see past the trees (Dangerous and Forbidden Glade warnings disabled). (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19000,7 +19798,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Hungry Mistworm"
+              {
+                "label": "Hungry Mistworm",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 3 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19027,7 +19828,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Heavy Fog"
+              {
+                "label": "Heavy Fog",
+                "description": "The forest is shrouded in a thick miasma, making it impossible to see past the trees (Dangerous and Forbidden Glade warnings disabled). (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19057,7 +19861,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Hungry Mistworm"
+              {
+                "label": "Hungry Mistworm",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 4 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19084,7 +19891,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Heavy Fog"
+              {
+                "label": "Heavy Fog",
+                "description": "The forest is shrouded in a thick miasma, making it impossible to see past the trees (Dangerous and Forbidden Glade warnings disabled). (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19114,7 +19924,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Hungry Mistworm"
+              {
+                "label": "Hungry Mistworm",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 5 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19141,7 +19954,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Heavy Fog"
+              {
+                "label": "Heavy Fog",
+                "description": "The forest is shrouded in a thick miasma, making it impossible to see past the trees (Dangerous and Forbidden Glade warnings disabled). (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19171,7 +19987,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Hungry Mistworm"
+              {
+                "label": "Hungry Mistworm",
+                "description": "Cooked and raw food in the Warehouse is disappearing at a rate of 6 items every 10 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19200,7 +20019,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Hungry Mistworm",
     "workingEffects": [],
     "threats": [
-      "Mistworm Infestation"
+      {
+        "label": "Mistworm Infestation",
+        "description": "Where there is one mistworm, soon many more will follow. Destroys all stored food (both raw and cooked)."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -19215,7 +20037,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Giant Beast"
+              {
+                "label": "Giant Beast",
+                "description": "Villagers are afraid of going into the woods. All woodcutters and gatherers get a ‑16 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19241,7 +20066,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19268,7 +20096,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Giant Beast"
+              {
+                "label": "Giant Beast",
+                "description": "Villagers are afraid of going into the woods. All woodcutters and gatherers get a ‑18 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19294,7 +20125,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19321,7 +20155,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Giant Beast"
+              {
+                "label": "Giant Beast",
+                "description": "Villagers are afraid of going into the woods. All woodcutters and gatherers get a ‑20 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19347,7 +20184,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19374,7 +20214,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Feed",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Giant Beast"
+              {
+                "label": "Giant Beast",
+                "description": "Villagers are afraid of going into the woods. All woodcutters and gatherers get a ‑22 penalty to Resolve. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19400,7 +20243,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Chase Away",
             "decisionTag": null,
             "workingEffects": [
-              "Rage of the Forest"
+              {
+                "label": "Rage of the Forest",
+                "description": "The forest’s Hostility is temporarily increased by 100 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -19429,7 +20275,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Drainage Mole",
     "workingEffects": [],
     "threats": [
-      "Earthquake"
+      {
+        "label": "Earthquake",
+        "description": "Drainage moles are intelligent beings, but they can be very bad-tempered when hungry. Kills villagers and destroys all resource nodes, buildings, and events within a 20 field radius."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -19517,7 +20366,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Overflow"
+              {
+                "label": "Overflow",
+                "description": "The machine is somehow connected with the settlement's underground pipe system. You lose 4 units of a random type of rainwater every 12 seconds. Every 120 seconds, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19564,7 +20416,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Overflow"
+              {
+                "label": "Overflow",
+                "description": "The machine is somehow connected with the settlement's underground pipe system. You lose 4 units of a random type of rainwater every 12 seconds. Every 120 seconds, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19611,7 +20466,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Overflow"
+              {
+                "label": "Overflow",
+                "description": "The machine is somehow connected with the settlement's underground pipe system. You lose 4 units of a random type of rainwater every 12 seconds. Every 120 seconds, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19658,7 +20516,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tear Down",
             "decisionTag": null,
             "workingEffects": [
-              "Overflow"
+              {
+                "label": "Overflow",
+                "description": "The machine is somehow connected with the settlement's underground pipe system. You lose 4 units of a random type of rainwater every 12 seconds. Every 120 seconds, 2 Blightrot Cysts are spawned in the settlement. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19707,7 +20568,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Noxious Machinery",
     "workingEffects": [],
     "threats": [
-      "Blightrot Outbreak"
+      {
+        "label": "Blightrot Outbreak",
+        "description": "The explosion of the machine will not only destroy everything within a 10 field radius, but will also cause 5 Blightrot Cysts to spawn in the settlement."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -19722,8 +20586,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Degradation",
-              "Petrification"
+              {
+                "label": "Degradation",
+                "description": "Petrified wooden structures are slowly degrading. All homes can house 1 fewer resident. (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Petrification",
+                "description": "A petrified tree is radiating its sickness onto the entire forest. Tree felling is 50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19761,8 +20631,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Degradation",
-              "Petrification"
+              {
+                "label": "Degradation",
+                "description": "Petrified wooden structures are slowly degrading. All homes can house 1 fewer resident. (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Petrification",
+                "description": "A petrified tree is radiating its sickness onto the entire forest. Tree felling is 50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19800,8 +20676,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Degradation",
-              "Petrification"
+              {
+                "label": "Degradation",
+                "description": "Petrified wooden structures are slowly degrading. All homes can house 1 fewer resident. (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Petrification",
+                "description": "A petrified tree is radiating its sickness onto the entire forest. Tree felling is 50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19839,8 +20721,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cut Down",
             "decisionTag": null,
             "workingEffects": [
-              "Degradation",
-              "Petrification"
+              {
+                "label": "Degradation",
+                "description": "Petrified wooden structures are slowly degrading. All homes can house 1 fewer resident. (Is active only when the corresponding Glade Event is being worked on)"
+              },
+              {
+                "label": "Petrification",
+                "description": "A petrified tree is radiating its sickness onto the entire forest. Tree felling is 50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -19880,7 +20768,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Petrified Tree",
     "workingEffects": [],
     "threats": [
-      "Petrified Wood"
+      {
+        "label": "Petrified Wood",
+        "description": "The sickness of the petrified tree spreads throughout the settlement. Destroys all stored wood (planks, wood)."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -20213,8 +21104,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Fuming Machinery",
     "workingEffects": [],
     "threats": [
-      "Discharge",
-      "Magical Explosion"
+      {
+        "label": "Discharge",
+        "description": "The core of the machinery is unstable and will release a small discharge before the main explosion. Destroys deposits and trees, and kills villagers within a 5 field radius."
+      },
+      {
+        "label": "Magical Explosion",
+        "description": "The core of the machinery is unstable, and could explode at any minute. Destroys everything within a 10 field radius."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 120.0,
@@ -20229,7 +21126,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Contaminated Food"
+              {
+                "label": "Contaminated Food",
+                "description": "All food production (both raw and cooked) is 60% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20301,7 +21201,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Contaminated Food"
+              {
+                "label": "Contaminated Food",
+                "description": "All food production (both raw and cooked) is 70% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20373,7 +21276,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Contaminated Food"
+              {
+                "label": "Contaminated Food",
+                "description": "All food production (both raw and cooked) is 80% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20445,7 +21351,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Contaminated Food"
+              {
+                "label": "Contaminated Food",
+                "description": "All food production (both raw and cooked) is 90% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20519,8 +21428,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Leaking Cauldron",
     "workingEffects": [],
     "threats": [
-      "Toxic Ooze",
-      "Foul Taste"
+      {
+        "label": "Toxic Ooze",
+        "description": "A toxic substance of unknown origin. Destroys all planted crops in farm fields."
+      },
+      {
+        "label": "Foul Taste",
+        "description": "Food tastes terrible due to contaminants from a leaking cauldron. (‑8 to Global Resolve)"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -20535,7 +21450,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "High Voltage"
+              {
+                "label": "High Voltage",
+                "description": "The forest’s Hostility is temporarily increased by 200 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20607,7 +21525,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "High Voltage"
+              {
+                "label": "High Voltage",
+                "description": "The forest’s Hostility is temporarily increased by 200 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20679,7 +21600,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "High Voltage"
+              {
+                "label": "High Voltage",
+                "description": "The forest’s Hostility is temporarily increased by 200 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20751,7 +21675,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "High Voltage"
+              {
+                "label": "High Voltage",
+                "description": "The forest’s Hostility is temporarily increased by 200 points. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20825,7 +21752,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Lightning Catcher",
     "workingEffects": [],
     "threats": [
-      "Lightning Strike"
+      {
+        "label": "Lightning Strike",
+        "description": "Some scholars are trying to capture and harness the power of lightning... but their experiments usually bring destruction instead. Lightning will turn 4 buildings into ruins."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -20840,7 +21770,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Salvage",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 120 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -20849,7 +21782,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rebuild",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 120 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20897,7 +21833,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Salvage",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 110 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -20906,7 +21845,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rebuild",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 110 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -20954,7 +21896,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Salvage",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 100 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -20963,7 +21908,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rebuild",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 100 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -21011,7 +21959,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Salvage",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 90 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -21020,7 +21971,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Rebuild",
             "decisionTag": null,
             "workingEffects": [
-              "Overcharged Rainpunk Technology"
+              {
+                "label": "Overcharged Rainpunk Technology",
+                "description": "The corrupting power of the rain is seeping through the Rainpunk machinery. Every 90 seconds, a Blood Flower will appear near the Rainpunk Foundry. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -21070,7 +22024,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Destroyed Rainpunk Foundry",
     "workingEffects": [],
     "threats": [
-      "Magical Explosion"
+      {
+        "label": "Magical Explosion",
+        "description": "The core of the machinery is unstable, and could explode at any minute. Destroys everything within a 18 field radius."
+      }
     ],
     "workerSlots": 3,
     "totalTime": 270.0,
@@ -21531,7 +22488,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -21569,7 +22529,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -21607,7 +22570,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -21645,7 +22611,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -21698,7 +22667,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -21757,7 +22729,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -21816,7 +22791,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -21875,7 +22853,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -21949,7 +22930,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22008,7 +22992,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22067,7 +23054,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22126,7 +23116,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22200,7 +23193,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22259,7 +23255,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22318,7 +23317,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22377,7 +23379,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22451,7 +23456,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22510,7 +23518,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22569,7 +23580,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22628,7 +23642,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22702,7 +23719,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22761,7 +23781,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22820,7 +23843,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22879,7 +23905,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -22953,7 +23982,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23012,7 +24044,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23071,7 +24106,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23130,7 +24168,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23204,7 +24245,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23263,7 +24307,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23322,7 +24369,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23381,7 +24431,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23455,7 +24508,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23514,7 +24570,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23573,7 +24632,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23632,7 +24694,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23706,7 +24771,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23765,7 +24833,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23824,7 +24895,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23883,7 +24957,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -23957,7 +25034,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24016,7 +25096,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24075,7 +25158,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24134,7 +25220,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24208,7 +25297,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24267,7 +25359,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24326,7 +25421,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24385,7 +25483,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24459,7 +25560,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24518,7 +25622,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24577,7 +25684,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24636,7 +25746,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24710,7 +25823,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24769,7 +25885,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24828,7 +25947,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24887,7 +26009,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -24961,7 +26086,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25020,7 +26148,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25079,7 +26210,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25138,7 +26272,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25212,7 +26349,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25271,7 +26411,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25330,7 +26473,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25389,7 +26535,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25463,7 +26612,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25522,7 +26674,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25581,7 +26736,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25640,7 +26798,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25714,7 +26875,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25773,7 +26937,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25832,7 +26999,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 60 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -25891,7 +27061,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cleanse",
             "decisionTag": null,
             "workingEffects": [
-              "Frightening Visions"
+              {
+                "label": "Frightening Visions",
+                "description": "Horrific phantoms appear before the villagers. Get -3 to Global Resolve every 45 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -30720,8 +31893,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Black Treasure Stag",
     "workingEffects": [],
     "threats": [
-      "Into the Mists",
-      "Vanishing"
+      {
+        "label": "Into the Mists",
+        "description": "The treasure stag escapes to a nearby Dangerous (<sprite name=\"dangerous\">) or Forbidden Glade (<sprite name=\"forbidden\">), hiding from mortal sight."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -30883,8 +32062,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Golden Treasure Stag",
     "workingEffects": [],
     "threats": [
-      "Into the Mists",
-      "Vanishing"
+      {
+        "label": "Into the Mists",
+        "description": "The treasure stag escapes to a nearby Dangerous (<sprite name=\"dangerous\">) or Forbidden Glade (<sprite name=\"forbidden\">), hiding from mortal sight."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31046,8 +32231,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Royal Treasure Stag",
     "workingEffects": [],
     "threats": [
-      "Into the Mists",
-      "Vanishing"
+      {
+        "label": "Into the Mists",
+        "description": "The treasure stag escapes to a nearby Dangerous (<sprite name=\"dangerous\">) or Forbidden Glade (<sprite name=\"forbidden\">), hiding from mortal sight."
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31095,8 +32286,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Stormbird's Anger",
-              "Growing Darkness"
+              {
+                "label": "Stormbird's Anger",
+                "description": "Disturbing the Stormbird's nest will instantly summon a storm, which will continue until your scouts have finished working on the event. (Active only when the corresponding Glade Event is being worked on, but canceling the work will not stop the storm)"
+              },
+              {
+                "label": "Growing Darkness",
+                "description": "Villagers get a -4 penalty to their Resolve for each Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -31143,8 +32340,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Stormbird's Anger",
-              "Growing Darkness"
+              {
+                "label": "Stormbird's Anger",
+                "description": "Disturbing the Stormbird's nest will instantly summon a storm, which will continue until your scouts have finished working on the event. (Active only when the corresponding Glade Event is being worked on, but canceling the work will not stop the storm)"
+              },
+              {
+                "label": "Growing Darkness",
+                "description": "Villagers get a -4 penalty to their Resolve for each Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -31191,8 +32394,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Stormbird's Anger",
-              "Growing Darkness"
+              {
+                "label": "Stormbird's Anger",
+                "description": "Disturbing the Stormbird's nest will instantly summon a storm, which will continue until your scouts have finished working on the event. (Active only when the corresponding Glade Event is being worked on, but canceling the work will not stop the storm)"
+              },
+              {
+                "label": "Growing Darkness",
+                "description": "Villagers get a -4 penalty to their Resolve for each Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -31239,8 +32448,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Stormbird's Anger",
-              "Growing Darkness"
+              {
+                "label": "Stormbird's Anger",
+                "description": "Disturbing the Stormbird's nest will instantly summon a storm, which will continue until your scouts have finished working on the event. (Active only when the corresponding Glade Event is being worked on, but canceling the work will not stop the storm)"
+              },
+              {
+                "label": "Growing Darkness",
+                "description": "Villagers get a -4 penalty to their Resolve for each Hostility level. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [],
             "options2": []
@@ -31256,8 +32471,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Giant Stormbird's Nest",
     "workingEffects": [],
     "threats": [
-      "Violent Dusk",
-      "Cleanup Duty"
+      {
+        "label": "Violent Dusk",
+        "description": "With its giant wings, the Stormbird can bring even more stormy clouds over the settlement. Villagers get a -4 penalty to their Resolve during each storm. Multiplies with Hostility level. (Permanent. Won't be removed once the corresponding Glade Event is finished.)"
+      },
+      {
+        "label": "Cleanup Duty",
+        "description": "1 Impatience Point"
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -31272,7 +32493,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Termite Infestation"
+              {
+                "label": "Termite Infestation",
+                "description": "Harvesting and planting are –50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31298,7 +32522,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Stonetooth Swarm"
+              {
+                "label": "Stonetooth Swarm",
+                "description": "Agitated termites can be a real nuisance. (‑5 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31325,7 +32552,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Termite Infestation"
+              {
+                "label": "Termite Infestation",
+                "description": "Harvesting and planting are –50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31351,7 +32581,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Stonetooth Swarm"
+              {
+                "label": "Stonetooth Swarm",
+                "description": "Agitated termites can be a real nuisance. (‑5 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31378,7 +32611,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Termite Infestation"
+              {
+                "label": "Termite Infestation",
+                "description": "Harvesting and planting are –50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31404,7 +32640,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Stonetooth Swarm"
+              {
+                "label": "Stonetooth Swarm",
+                "description": "Agitated termites can be a real nuisance. (‑5 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31431,7 +32670,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Burn Down",
             "decisionTag": null,
             "workingEffects": [
-              "Termite Infestation"
+              {
+                "label": "Termite Infestation",
+                "description": "Harvesting and planting are –50% slower. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31457,7 +32699,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Tame",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Stonetooth Swarm"
+              {
+                "label": "Stonetooth Swarm",
+                "description": "Agitated termites can be a real nuisance. (‑5 to Global Resolve) (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -31486,7 +32731,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Stonetooth Termite Burrow",
     "workingEffects": [],
     "threats": [
-      "Agitated Swarm"
+      {
+        "label": "Agitated Swarm",
+        "description": "Nothing can stop a hungry stonetooth termite swarm from feeding. Destroys all stored building materials (bricks, fabric, planks)."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -31537,8 +32785,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Wandering Merchant - Hermit",
     "workingEffects": [],
     "threats": [
-      ">Missing key<",
-      "Vanishing"
+      {
+        "label": ">Missing key<",
+        "description": ">Missing key<"
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31589,8 +32843,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Wandering Merchant - Seer",
     "workingEffects": [],
     "threats": [
-      ">Missing key<",
-      "Vanishing"
+      {
+        "label": ">Missing key<",
+        "description": ">Missing key<"
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31641,8 +32901,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Wandering Merchant - Shaman",
     "workingEffects": [],
     "threats": [
-      ">Missing key<",
-      "Vanishing"
+      {
+        "label": ">Missing key<",
+        "description": ">Missing key<"
+      },
+      {
+        "label": "Vanishing",
+        "description": "If the ghost's request is not met in time, it will simply vanish."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31735,7 +33001,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Black Treasure Stag",
     "workingEffects": [],
     "threats": [
-      "Escape"
+      {
+        "label": "Escape",
+        "description": "When the specified time is up, the Treasure Stag will disappear into the forest."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31828,7 +33097,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Golden Treasure Stag",
     "workingEffects": [],
     "threats": [
-      "Escape"
+      {
+        "label": "Escape",
+        "description": "When the specified time is up, the Treasure Stag will disappear into the forest."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31921,7 +33193,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Royal Treasure Stag",
     "workingEffects": [],
     "threats": [
-      "Escape"
+      {
+        "label": "Escape",
+        "description": "When the specified time is up, the Treasure Stag will disappear into the forest."
+      }
     ],
     "workerSlots": 0,
     "totalTime": 0.0,
@@ -31936,8 +33211,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cultivate the Decay",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Decay",
-              "Queen's Wrath"
+              {
+                "label": "Decay",
+                "description": "The remains of the royal guard begin to decay. Spawns between 4 and 6 Blood Flowers upon activation. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              },
+              {
+                "label": "Queen's Wrath",
+                "description": "Somehow, word of your decision has spread and reached the Queen. Viceroy executions are quite rare, but not as rare as you might hope. Gain 2 Impatience Points."
+              }
             ],
             "options1": [],
             "options2": []
@@ -31980,8 +33261,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cultivate the Decay",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Decay",
-              "Queen's Wrath"
+              {
+                "label": "Decay",
+                "description": "The remains of the royal guard begin to decay. Spawns between 4 and 6 Blood Flowers upon activation. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              },
+              {
+                "label": "Queen's Wrath",
+                "description": "Somehow, word of your decision has spread and reached the Queen. Viceroy executions are quite rare, but not as rare as you might hope. Gain 2 Impatience Points."
+              }
             ],
             "options1": [],
             "options2": []
@@ -32024,8 +33311,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cultivate the Decay",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Decay",
-              "Queen's Wrath"
+              {
+                "label": "Decay",
+                "description": "The remains of the royal guard begin to decay. Spawns between 4 and 6 Blood Flowers upon activation. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              },
+              {
+                "label": "Queen's Wrath",
+                "description": "Somehow, word of your decision has spread and reached the Queen. Viceroy executions are quite rare, but not as rare as you might hope. Gain 2 Impatience Points."
+              }
             ],
             "options1": [],
             "options2": []
@@ -32068,8 +33361,14 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Cultivate the Decay",
             "decisionTag": "Corruption",
             "workingEffects": [
-              "Decay",
-              "Queen's Wrath"
+              {
+                "label": "Decay",
+                "description": "The remains of the royal guard begin to decay. Spawns between 4 and 6 Blood Flowers upon activation. (Activates every time work on the corresponding Glade Event is started. The effect won't be reversed once work is stopped)"
+              },
+              {
+                "label": "Queen's Wrath",
+                "description": "Somehow, word of your decision has spread and reached the Queen. Viceroy executions are quite rare, but not as rare as you might hope. Gain 2 Impatience Points."
+              }
             ],
             "options1": [],
             "options2": []
@@ -32114,8 +33413,14 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Destroyed Cage of the Warbeast",
     "workingEffects": [],
     "threats": [
-      "Unleashed Beast",
-      "Hunting Ground"
+      {
+        "label": "Unleashed Beast",
+        "description": "A free-roaming warbeast will make the forest even more dangerous. Hostility of the Forest increases by 80."
+      },
+      {
+        "label": "Hunting Ground",
+        "description": "The creatures of the forest are not enough for the warbeast, so it must find other, more easily accessible food sources. Every newcomer caravan arrives with 2 fewer villagers on board."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,
@@ -32163,7 +33468,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Return the Child",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Wildfire Presence"
+              {
+                "label": "Wildfire Presence",
+                "description": "Fuel in the settlement's Warehouses is disappearing at a rate of 2 items every 15 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -32215,7 +33523,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Return the Child",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Wildfire Presence"
+              {
+                "label": "Wildfire Presence",
+                "description": "Fuel in the settlement's Warehouses is disappearing at a rate of 3 items every 15 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -32267,7 +33578,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Return the Child",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Wildfire Presence"
+              {
+                "label": "Wildfire Presence",
+                "description": "Fuel in the settlement's Warehouses is disappearing at a rate of 4 items every 15 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -32319,7 +33633,10 @@ export const gladeEvents: GladeEvent[] = [
             "name": "Return the Child",
             "decisionTag": "Empathy",
             "workingEffects": [
-              "Wildfire Presence"
+              {
+                "label": "Wildfire Presence",
+                "description": "Fuel in the settlement's Warehouses is disappearing at a rate of 5 items every 15 seconds. (Is active only when the corresponding Glade Event is being worked on)"
+              }
             ],
             "options1": [
               {
@@ -32340,7 +33657,10 @@ export const gladeEvents: GladeEvent[] = [
     "label": "Wildfire",
     "workingEffects": [],
     "threats": [
-      "Combustion"
+      {
+        "label": "Combustion",
+        "description": "The mere presence of a fire spirit can cause spontaneous combustion in its vicinity. Destroys all stored fuel (Coal, Oil, Wood, Sea Marrow)."
+      }
     ],
     "workerSlots": 2,
     "totalTime": 210.0,

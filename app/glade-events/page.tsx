@@ -5,63 +5,68 @@ import { gladeEvents } from '@/data/gladeEvents';
 import { cn } from '@/lib/utils';
 import { RootState } from '@/redux/store';
 import { GladeEvent, GladeSolveOption } from '@/types/GladeEvent';
+import { ItemUsage } from '@/types/ItemUsage';
 import { getImgSrc } from '@/utils/img/getImgSrc';
 import { interpolateSprites } from '@/utils/text/interpolateSprites';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
+const GladeSolveOptionColumn = ({ options }: { options?: ItemUsage[] }) =>
+{
+	return (
+		<div className='flex flex-col w-full items-start p-4 border'>
+			{options?.length === 1 ? (
+				<p>
+					<span className='font-semibold'>One</span> of:
+				</p>
+			) : (
+				<p>
+					<span className='font-semibold'>Requires</span>:
+				</p>
+			)}
+
+			<div className='w-full border-b my-1' />
+			{options?.map((item, index) => (
+				<div key={index} className='flex flex-row items-center gap-2'>
+					<p>{item.count}</p>
+					<ItemIcon item={item.id} size='s' />
+					<p>{item.id}</p>
+				</div>
+			))}
+		</div>
+	);
+};
+
 const GladeSolveOptionCard = (solveOption: GladeSolveOption) =>
 {
 	return (
 		<div className='flex flex-row p-4 border rounded-md'>
-			<div className='flex flex-col'>
+			<div className='flex flex-col w-full'>
 				<div className='flex flex-row items-center justify-center gap-2'>
 					<p>{solveOption.name}</p>
 					{solveOption.decisionTag && <p className='text-sm'>({solveOption.decisionTag})</p>}
 				</div>
-				<div className={cn('grid', solveOption.options2?.length > 0 ? ' grid-cols-2' : ' grid-cols-1')}>
-					<div className='flex flex-col items-start p-4 border'>
-						<p>
-							<span className='font-semibold'>One</span> of:
-						</p>
-                        <div className='w-full border-b my-1'/>
-						{solveOption.options1?.map((item, index) => (
-							<div key={index} className='flex flex-row items-center gap-2'>
-								<p>{item.count}</p>
-								<ItemIcon item={item.id} size='s' />
-								<p>{item.id}</p>
-							</div>
-						))}
-					</div>
-					{solveOption.options2 && solveOption.options2.length > 0 && (
-						<div className='flex flex-col items-start p-4 border border-l-0'>
-						<p>
-							<span className='font-semibold'>One</span> of:
-						</p>
-                        <div className='w-full border-b my-1'/>
+				<div className={cn('grid w-full', solveOption.options2?.length > 0 ? ' grid-cols-2' : ' grid-cols-1')}>
+					<GladeSolveOptionColumn options={solveOption.options1} />
+					{solveOption.options2?.length > 0 && <GladeSolveOptionColumn options={solveOption.options2} />}
+				</div>
 
-							{solveOption.options2?.map((item, index) => (
-								<div key={index} className='flex flex-row items-center gap-2'>
-									<p>{item.count}</p>
-									<ItemIcon item={item.id} size='s' />
-									<p>{item.id}</p>
+				{solveOption.workingEffects?.length > 0 && (
+					<div>
+						<p>Working Effects</p>
+						<div className='flex flex-col gap-2'>
+							{solveOption.workingEffects?.map((effect, index) => (
+								<div className='flex flex-row items-start gap-2 border p-1 rounded-md' key={`we_${index}`}>
+									<img className='h-16 aspect aspect-square' src={`/img/${getImgSrc(effect.label)}.png`} />
+									<div className='flex flex-col gap-1'>
+										<p className='text-lg font-medium'>{effect.label}</p>
+										<p>{effect.description}</p>
+									</div>
 								</div>
 							))}
 						</div>
-					)}
-				</div>
-
-                <div>
-                    <p>Working Effects</p>
-                    <div className='flex flex-row gap-2'>
-                        {solveOption.workingEffects?.map((effect, index) => (
-                            <div className='flex flex-row items-center' key={`we_${index}`}>
-                                <img src={`/img/${getImgSrc(effect)}.png`}/>
-                                <p>{effect}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+					</div>
+				)}
 			</div>
 		</div>
 	);
