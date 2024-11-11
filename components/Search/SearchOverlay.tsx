@@ -55,7 +55,7 @@ const SearchOverlay = () =>
 	return (
 		<div>
 				<div
-					className={cn("fixed inset-0 bg-black bg-opacity-50 transition-all duration-1000 flex items-center justify-center")}
+					className={cn("fixed inset-0 transition-colors duration-300 flex items-center justify-center bg-black z-50", (isOverlayOpen ? " bg-opacity-50 " : " bg-opacity-0 invisible"))}
 					onClick={() => setIsOverlayOpen(false)}
 				>
 					<div
