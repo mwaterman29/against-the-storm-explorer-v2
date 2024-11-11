@@ -7,7 +7,8 @@ import { uuid } from '../uuid';
 
 function extractSpriteName(input: string): string
 {
-	const match = input.match(/<sprite name="\[.*?\]\s*(.*?)">/);
+	//const match = input.match(/<sprite name="\[.*?\]\s*(.*?)">/);
+	const match = input.match(/\[.*?\]\s*(.*?)/);
 	return match ? match[1] : '';
 }
 
@@ -38,7 +39,7 @@ const patterns: Array<{ pattern: RegExp; replacer: (match: string, index: number
 				<img className='h-6 w-6 aspect-square' key={uuid()} src={imgSrc} alt={formattedName} style={{ display: 'inline', verticalAlign: 'middle' }} />
 			);
 		}
-	}
+	},
 ];
 
 function interpolateSprites(text: string): React.ReactNode

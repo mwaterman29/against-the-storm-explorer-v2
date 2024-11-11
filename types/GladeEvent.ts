@@ -16,6 +16,7 @@ interface GladeSolveOption
 {
 	name: string | null;
 	decisionTag: string | null;
+	workingEffects: string[];
 	options1: ItemUsage[];
 	options2: ItemUsage[];
 }
@@ -26,8 +27,8 @@ interface GladeEvent
 	label: string;
 	difficulties: GladeDifficulty[];
 	rewardTableNames: string[];
-	EffectsWhileWorking: string[];
-	ThreatEffects: string[];
+	workingEffects: string[];
+	threats: string[];
 	workerSlots: number;
 	totalTime: number;
 	difficulty: string;

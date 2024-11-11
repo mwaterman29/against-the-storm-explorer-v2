@@ -1,4 +1,6 @@
 function formatName(name: string): string {
+    if(!name) return name;
+
     return name
         .replace(/_/g, ' ')
         .split(' ')
