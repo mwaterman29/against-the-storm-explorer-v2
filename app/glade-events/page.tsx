@@ -11,6 +11,28 @@ import { interpolateSprites } from '@/utils/text/interpolateSprites';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
+function formatSecondsToMMSS(seconds: number): string
+{
+	const minutes = Math.floor(seconds / 60);
+	const remainingSeconds = seconds % 60;
+	const formattedMinutes = minutes.toString().padStart(2, '0');
+	const formattedSeconds = remainingSeconds.toString().padStart(2, '0');
+	return `${formattedMinutes}:${formattedSeconds}`;
+}
+
+const GladeEffectCard = ({ effect }: { effect: any }) =>
+{
+	return (
+		<div className='flex flex-row items-start gap-2 border p-1 rounded-md'>
+			<img className='h-16 aspect aspect-square' src={`/img/${getImgSrc(effect.label)}.png`} />
+			<div className='flex flex-col gap-1'>
+				<p className='text-lg font-medium'>{effect.label}</p>
+				<p>{interpolateSprites(effect.description)}</p>
+			</div>
+		</div>
+	);
+};
+
 const GladeSolveOptionColumn = ({ options }: { options?: ItemUsage[] }) =>
 {
 	return (
@@ -55,15 +77,7 @@ const GladeSolveOptionCard = (solveOption: GladeSolveOption) =>
 					<div>
 						<p>Working Effects</p>
 						<div className='flex flex-col gap-2'>
-							{solveOption.workingEffects?.map((effect, index) => (
-								<div className='flex flex-row items-start gap-2 border p-1 rounded-md' key={`we_${index}`}>
-									<img className='h-16 aspect aspect-square' src={`/img/${getImgSrc(effect.label)}.png`} />
-									<div className='flex flex-col gap-1'>
-										<p className='text-lg font-medium'>{effect.label}</p>
-										<p>{interpolateSprites(effect.description)}</p>
-									</div>
-								</div>
-							))}
+							{solveOption.workingEffects?.map((effect, index) => <GladeEffectCard key={`we_${index}`} effect={effect} />)}
 						</div>
 					</div>
 				)}
@@ -79,12 +93,45 @@ const GladeEventCard = (event: GladeEvent) =>
 
 	const difficulty = event.difficulties[difficultyIndex];
 
+	let solveTime = event.totalTime;
+	if(solveTime > 120)
+	{
+		if (selectedDifficulty > 0)
+			{
+				solveTime += 30;
+			}
+			if (selectedDifficulty > 1)
+			{
+				solveTime += 30;
+			}
+			if (selectedDifficulty > 2)
+			{
+				solveTime += 30;
+			}
+	}
+	if (selectedDifficulty >= 12)
+	{
+		solveTime = Math.floor(solveTime * 1.4935);
+	}
+
 	return (
 		<div className='flex flex-row p-4 border rounded-md'>
 			<img className='w-48 h-48' src={`/img/${getImgSrc(event.id)}.png`} />
 			<div className='grid grid-cols-3'>
 				<GladeSolveOptionCard {...difficulty.gladeSolveOptions[0]} />
-				<div className='flex flex-col'></div>
+				<div className='flex flex-col'>
+					<p>Threats:</p>
+					{event.threats.map((threat, index) =>
+					{
+						return (
+							<div>
+								<GladeEffectCard effect={threat} />
+							</div>
+						);
+					})}
+					<hr />
+					<p>Time to Solve: {formatSecondsToMMSS(solveTime)}</p>
+				</div>
 				<GladeSolveOptionCard {...difficulty.gladeSolveOptions[1]} />
 			</div>
 		</div>
