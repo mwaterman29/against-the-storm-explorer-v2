@@ -60,7 +60,7 @@ const GladeSolveOptionCard = (solveOption: GladeSolveOption) =>
 									<img className='h-16 aspect aspect-square' src={`/img/${getImgSrc(effect.label)}.png`} />
 									<div className='flex flex-col gap-1'>
 										<p className='text-lg font-medium'>{effect.label}</p>
-										<p>{effect.description}</p>
+										<p>{interpolateSprites(effect.description)}</p>
 									</div>
 								</div>
 							))}

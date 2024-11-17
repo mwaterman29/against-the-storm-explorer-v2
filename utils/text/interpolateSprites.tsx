@@ -7,8 +7,7 @@ import { uuid } from '../uuid';
 
 function extractSpriteName(input: string): string
 {
-	//const match = input.match(/<sprite name="\[.*?\]\s*(.*?)">/);
-	const match = input.match(/\[.*?\]\s*(.*?)/);
+	const match = input.match(/<sprite name="(?:\[.*?\] )?(.*?)">/);
 	return match ? match[1] : '';
 }
 
@@ -35,8 +34,11 @@ const patterns: Array<{ pattern: RegExp; replacer: (match: string, index: number
 			const extractedName = extractSpriteName(match);
 			const formattedName = formatName(extractedName);
 			const imgSrc = `/img/${formattedName}.png`;
+		
+			//console.log(`imgSrc: ${imgSrc} from ${match}`);
+
 			return (
-				<img className='h-6 w-6 aspect-square' key={uuid()} src={imgSrc} alt={formattedName} style={{ display: 'inline', verticalAlign: 'middle' }} />
+				<img className='h-6 w-6 aspect-square border' key={uuid()} src={imgSrc} alt={formattedName} style={{ display: 'inline', verticalAlign: 'top' }} />
 			);
 		}
 	},
@@ -74,7 +76,7 @@ function interpolateSprites(text: string): React.ReactNode
 		result = newResult;
 	});
 
-	return <div className='flex flex-wrap gap-1'>{result}</div>;
+	return <p className=''>{result}</p>;
 }
 
 export { interpolateSprites };
