@@ -25,6 +25,7 @@ interface EffectSummary
 {
 	label: string;
 	description: string;
+	interval: number | null;
 }
 
 interface GladeEvent
