@@ -13,7 +13,7 @@ const patterns: RegExp[] =
 [
     /\(no reward\)/i,
     /Haunted/i,
-    /\s\d+$/,
+    ///\s\d+$/,
      /^\[Altar\]/i
 ];
 
