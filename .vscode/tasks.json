@@ -1,0 +1,49 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build BepInEx Mod",
+			"type": "shell",
+			"command": "msbuild",
+			"args": ["/p:Configuration=Release", "/t:Build", "ATSDataGenerator/ATSDataGenerator.sln"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Run Website",
+			"type": "shell",
+			"command": "yarn",
+			"args": ["run", "dev"],
+			"options": {
+				"cwd": "${workspaceFolder}/website"
+			}
+		},
+		{
+			"label": "Copy DLL to Game",
+			"type": "shell",
+			"command": "copy",
+			"args": [
+				"${workspaceFolder}/ATSDataGenerator/bin/Release/ATSDataGenerator.dll",
+				"G:/Gaming Time/Steam/steamapps/common/Against the Storm/BepInEx/plugins/ATSDataGenerator.dll"
+			]
+		},
+		{
+			"label": "Extract Class Metadata",
+			"type": "shell",
+			"command": "ilspycmd",
+			"args": [
+				"-p",
+				"-o",
+				"${workspaceFolder}/dump/",
+				"G:\\Gaming Time\\Steam\\steamapps\\common\\Against the Storm\\Against the Storm_Data\\Managed\\Assembly-CSharp.dll"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
