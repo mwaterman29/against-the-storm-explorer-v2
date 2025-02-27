@@ -9,7 +9,7 @@ import { GladeEvent, GladeSolveOption } from '@/types/GladeEvent';
 import { ItemUsage } from '@/types/ItemUsage';
 import { getImgSrc } from '@/utils/img/getImgSrc';
 import { interpolateSprites } from '@/utils/text/interpolateSprites';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useRef, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import GladeSolveOptionCard from './GladeSolveOptionCard';
 import { formatSecondsToMMSS } from '@/utils/formatSecondsToMMSS';
@@ -27,6 +27,20 @@ const GladeEventCard = (event: GladeEvent) =>
 
 	const [allVisible, setAllVisible] = useState(false);
 	const [visibleTab, setVisibleTab] = useState('solve1');
+	const cardRef = useRef<HTMLDivElement>(null);
+
+	const handleVisibilityToggle = () => {
+		setAllVisible(!allVisible);
+		// Wait for the next render cycle before scrolling
+		setTimeout(() => {
+			if (cardRef.current) {
+				cardRef.current.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center'
+				});
+			}
+		}, 0);
+	};
 
 	let solveTime = event.totalTime;
 	if (solveTime > 120)
@@ -41,11 +55,11 @@ const GladeEventCard = (event: GladeEvent) =>
 	}
 
 	return (
-		<div className={cn('flex p-4 border rounded-md text-white items-center gap-2', allVisible ? 'flex flex-row items-start col-span-4' : 'flex-col')}>
+		<div ref={cardRef} className={cn('flex p-4 border rounded-md text-white items-center gap-2', allVisible ? 'flex flex-row items-start col-span-4' : 'flex-col')}>
 			<div className='flex flex-col items-center gap-2'>
 				<div className='flex flex-row items-center justify-center gap-4 min-w-72'>
 					<p className='font-semibold text-2xl'>{event.label}</p>
-					<button onClick={() => setAllVisible(!allVisible)} className={cn(' bg-transparent transition-all duration-300 text-xl')}>
+					<button onClick={handleVisibilityToggle} className={cn(' bg-transparent transition-all duration-300 text-xl')}>
 						{allVisible ? <ArrowBackIos /> : <ArrowForwardIos />}
 					</button>
 				</div>
