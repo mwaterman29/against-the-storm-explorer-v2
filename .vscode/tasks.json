@@ -4,12 +4,18 @@
 		{
 			"label": "Build BepInEx Mod",
 			"type": "shell",
-			"command": "msbuild",
-			"args": ["/p:Configuration=Release", "/t:Build", "ATSDataGenerator/ATSDataGenerator.sln"],
+			"command": "dotnet",
+			"args": [
+			  "build",
+			  "${workspaceFolder}/data-generator/ATSDataGenerator.sln",
+			  "-c",
+			  "Release"
+			],
 			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
+			  "kind": "build",
+			  "isDefault": true
+			},
+			"problemMatcher": []
 		},
 		{
 			"label": "Run Website",

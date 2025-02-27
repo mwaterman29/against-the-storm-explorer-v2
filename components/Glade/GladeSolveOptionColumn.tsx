@@ -18,7 +18,7 @@ const GladeSolveOptionColumn = ({ options, showBorder }: { options?: ItemUsage[]
 		<div className='flex flex-col w-full items-start gap-1'>
 			{options && options.length > 0 && (
 				<div className={cn('flex flex-col p-4 pt-1 gap-1 h-full w-full relative', showBorder ? 'border-r ' : '')}>
-					<div className='absolute top-2 right-2'>
+					<div className='//absolute //top-2 //right-2'>
 						{options?.length === 1 ? (
 							<p className='hidden'>
 								(<span className='font-semibold'>Required</span>)

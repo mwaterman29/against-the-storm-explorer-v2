@@ -556,25 +556,25 @@ namespace ATSDataGenerator
                         else
                             index.AppendLine($@"<div><h5>{logic.DisplayName} {logic.GetAmountText()}</div>");
                     }
-                    if (orderLogicSet.rewards != null) //overrideRewards???
-                    {
-                        index.AppendLine($@"<h4>Rewards:</h4>");
-                        foreach (var reward in orderLogicSet.rewards)
-                        {
-                            if (reward.Name != null)
-                                GetEffectSource(reward).orders.Add(order.Name);
-                            index.AppendLine($@"<div><h5>{reward?.Name ?? "<???>"}</h5></div>");
-                        }
-                    } 
-                    else
-                    {
-                        index.AppendLine($@"<h4>Rewards:</h4>");
-                        foreach (var reward in order.rewards)
-                        {
-                            GetEffectSource(reward).orders.Add(order.Name);
-                            index.AppendLine($@"<div><h5>{reward.DisplayName} {reward.GetAmountText()}</h5></div>");
-                        }
-                    }
+                    // if (orderLogicSet.rewards != null) //overrideRewards???
+                    // {
+                    //     index.AppendLine($@"<h4>Rewards:</h4>");
+                    //     foreach (var reward in orderLogicSet.rewards)
+                    //     {
+                    //         if (reward.Name != null)
+                    //             GetEffectSource(reward).orders.Add(order.Name);
+                    //         index.AppendLine($@"<div><h5>{reward?.Name ?? "<???>"}</h5></div>");
+                    //     }
+                    // } 
+                    // else
+                    // {
+                    //     index.AppendLine($@"<h4>Rewards:</h4>");
+                    //     foreach (var reward in order.rewards)
+                    //     {
+                    //         GetEffectSource(reward).orders.Add(order.Name);
+                    //         index.AppendLine($@"<div><h5>{reward.DisplayName} {reward.GetAmountText()}</h5></div>");
+                    //     }
+                    // }
                     index.AppendLine($@"<div><h5>{order.reputationReward.DisplayName} {order.reputationReward.GetAmountText()}</h5></div>");
                     index.AppendLine($@"</div>");
                 }

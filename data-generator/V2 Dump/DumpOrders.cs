@@ -47,20 +47,20 @@ namespace ATSDumpV2
                             logicSet.Logics.Add($"{logic.DisplayName} {logic.GetAmountText()}");
                     }
 
-                    if (orderLogicSet.rewards != null)
-                    {
-                        foreach (var reward in orderLogicSet.rewards)
-                        {
-                            logicSet.Rewards.Add(reward?.Name ?? "<???>");
-                        }
-                    }
-                    else
-                    {
-                        foreach (var reward in order.rewards)
-                        {
-                            logicSet.Rewards.Add($"{reward.DisplayName} {reward.GetAmountText()}");
-                        }
-                    }
+                    // if (orderLogicSet.rewards != null)
+                    // {
+                    //     foreach (var reward in orderLogicSet.rewards)
+                    //     {
+                    //         logicSet.Rewards.Add(reward?.Name ?? "<???>");
+                    //     }
+                    // }
+                    // else
+                    // {
+                    //     foreach (var reward in order.rewards)
+                    //     {
+                    //         logicSet.Rewards.Add($"{reward.DisplayName} {reward.GetAmountText()}");
+                    //     }
+                    // }
 
                     orderObj.LogicSets.Add(logicSet);
                 }
