@@ -1,4 +1,4 @@
-[
+export const effects = [
   {
     "id": "Effect_CorruptedSacrifice_Name",
     "label": "Mark of the Sealed Ones",

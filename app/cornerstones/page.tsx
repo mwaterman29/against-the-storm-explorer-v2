@@ -1,117 +1,227 @@
 'use client';
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import * as EffectsData from '@/data/effects.json';
+import { effects } from '@/data/effects';
 import { cn } from '@/lib/utils';
 import { Cornerstone } from '@/types/Cornerstone';
 import { RootState } from '@/redux/store';
 import { useSelector } from 'react-redux';
 import CornerstoneComponent from '@/components/Cornerstone';
+import { useMemo, useState } from 'react';
+import KeyboardArrowDown from '@material-symbols/svg-400/outlined/keyboard_arrow_down.svg';
 
-const CornerstonesPage = () =>
-{
-	let cornerstones: Cornerstone[] = EffectsData.filter(effect => effect.type === 'Cornerstone');
+const categoryDescriptions: Record<string, { title: string; description: string }> = {
+	stormforged: {
+		title: 'Stormforged Cornerstones',
+		description: 'Stormforged Cornerstones are only available from the Forsaken Altar, during the storm.'
+	},
+	legendary: {
+		title: 'Legendary Cornerstones',
+		description: 'Legendary Cornerstones are offered at the start of even years, until after year 6.'
+	},
+	epic: {
+		title: 'Epic Cornerstones',
+		description: 'Epic Cornerstones are offered at the start of even years.'
+	},
+	perks: {
+		title: 'Perks',
+		description: '<perks explainer text eventually>'
+	},
+	effects: {
+		title: 'Effects',
+		description: '<effects explainer text eventually>'
+	}
+};
+
+const CornerstonesPage = () => {
+	const [searchTerm, setSearchTerm] = useState('');
 
 	//Account for settings
 	const showTutorial = useSelector((state: RootState) => state.settings.showTutorial);
 	const showInternal = useSelector((state: RootState) => state.settings.showInternal);
 
-	if (!showTutorial)
-	{
-		cornerstones = cornerstones.filter(cornerstone => !cornerstone.tags.includes('tutorial'));
-	}
+	const itemsByCategory = useMemo(() => {
+		let filteredEffects = effects;
 
-	if (!showInternal)
-	{
-		cornerstones = cornerstones.filter(cornerstone => !cornerstone.tags.includes('hidden'));
-	}
-
-	//Sort by tags length, then alphabetically
-	cornerstones.sort((a, b) =>
-	{
-		const tagLengthDifference = a.tags.length - b.tags.length;
-		if (tagLengthDifference !== 0)
-		{
-			return tagLengthDifference;
+		if (!showTutorial) {
+			filteredEffects = filteredEffects.filter(effect => !effect.tags.includes('tutorial'));
 		}
-		return a.label.localeCompare(b.label);
-	});
 
-	let stormforged = cornerstones.filter(cornerstone => cornerstone.tier === 'Mythic');
-	let annual = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary' || cornerstone.tier === 'Epic');
-	let legendary = cornerstones.filter(cornerstone => cornerstone.tier === 'Legendary');
-	let epic = cornerstones.filter(cornerstone => cornerstone.tier === 'Epic');
+		if (!showInternal) {
+			filteredEffects = filteredEffects.filter(effect => !effect.tags.includes('hidden'));
+		}
 
-	const test = {
-		"id": "Reward_ForgeTripHammer_Name",
-		"label": "Forge Trip Hammer (Stormforged)",
-		"description": "Powerful and precise machinery. Amber Test: <sprite name=\"[valuable] amber\"> Amber <sprite name=\"[mat processed] parts\"> Parts (<sprite name=grade3>) can be produced in the Smithy and +100% to amount of goods produced in the Smithy.",
-		"tier": "Mythic",
-		"type": "Cornerstone",
-		"biomeLock": [],
-		"soldBy": [],
-		"tags": []
-	}
+		// Filter by search term if present
+		if (searchTerm) {
+			filteredEffects = filteredEffects.filter(effect => 
+				effect.label.toLowerCase().includes(searchTerm.toLowerCase()) ||
+				effect.description.toLowerCase().includes(searchTerm.toLowerCase())
+			);
+		}
+
+		// Separate effects by type
+		const cornerstones = filteredEffects.filter(effect => effect.type === 'Cornerstone');
+		const perks = filteredEffects.filter(effect => effect.type === 'Perk');
+		const generalEffects = filteredEffects.filter(effect => effect.type === 'Effect');
+
+		return {
+			cornerstones: {
+				stormforged: cornerstones.filter(c => c.tier === 'Mythic'),
+				legendary: cornerstones.filter(c => c.tier === 'Legendary'),
+				epic: cornerstones.filter(c => c.tier === 'Epic')
+			},
+			perks,
+			effects: generalEffects
+		};
+	}, [effects, showTutorial, showInternal, searchTerm]);
+
+	const totalResults = Object.values(itemsByCategory.cornerstones).reduce((acc, cornerstones) => acc + cornerstones.length, 0) 
+		+ itemsByCategory.perks.length 
+		+ itemsByCategory.effects.length;
+
+	const hasCornerstones = Object.values(itemsByCategory.cornerstones).some(category => category.length > 0);
 
 	return (
-		<div className='flex flex-col gap-2 p-2 overflow-y-auto max-h-[calc(100dvh-48px)] bg-slate-900 text-slate-300'>
-			<Collapsible>
-				<CollapsibleTrigger className='flex flex-col items-start'>
-					<p className='text-xl text-white'>
-						<span className='text-perk-stormforged font-bold'>Stormforged</span> Cornerstones
-					</p>
-					<p>
-						<span className='text-perk-stormforged font-bold'>Stormforged</span> Cornerstones are only available from the Forsaken Altar, during the
-						storm.
-					</p>
-				</CollapsibleTrigger>
-				<CollapsibleContent className='flex flex-col gap-2'>
-					{stormforged.map((cornerstone, index) =>
-					{
-						return <CornerstoneComponent key={index} cornerstone={cornerstone} />;
-					})}
-				</CollapsibleContent>
-			</Collapsible>
-
-			<Collapsible>
-				<CollapsibleTrigger>
-					<p className='text-xl text-white'>
-						<span className='text-perk-orange font-bold'>Annual</span> Cornerstones
-					</p>
-				</CollapsibleTrigger>
-				<CollapsibleContent className='flex flex-col gap-2'>
-					<div className='flex flex-col py-2'>
-						<p className='text-white text-lg'>
-							<span className='text-perk-orange'>Legendary</span> Cornerstones
-						</p>
-						<p className=''>
-							<span className='text-perk-orange'>Legendary</span> Cornerstones are offered at the start of <strong>even years</strong>, until
-							after year 6.
-						</p>
-						<p></p>
-						<hr />
+		<div className='flex flex-col overflow-y-auto max-h-full bg-slate-900 text-white'>
+			<div className='flex flex-row items-center justify-between px-4 sm:px-8 py-4 bg-slate-800 border-b border-slate-700'>
+				<h1 className='text-2xl font-semibold text-slate-50'>Cornerstones, Perks, and Effects</h1>
+				<div className='relative max-w-md w-full ml-8'>
+					<input
+						type="text"
+						value={searchTerm}
+						onChange={(e) => setSearchTerm(e.target.value)}
+						placeholder="Search all items..."
+						className="w-full p-2 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-600"
+					/>
+					<div className='absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm'>
+						{searchTerm ? `${totalResults} results` : ''}
 					</div>
-					{legendary.map((cornerstone, index) =>
-					{
-						return <CornerstoneComponent key={index} cornerstone={cornerstone} />;
-					})}
+				</div>
+			</div>
 
-					<div className='flex flex-col py-2'>
-						<p className='text-white text-lg'>
-							<span className='text-perk-purple'>Epic</span> Cornerstones
-						</p>
-						<p className=''>
-							<span className='text-perk-purple'>Epic</span> Cornerstones are offered at the start of <strong>even years</strong>.
-						</p>
-						<p></p>
-						<hr />
-					</div>
-					{epic.map((cornerstone, index) =>
-					{
-						return <CornerstoneComponent key={index} cornerstone={cornerstone} />;
-					})}
-				</CollapsibleContent>
-			</Collapsible>
+			<div className='flex flex-col gap-8 p-4 sm:p-8'>
+				{/* Cornerstones Section */}
+				{hasCornerstones && (
+					<Collapsible defaultOpen>
+						<CollapsibleTrigger className='w-full items-start flex flex-col gap-2 group hover:opacity-80 transition-opacity'>
+							<div className='flex flex-row items-center gap-3'>
+								<h2 className='text-2xl font-semibold text-slate-50'>Cornerstones</h2>
+								<div className='text-2xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
+									<KeyboardArrowDown />
+								</div>
+							</div>
+							<hr className='w-full border-slate-700' />
+						</CollapsibleTrigger>
+						<CollapsibleContent className='flex flex-col gap-8 mt-4'>
+							{/* Stormforged */}
+							{itemsByCategory.cornerstones.stormforged.length > 0 && (
+								<Collapsible defaultOpen>
+									<CollapsibleTrigger className='w-full items-start flex flex-col gap-2 group hover:opacity-80 transition-opacity'>
+										<div className='flex flex-row items-center gap-3'>
+											<h3 className='text-xl font-semibold text-perk-stormforged'>{categoryDescriptions.stormforged.title}</h3>
+											<div className='text-xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
+												<KeyboardArrowDown />
+											</div>
+										</div>
+										<p className='text-slate-400 text-sm'>{categoryDescriptions.stormforged.description}</p>
+									</CollapsibleTrigger>
+									<CollapsibleContent className='mt-4'>
+										<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+											{itemsByCategory.cornerstones.stormforged.map((cornerstone, index) => (
+												<CornerstoneComponent key={index} cornerstone={cornerstone} />
+											))}
+										</div>
+									</CollapsibleContent>
+								</Collapsible>
+							)}
+
+							{/* Legendary */}
+							{itemsByCategory.cornerstones.legendary.length > 0 && (
+								<Collapsible defaultOpen>
+									<CollapsibleTrigger className='w-full items-start flex flex-col gap-2 group hover:opacity-80 transition-opacity'>
+										<div className='flex flex-row items-center gap-3'>
+											<h3 className='text-xl font-semibold text-perk-orange'>{categoryDescriptions.legendary.title}</h3>
+											<div className='text-xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
+												<KeyboardArrowDown />
+											</div>
+										</div>
+										<p className='text-slate-400 text-sm'>{categoryDescriptions.legendary.description}</p>
+									</CollapsibleTrigger>
+									<CollapsibleContent className='mt-4'>
+										<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+											{itemsByCategory.cornerstones.legendary.map((cornerstone, index) => (
+												<CornerstoneComponent key={index} cornerstone={cornerstone} />
+											))}
+										</div>
+									</CollapsibleContent>
+								</Collapsible>
+							)}
+
+							{/* Epic */}
+							{itemsByCategory.cornerstones.epic.length > 0 && (
+								<Collapsible defaultOpen>
+									<CollapsibleTrigger className='w-full items-start flex flex-col gap-2 group hover:opacity-80 transition-opacity'>
+										<div className='flex flex-row items-center gap-3'>
+											<h3 className='text-xl font-semibold text-perk-purple'>{categoryDescriptions.epic.title}</h3>
+											<div className='text-xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
+												<KeyboardArrowDown />
+											</div>
+										</div>
+										<p className='text-slate-400 text-sm'>{categoryDescriptions.epic.description}</p>
+									</CollapsibleTrigger>
+									<CollapsibleContent className='mt-4'>
+										<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+											{itemsByCategory.cornerstones.epic.map((cornerstone, index) => (
+												<CornerstoneComponent key={index} cornerstone={cornerstone} />
+											))}
+										</div>
+									</CollapsibleContent>
+								</Collapsible>
+							)}
+						</CollapsibleContent>
+					</Collapsible>
+				)}
+
+				{/* Perks Section */}
+				{itemsByCategory.perks.length > 0 && (
+					<Collapsible defaultOpen>
+						<CollapsibleTrigger className='w-full items-start flex flex-col gap-2 group hover:opacity-80 transition-opacity'>
+							<div className='flex flex-row items-center gap-3'>
+								<h2 className='text-2xl font-semibold text-slate-50'>{categoryDescriptions.perks.title}</h2>
+								<div className='text-2xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
+									<KeyboardArrowDown />
+								</div>
+							</div>
+							<p className='text-slate-400 text-sm'>{categoryDescriptions.perks.description}</p>
+							<hr className='w-full border-slate-700' />
+						</CollapsibleTrigger>
+						<CollapsibleContent className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4'>
+							{itemsByCategory.perks.map((perk, index) => (
+								<CornerstoneComponent key={index} cornerstone={perk} />
+							))}
+						</CollapsibleContent>
+					</Collapsible>
+				)}
+
+				{/* Effects Section */}
+				{itemsByCategory.effects.length > 0 && (
+					<Collapsible defaultOpen>
+						<CollapsibleTrigger className='w-full items-start flex flex-col gap-2 group hover:opacity-80 transition-opacity'>
+							<div className='flex flex-row items-center gap-3'>
+								<h2 className='text-2xl font-semibold text-slate-50'>{categoryDescriptions.effects.title}</h2>
+								<div className='text-2xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
+									<KeyboardArrowDown />
+								</div>
+							</div>
+							<p className='text-slate-400 text-sm'>{categoryDescriptions.effects.description}</p>
+							<hr className='w-full border-slate-700' />
+						</CollapsibleTrigger>
+						<CollapsibleContent className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4'>
+							{/* Effects will be implemented later */}
+						</CollapsibleContent>
+					</Collapsible>
+				)}
+			</div>
 		</div>
 	);
 };
