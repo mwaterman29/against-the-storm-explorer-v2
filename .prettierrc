@@ -10,6 +10,16 @@
 	"arrowParens": "avoid",
 	"trailingComma": "none",
 	"printWidth": 160,
-	"plugins": ["prettier-plugin-brace-style"],
-	"braceStyle": "allman"
+	"plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-brace-style", "prettier-plugin-merge"],
+	"braceStyle": "allman",
+	"importOrder": [
+		"^react",
+		"^@material-symbols/svg-400/.*$",
+		"^@/components/.*$",
+		"^@/utils/.*$",
+		"^@/types/.*$",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
 }
