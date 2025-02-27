@@ -55,7 +55,8 @@ const GladeEventCard = (event: GladeEvent) =>
 	}
 
 	return (
-		<div ref={cardRef} className={cn('flex p-4 border rounded-md text-white items-center gap-2', allVisible ? 'flex flex-row items-start col-span-4' : 'flex-col')}>
+		<div ref={cardRef} className={cn('flex p-4 border rounded-md text-white items-center gap-2', 
+			allVisible ? 'flex-col sm:flex-row items-start col-span-1 sm:col-span-2 lg:col-span-3 2xl:col-span-4' : 'flex-col')}>
 			<div className='flex flex-col items-center gap-2'>
 				<div className='flex flex-row items-center justify-center gap-4 min-w-72'>
 					<p className='font-semibold text-2xl'>{event.label}</p>
