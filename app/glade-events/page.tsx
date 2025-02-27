@@ -68,35 +68,42 @@ const GladeEventsPage = () =>
 	}, [gladeEvents, searchTerm]);
 
 	return (
-		<div className='flex flex-col overflow-y-auto max-h-full bg-slate-900 text-white p-4'>
-			<div className='flex flex-col py-4 gap-4'>
-				<p>Glade Events</p>
-				<input
-					type="text"
-					value={searchTerm}
-					onChange={(e) => setSearchTerm(e.target.value)}
-					placeholder="Search events by name..."
-					className="p-2 rounded-md bg-slate-800 border border-slate-700 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-600"
-				/>
+		<div className='flex flex-col overflow-y-auto max-h-full bg-slate-900 text-white'>
+			<div className='flex flex-row items-center justify-between px-4 sm:px-8 py-4 bg-slate-800 border-b border-slate-700'>
+				<h1 className='text-2xl font-semibold text-slate-50'>Glade Events</h1>
+				<div className='relative max-w-md w-full ml-8'>
+					<input
+						type="text"
+						value={searchTerm}
+						onChange={(e) => setSearchTerm(e.target.value)}
+						placeholder="Search events by name..."
+						className="w-full p-2 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-600"
+					/>
+					<div className='absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm'>
+						{searchTerm ? `${Object.values(gladeEventsByCategory).reduce((acc, events) => acc + events.length, 0)} results` : ''}
+					</div>
+				</div>
 			</div>
-			<div className='flex flex-col gap-8'>
+			<div className='flex flex-col gap-12 p-4 sm:p-8'>
 				{Object.entries(gladeEventsByCategory).map(([category, events]) =>
 				{
 					if (events.length === 0) return null;
 
 					return (
 						<Collapsible key={category} defaultOpen>
-							<CollapsibleTrigger className='w-full items-start flex flex-col gap-1 group'>
-								<div className='flex flex-row items-center gap-2'>
-									<h2 className='text-3xl'>{category}</h2>
+							<CollapsibleTrigger className='w-full items-start flex flex-col gap-2 group hover:opacity-80 transition-opacity'>
+								<div className='flex flex-row items-center gap-3'>
+									<h2 className='text-3xl font-semibold'>{category}</h2>
 									<div className='text-2xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
 										<KeyboardArrowDown />
 									</div>
 								</div>
-								{categoryDescriptions[category] && <p>{categoryDescriptions[category]}</p>}
-								<hr className='w-full mb-4' />
+								{categoryDescriptions[category] && (
+									<p className='text-slate-400 text-sm'>{categoryDescriptions[category]}</p>
+								)}
+								<hr className='w-full border-slate-700' />
 							</CollapsibleTrigger>
-							<CollapsibleContent className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6'>
+							<CollapsibleContent className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mt-6'>
 								{events.map((event, index) => (
 									<GladeEventCard key={index} {...event} />
 								))}

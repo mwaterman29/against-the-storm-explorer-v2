@@ -55,87 +55,113 @@ const GladeEventCard = (event: GladeEvent) =>
 	}
 
 	return (
-		<div ref={cardRef} className={cn('flex p-4 border rounded-md text-white items-center gap-2', 
+		<div ref={cardRef} className={cn('flex p-4 border border-slate-700 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors text-white items-center gap-4', 
 			allVisible ? 'flex-col sm:flex-row items-start col-span-1 sm:col-span-2 lg:col-span-3 2xl:col-span-4' : 'flex-col')}>
-			<div className='flex flex-col items-center gap-2'>
-				<div className='flex flex-row items-center justify-center gap-4 min-w-72'>
-					<p className='font-semibold text-2xl'>{event.label}</p>
-					<button onClick={handleVisibilityToggle} className={cn(' bg-transparent transition-all duration-300 text-xl')}>
+			<div className={cn('flex flex-col items-center gap-4', allVisible && 'sm:min-w-[300px]')}>
+				<div className='flex flex-row items-center justify-between w-full gap-4'>
+					<h3 className='font-semibold text-xl text-slate-50'>{event.label}</h3>
+					<button 
+						onClick={handleVisibilityToggle} 
+						className={cn('p-2 rounded-md hover:bg-slate-700 transition-colors text-slate-400 hover:text-slate-50')}
+					>
 						{allVisible ? <ArrowBackIos /> : <ArrowForwardIos />}
 					</button>
 				</div>
-				<img className='w-48 h-48 rounded-md border-ats-dark-brown border-2' src={`/img/${getImgSrc(event.id)}.png`} />
+				<img 
+					className='w-48 h-48 rounded-lg border-2 border-slate-600 hover:border-slate-500 transition-colors' 
+					src={`/img/${getImgSrc(event.id)}.png`}
+					alt={event.label} 
+				/>
+				<div className='text-center text-slate-400 text-sm'>
+					<p>{formatSecondsToMMSS(solveTime)} to solve</p>
+					<p>Up to {event.workerSlots} Workers</p>
+				</div>
 			</div>
 
 			<div className={cn('flex w-full bg-transparent gap-2', allVisible ? 'hidden' : '')}>
 				{difficulty.gladeSolveOptions.length > 0 && (
 					<button
-						onClick={() =>
-						{
+						onClick={() => {
 							setVisibleTab('solve1');
 							setAllVisible(false);
 						}}
-						className={cn('w-full bg-transparent transition-all duration-300', visibleTab === 'solve1' && 'bg-gray-700')}
+						className={cn('w-full p-2 rounded-md transition-colors hover:bg-slate-700/50', 
+							visibleTab === 'solve1' ? 'bg-slate-700 text-slate-50' : 'text-slate-400')}
 					>
 						{difficulty.gladeSolveOptions[0].name}
 					</button>
 				)}
 				<button
-					onClick={() =>
-					{
+					onClick={() => {
 						setVisibleTab('threats');
 						setAllVisible(false);
 					}}
-					className={cn('w-full', visibleTab === 'threats' && 'bg-gray-700')}
+					className={cn('w-full p-2 rounded-md transition-colors hover:bg-slate-700/50',
+						visibleTab === 'threats' ? 'bg-slate-700 text-slate-50' : 'text-slate-400')}
 				>
 					Threats
 				</button>
 				{difficulty.gladeSolveOptions.length > 1 && (
 					<button
-						onClick={() =>
-						{
+						onClick={() => {
 							setVisibleTab('solve2');
 							setAllVisible(false);
 						}}
-						className={cn('w-full', visibleTab === 'solve2' && 'bg-gray-700')}
+						className={cn('w-full p-2 rounded-md transition-colors hover:bg-slate-700/50',
+							visibleTab === 'solve2' ? 'bg-slate-700 text-slate-50' : 'text-slate-400')}
 					>
 						{difficulty.gladeSolveOptions[1].name}
 					</button>
 				)}
 			</div>
 
-			<div className={cn('', allVisible ? 'grid grid-cols-3' : 'flex')}>
-				{(!allVisible && visibleTab === 'solve1') || allVisible ? <GladeSolveOptionCard {...difficulty.gladeSolveOptions[0]} /> : null}
+			<div className={cn('w-full', allVisible ? 'grid grid-cols-1 lg:grid-cols-3 gap-4' : 'flex')}>
+				{(!allVisible && visibleTab === 'solve1') || allVisible ? (
+					difficulty.gladeSolveOptions[0] ? 
+						<GladeSolveOptionCard {...difficulty.gladeSolveOptions[0]} /> :
+						<div className='flex items-center justify-center p-8 text-slate-400 border border-slate-700 rounded-lg bg-slate-800/50'>
+							No requirements to solve this event
+						</div>
+				) : null}
 
 				{(!allVisible && visibleTab === 'threats') || allVisible ? (
-					<div>
-						{event.threats.map((threat, index) =>
-							{
-							let displayThreat = false;
-							if (index === 0 && threat.interval)
-								{
-								displayThreat = true;
-							}
-							if (index > 0 && event.threats[index - 1].interval !== threat.interval)
-								{
-								displayThreat = true;
-							}
+					<div className='flex flex-col rounded-lg bg-slate-800/50 border border-slate-700'>
+						{event.threats.length > 0 ? (
+							event.threats.map((threat, index) => {
+								let displayThreat = false;
+								if (index === 0 && threat.interval) {
+									displayThreat = true;
+								}
+								if (index > 0 && event.threats[index - 1].interval !== threat.interval) {
+									displayThreat = true;
+								}
 
-							return (
-								<div key={index}>
-									{displayThreat && (
-										<p className='w-full text-center font-semibold h-[39px] flex items-center justify-center'>
-											Every {formatSecondsToMMSS(threat.interval as number)} not solved:
-										</p>
-									)}
-									<GladeEffectCard effect={threat} />
-								</div>
-							);
-						})}
+								return (
+									<div key={index}>
+										{displayThreat && (
+											<div className='p-3 text-center font-medium text-slate-400 border-b border-slate-700'>
+												Every {formatSecondsToMMSS(threat.interval as number)} not solved:
+											</div>
+										)}
+										<GladeEffectCard effect={threat} />
+									</div>
+								);
+							})
+						) : (
+							<div className='p-8 text-center text-slate-400'>
+								No threats while solving this event
+							</div>
+						)}
 					</div>
 				) : null}
 
-				{(!allVisible && visibleTab === 'solve2') || allVisible ? <GladeSolveOptionCard {...difficulty.gladeSolveOptions[1]} /> : null}
+				{(!allVisible && visibleTab === 'solve2') || allVisible ? (
+					difficulty.gladeSolveOptions[1] ? 
+						<GladeSolveOptionCard {...difficulty.gladeSolveOptions[1]} /> :
+						<div className='flex items-center justify-center p-8 text-slate-400 border border-slate-700 rounded-lg bg-slate-800/50'>
+							No alternative solution available
+						</div>
+				) : null}
 			</div>
 		</div>
 	);
