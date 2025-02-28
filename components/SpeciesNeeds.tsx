@@ -16,28 +16,24 @@ const needMap: Record<string, string> = {
     'Luxury': 'Wine',
 }
 
-const SpeciesNeeds = ({ species, className, labelClassName, includeHousing = false}: SpeciesNeedsProps) =>
-{
-	const speciesObj = useMemo(() =>
-	{
-		if (typeof species === 'string')
-		{
-			return allSpecies.find(s => s.name === species)!;
-		}
-		else
-		{
-			return species;
-		}
-	}, [species]);
+const SpeciesNeeds = ({ species, className, labelClassName, includeHousing = false}: SpeciesNeedsProps) => {
+    const speciesObj = useMemo(() => {
+        if (typeof species === 'string') {
+            return allSpecies.find(s => s.name === species);
+        }
+        return species;
+    }, [species]);
+
+    if (!speciesObj) {
+        return null;
+    }
 
     return (
         <div className={cn('', className)}>
-            {speciesObj.needs.map((needRaw: string, index: number) => 
-            {
+            {speciesObj.needs.map((needRaw: string, index: number) => {
                 const need = needMap[needRaw] || needRaw;
 
-                if(!includeHousing && need.includes('Housing'))
-                {
+                if(!includeHousing && need.includes('Housing')) {
                     return null;
                 }
 

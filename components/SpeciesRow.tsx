@@ -1,15 +1,27 @@
-import { Button } from './ui/button';
+import { Species } from '@/types/Species';
+import { formatName } from '@/utils/text/formatName';
 
-const SpeciesRow = ({ species, onPick }: { species: any; onPick: (species: any) => void }) => {
-    return (
-        <div className='flex flex-row items-center gap-2 w-full'>
-            <img className='w-12 h-12' src={`/img/${species.name}.png`} />
-            <p className='w-full'>{species.name}</p>
-            <Button className='justify-self-end' onClick={() => onPick(species.name)}>
-                Select
-            </Button>
-        </div>
-    );
+interface SpeciesRowProps {
+	species: Species;
+	onPick: (species: string) => void;
+}
+
+const SpeciesRow = ({ species, onPick }: SpeciesRowProps) => {
+	return (
+		<button
+			className='w-full p-2 flex flex-row items-center gap-4 text-left'
+			onClick={() => onPick(species.name)}
+		>
+			<img
+				className='w-12 h-12 rounded-lg border border-slate-700'
+				src={`/img/${species.name}.png`}
+			/>
+			<div className='flex flex-col'>
+				<div className='text-slate-50'>{formatName(species.name)}</div>
+				<div className='text-sm text-slate-400'>{species.description}</div>
+			</div>
+		</button>
+	);
 };
 
 export default SpeciesRow;

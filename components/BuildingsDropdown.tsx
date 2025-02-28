@@ -4,6 +4,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/compon
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import BuildingRow from './BuildingRow';
 import { productionBuildings } from '@/data/productionBuildings';
+import KeyboardArrowDown from '@material-symbols/svg-400/outlined/keyboard_arrow_down.svg';
 
 interface BuildingsDropdownProps {
     filter: any[];
@@ -39,27 +40,34 @@ const BuildingsDropdown = ({ filter, onPick }: BuildingsDropdownProps) => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button>Choose Building</Button>
+                <Button className="w-full bg-slate-800 border border-slate-700 text-slate-50 hover:bg-slate-700">
+                    <span className="text-slate-400">Choose Building</span>
+                </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className='max-h-[40dvh] overflow-y-auto p-0 m-0'>
-                <div className="sticky top-0 bg-white z-10 p-2">
+            <DropdownMenuContent className='max-h-[40dvh] w-[350px] overflow-y-auto p-0 bg-slate-800 border border-slate-700'>
+                <div className="sticky top-0 bg-slate-800 z-10 p-2 border-b border-slate-700">
                     <input
                         type="text"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        placeholder="Search..."
-                        className="w-full p-2 border rounded"
+                        placeholder="Search buildings..."
+                        className="w-full p-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-600"
                     />
                 </div>
                 {Object.keys(sortedGrouped).map(category => {
                     return (
                         <Collapsible key={category} defaultOpen>
-                            <CollapsibleTrigger className="p-2 text-left w-full font-bold bg-gray-100 hover:bg-gray-200">
+                            <CollapsibleTrigger className="p-2 text-left w-full font-medium bg-slate-800 hover:bg-slate-700 text-slate-50 flex flex-row items-center justify-between group border-b border-slate-700">
                                 {category}
+                                <div className='text-xl text-slate-400 transition-transform duration-200 group-data-[state=open]:rotate-180'>
+                                    <KeyboardArrowDown />
+                                </div>
                             </CollapsibleTrigger>
-                            <CollapsibleContent>
+                            <CollapsibleContent className="bg-slate-900/50">
                                 {sortedGrouped[category].map((building, index) => (
-                                    <BuildingRow key={index} building={building} onPick={onPick} />
+                                    <div key={index} className="hover:bg-slate-800 transition-colors">
+                                        <BuildingRow key={index} building={building} onPick={onPick} />
+                                    </div>
                                 ))}
                             </CollapsibleContent>
                         </Collapsible>

@@ -1,4 +1,5 @@
-export type Species = {
-    name: string;
-    needs: string[];
+export interface Species {
+	name: string;
+	description: string;
+	needs: string[];
 }
