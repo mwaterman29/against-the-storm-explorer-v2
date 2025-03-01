@@ -103,3 +103,39 @@ If needed, you can further use the `web_scraper.py` file to scrape the web page 
 - Use 'gpt-4o' as the model name for OpenAI's GPT-4 with vision capabilities
 
 # Scratchpad
+
+## Current Task: Refactor Building Scoring System
+
+Goal: Refactor the building scoring system to provide better reasoning and more structured scoring rules.
+
+Changes needed:
+[X] Update ItemScoringMetadata interface to include:
+  - category (keep existing)
+  - baseScores (keep existing)
+  - Add tierReasons: string[] for reasoning per tier
+  - Replace scoringRules with array of scoring rule functions
+
+[X] Create new types for scoring rule functions:
+  - Input: scoring context and other relevant info
+  - Output: {scored: boolean, scoreDelta: number, reasoning?: string}
+
+[X] Update the calculateBuildingScore function to use new structure
+  - Collect all reasoning strings
+  - Return both score breakdown and reasoning array
+
+[X] Update the itemMetadata with new structure
+  - Add tier reasons
+  - Convert existing rules to new function format
+  - Add more detailed reasoning strings
+
+Status: Completed initial refactor. The new system now:
+1. Provides detailed reasoning for each score component
+2. Has a more flexible rule system with reusable scoring rules
+3. Includes tier-specific reasoning strings
+4. Better organizes the scoring logic into discrete, testable functions
+
+Next steps if needed:
+1. Add more items to the metadata with their scoring rules
+2. Add more reusable scoring rules for common patterns
+3. Add unit tests to verify scoring logic
+4. Add documentation for the scoring system
