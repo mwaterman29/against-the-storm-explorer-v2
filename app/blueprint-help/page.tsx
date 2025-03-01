@@ -11,20 +11,24 @@ import { RootState } from '@/redux/store';
 import { useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import KeyboardArrowDown from '@material-symbols/svg-400/outlined/keyboard_arrow_down.svg';
+
 import BuildingRow from '@/components/BuildingRow';
 import BuildingsDropdown from '@/components/BuildingsDropdown';
 import ItemIcon from '@/components/ItemIcon';
 import SpeciesDropdown from '@/components/SpeciesDropdown';
 import SpeciesNeeds from '@/components/SpeciesNeeds';
 import TierSpan from '@/components/TierSpan';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
+import { calculateBuildingScore } from '@/utils/buildingScoring';
 import { calculateDifferences } from '@/utils/calculateDifferences';
 import { findProductionChainsWithTiers } from '@/utils/findProductionChainsWithTiers';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import KeyboardArrowDown from '@material-symbols/svg-400/outlined/keyboard_arrow_down.svg';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
@@ -33,15 +37,15 @@ const BiomesDropdown = ({ biomes, onPick }: { biomes: any[]; onPick: any }) =>
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button className="w-full bg-slate-800 border border-slate-700 text-slate-50 hover:bg-slate-700">
-					<span className="text-slate-400">Choose Biome</span>
+				<Button className='w-full bg-slate-800 border border-slate-700 text-slate-50 hover:bg-slate-700'>
+					<span className='text-slate-400'>Choose Biome</span>
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='max-h-[40dvh] overflow-y-auto w-full min-w-[200px] bg-slate-800 border border-slate-700 p-0'>
 				{biomes.map(biome => (
-					<Button 
+					<Button
 						key={biome.name}
-						className="w-full justify-start font-normal text-slate-50 hover:bg-slate-700 rounded-none border-b border-slate-700 last:border-0"
+						className='w-full justify-start font-normal text-slate-50 hover:bg-slate-700 rounded-none border-b border-slate-700 last:border-0'
 						onClick={() => onPick(biome)}
 					>
 						{biome.name}
@@ -124,12 +128,21 @@ const BlueprintDraftPage = () =>
 		return data;
 	}, [biomeData, blueprintsOwned, thisPick]);
 
-	const handleWaterTypeToggle = (type: string) => {
-		setWaterTypes(prev => 
-			prev.includes(type) 
-				? prev.filter(t => t !== type)
-				: [...prev, type]
-		);
+	const handleWaterTypeToggle = (type: string) =>
+	{
+		setWaterTypes(prev => (prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]));
+	};
+
+	const getBuildingScore = (building: any) =>
+	{
+		return calculateBuildingScore(building, {
+			species: selectedSpecies,
+			waterTypes,
+			biomeResources: new Set(biomeData?.treeItems.concat(biomeData?.depositItems) || []),
+			existingBuildings: blueprintsOwned,
+			difficulty,
+			pickNumber: thisPick.length
+		});
 	};
 
 	return (
@@ -160,7 +173,8 @@ const BlueprintDraftPage = () =>
 										<div key={index} className='flex flex-col items-center gap-2 p-4 bg-slate-800/50 rounded-lg border border-slate-700'>
 											<SpeciesDropdown
 												selected={speciesName}
-												onPick={(species: string) => {
+												onPick={(species: string) =>
+												{
 													const newSpecies = [...selectedSpecies];
 													newSpecies[index] = species;
 													setSelectedSpecies(newSpecies);
@@ -209,25 +223,21 @@ const BlueprintDraftPage = () =>
 											{ type: 'clearance', label: 'Clearance Geyser' },
 											{ type: 'drizzle', label: 'Drizzle Geyser' }
 										].map(geyser => (
-											<div key={geyser.type} className='flex flex-col items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700'>
+											<div
+												key={geyser.type}
+												className='flex flex-col items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700'
+											>
 												<h4 className='font-medium text-slate-50'>{geyser.label}</h4>
 												<div className='w-24 h-24 rounded-lg border-2 border-slate-700 flex items-center justify-center bg-slate-800'>
-													<img 
-														className='w-20 h-20' 
-														src={`/img/${geyser.type}_geyser.png`} 
-														alt={geyser.label}
-													/>
+													<img className='w-20 h-20' src={`/img/${geyser.type}_geyser.png`} alt={geyser.label} />
 												</div>
 												<div className='flex items-center gap-2'>
-													<Checkbox 
+													<Checkbox
 														id={`geyser-${geyser.type}`}
 														checked={waterTypes.includes(geyser.type)}
 														onCheckedChange={() => handleWaterTypeToggle(geyser.type)}
 													/>
-													<label 
-														htmlFor={`geyser-${geyser.type}`}
-														className='text-sm text-slate-300'
-													>
+													<label htmlFor={`geyser-${geyser.type}`} className='text-sm text-slate-300'>
 														Available
 													</label>
 												</div>
@@ -252,10 +262,13 @@ const BlueprintDraftPage = () =>
 									const building = buildings.find(building => building.id === blueprint);
 									if (!building) return null;
 									return (
-										<div key={building.id} className='flex flex-row items-center gap-2 justify-between group hover:bg-slate-800 p-2 rounded-md transition-colors'>
+										<div
+											key={building.id}
+											className='flex flex-row items-center gap-2 justify-between group hover:bg-slate-800 p-2 rounded-md transition-colors'
+										>
 											<BuildingRow building={building} />
-											<Button 
-												variant='destructive' 
+											<Button
+												variant='destructive'
 												size='sm'
 												onClick={() => setBlueprintsOwned(blueprintsOwned.filter(b => b !== blueprint))}
 											>
@@ -264,9 +277,9 @@ const BlueprintDraftPage = () =>
 										</div>
 									);
 								})}
-								<BuildingsDropdown 
-									filter={availableBlueprints} 
-									onPick={(building: any) => setBlueprintsOwned([...blueprintsOwned, building.id])} 
+								<BuildingsDropdown
+									filter={availableBlueprints}
+									onPick={(building: any) => setBlueprintsOwned([...blueprintsOwned, building.id])}
 								/>
 							</div>
 						</div>
@@ -279,37 +292,110 @@ const BlueprintDraftPage = () =>
 							{Array.from({ length: picksPerDraft }).map((_, index) =>
 							{
 								const selectedBuilding = thisPick[index];
-								const differences = draftBlueprintData[index];
+								const score = selectedBuilding ? getBuildingScore(selectedBuilding) : null;
 
 								return (
-									<div key={index} className='flex flex-col gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700'>
-										<h4 className='font-medium text-slate-50'>Pick {index + 1}</h4>
-										{selectedBuilding && (
-											<div className='flex flex-col gap-4'>
-												<BuildingRow 
-													building={selectedBuilding} 
-													onPick={() => setThisPick([...thisPick.slice(0, index), undefined])} 
-												/>
-												<div className='flex flex-col gap-2 text-sm text-slate-300'>
-													{differences.newResources.length > 0 && (
-														<p>New Resources: {differences.newResources.join(', ')}</p>
-													)}
-													{Object.keys(differences.improvedTiers).length > 0 && (
-														<p>
-															Improved Tiers:{' '}
-															{Object.entries(differences.improvedTiers)
-																.map(([resource, tier]) => `${resource}: Tier ${tier}`)
-																.join(', ')}
-														</p>
+									<Card key={index} className='bg-slate-800/50 border-slate-700 text-slate-50'>
+										<CardHeader>
+											<CardTitle className='flex justify-between items-center'>
+												<span>Pick {index + 1}</span>
+												{score && (
+													<Badge variant='secondary' className='text-lg'>
+														Score: {score.totalScore}
+													</Badge>
+												)}
+											</CardTitle>
+										</CardHeader>
+										<CardContent className='flex flex-col gap-4'>
+											{selectedBuilding && (
+												<div className='flex flex-col gap-4'>
+													<div className='flex flex-row items-center justify-between'>
+														<BuildingRow building={selectedBuilding} />
+														<Button
+															variant='destructive'
+															size='sm'
+															onClick={() => setThisPick([...thisPick.slice(0, index), undefined])}
+														>
+															Change
+														</Button>
+													</div>
+
+													{score && (
+														<div className='flex flex-col gap-4'>
+															{/* Building Recipes */}
+															{score.metadata.buildingRecipes.length > 0 && (
+																<div className='flex flex-col gap-3'>
+																	<span className='text-slate-400'>Building Recipes:</span>
+																	<div className='space-y-2 ml-2'>
+																		{score.metadata.buildingRecipes.map(recipe => (
+																			<div key={recipe.name} className='flex items-center gap-2'>
+																				<span className='text-slate-200'>{recipe.name}</span>
+																				{recipe.isIncomplete && (
+																					<Badge variant='secondary' className='text-xs'>
+																						Chain Incomplete
+																					</Badge>
+																				)}
+																				{recipe.isNew && !recipe.isIncomplete && (
+																					<Badge variant='secondary' className='text-xs'>
+																						New Recipe
+																					</Badge>
+																				)}
+																				{recipe.isImproved ? (
+																					<div className='flex items-center gap-1'>
+																						<TierSpan tier={recipe.oldTier || 0} />
+																						<span className='text-slate-400'>→</span>
+																						<TierSpan tier={recipe.tier} />
+																					</div>
+																				) : (
+																					<div className='flex items-center gap-1'>
+																						<TierSpan tier={recipe.tier} />
+																					</div>
+																				)}
+																			</div>
+																		))}
+																	</div>
+																</div>
+															)}
+
+															{/* Completed Other Chains */}
+															{score.metadata.otherChains.length > 0 && (
+																<div className='flex flex-col gap-3'>
+																	<span className='text-slate-400'>Completed Other Chains:</span>
+																	<div className='space-y-2 ml-2'>
+																		{score.metadata.otherChains.map(chain => (
+																			<div key={chain.name} className='flex items-center gap-2'>
+																				<span className='text-slate-200'>{chain.name}</span>
+																				<TierSpan tier={chain.tier} />
+																				<span className='text-slate-400'>, {chain.source}</span>
+																			</div>
+																		))}
+																	</div>
+																</div>
+															)}
+
+															<hr className='border-slate-700' />
+
+															{/* Score Breakdown */}
+															<div className='flex flex-col gap-1'>
+																<span className='text-slate-400'>Score breakdown:</span>
+																<ul className='list-disc list-inside text-slate-200 ml-2 space-y-1'>
+																	{score.reasoning.map((reason, i) => (
+																		<li key={i}>{reason}</li>
+																	))}
+																</ul>
+															</div>
+														</div>
 													)}
 												</div>
-											</div>
-										)}
-										<BuildingsDropdown
-											filter={availableBlueprints}
-											onPick={(building: any) => setThisPick([...thisPick.slice(0, index), building])}
-										/>
-									</div>
+											)}
+											{!selectedBuilding && (
+												<BuildingsDropdown
+													filter={availableBlueprints}
+													onPick={(building: any) => setThisPick([...thisPick.slice(0, index), building])}
+												/>
+											)}
+										</CardContent>
+									</Card>
 								);
 							})}
 						</div>
@@ -343,8 +429,7 @@ const BlueprintDraftPage = () =>
 				</Collapsible>
 			</div>
 
-			<div className='min-h-24 w-full'>
-			</div>
+			<div className='min-h-24 w-full'></div>
 		</div>
 	);
 };
