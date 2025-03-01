@@ -19,6 +19,7 @@ import SpeciesNeeds from '@/components/SpeciesNeeds';
 import TierSpan from '@/components/TierSpan';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Checkbox } from '@/components/ui/checkbox';
 
 import { calculateDifferences } from '@/utils/calculateDifferences';
 import { findProductionChainsWithTiers } from '@/utils/findProductionChainsWithTiers';
@@ -55,6 +56,7 @@ const BlueprintDraftPage = () =>
 {
 	const [blueprintsOwned, setBlueprintsOwned] = useState(defaultList);
 	const [thisPick, setThisPick] = useState<any[]>([]);
+	const [waterTypes, setWaterTypes] = useState<string[]>([]);
 
 	const difficulty = useSelector((state: RootState) => state.settings.difficulty);
 	const picksPerDraft = useMemo(() =>
@@ -122,6 +124,14 @@ const BlueprintDraftPage = () =>
 		return data;
 	}, [biomeData, blueprintsOwned, thisPick]);
 
+	const handleWaterTypeToggle = (type: string) => {
+		setWaterTypes(prev => 
+			prev.includes(type) 
+				? prev.filter(t => t !== type)
+				: [...prev, type]
+		);
+	};
+
 	return (
 		<div className='flex flex-col overflow-y-auto max-h-full bg-slate-900 text-white'>
 			<div className='flex flex-row items-center justify-between px-4 sm:px-8 py-4 bg-slate-800 border-b border-slate-700'>
@@ -188,6 +198,42 @@ const BlueprintDraftPage = () =>
 											</div>
 										</div>
 									)}
+								</div>
+
+								{/* Geyser Selection */}
+								<div className='flex flex-col gap-4'>
+									<h3 className='text-xl font-semibold text-slate-50'>Rainpunk / Geysers</h3>
+									<div className='grid grid-cols-3 gap-4'>
+										{[
+											{ type: 'storm', label: 'Storm Geyser' },
+											{ type: 'clearance', label: 'Clearance Geyser' },
+											{ type: 'drizzle', label: 'Drizzle Geyser' }
+										].map(geyser => (
+											<div key={geyser.type} className='flex flex-col items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700'>
+												<h4 className='font-medium text-slate-50'>{geyser.label}</h4>
+												<div className='w-24 h-24 rounded-lg border-2 border-slate-700 flex items-center justify-center bg-slate-800'>
+													<img 
+														className='w-20 h-20' 
+														src={`/img/${geyser.type}_geyser.png`} 
+														alt={geyser.label}
+													/>
+												</div>
+												<div className='flex items-center gap-2'>
+													<Checkbox 
+														id={`geyser-${geyser.type}`}
+														checked={waterTypes.includes(geyser.type)}
+														onCheckedChange={() => handleWaterTypeToggle(geyser.type)}
+													/>
+													<label 
+														htmlFor={`geyser-${geyser.type}`}
+														className='text-sm text-slate-300'
+													>
+														Available
+													</label>
+												</div>
+											</div>
+										))}
+									</div>
 								</div>
 							</div>
 						</div>
@@ -295,6 +341,9 @@ const BlueprintDraftPage = () =>
 						</div>
 					</CollapsibleContent>
 				</Collapsible>
+			</div>
+
+			<div className='min-h-24 w-full'>
 			</div>
 		</div>
 	);
