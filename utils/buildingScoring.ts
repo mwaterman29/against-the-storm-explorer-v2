@@ -41,13 +41,38 @@ const perSpeciesPerTierRule =
 		if (!recipe) return { scored: false, scoreDelta: 0 };
 
 		// Only apply for species that are actually in the settlement
-		const relevantSpecies = species.filter(s => s.needs.includes(foodName)).filter(s => context.species.includes(s.name)).length;
+		const relevantSpecies = species.filter(s => s.needs.includes(foodName)).filter(s => context.species.includes(s.name));
 
-		const scoreDelta = relevantSpecies * (recipe.tier + 1); // +1 because tier is 0-based
+		// Check if chain is completed
+		const { completedChains: currentChains } = findProductionChainsWithTiers(context.biomeResources, context.existingBuildings);
+		const { completedChains: newChains } = findProductionChainsWithTiers(context.biomeResources, [...context.existingBuildings, building.id]);
+		const isChainCompleted = currentChains.includes(foodName) || newChains.includes(foodName);
+
+		// Calculate score: +1 per tier per species, halved if chain incomplete
+		const baseScore = relevantSpecies.length * (recipe.tier + 1);
+		const multiplier = isChainCompleted ? 1 : 0.5;
+		const scoreDelta = baseScore * multiplier;
+
+		// Format species list
+		const speciesNames = relevantSpecies.map(s => s.name);
+		let speciesText = '';
+		if (speciesNames.length === 1)
+		{
+			speciesText = speciesNames[0];
+		}
+		else if (speciesNames.length === 2)
+		{
+			speciesText = `${speciesNames[0]} and ${speciesNames[1]}`;
+		}
+		else
+		{
+			speciesText = speciesNames.slice(0, -1).join(', ') + ', and ' + speciesNames[speciesNames.length - 1];
+		}
+
 		return {
 			scored: true,
 			scoreDelta,
-			reasoning: `+${recipe.tier + 1} per tier for ${relevantSpecies} species that need ${foodName} (+${scoreDelta})`
+			reasoning: `${speciesText} need${speciesNames.length === 1 ? 's' : ''} ${foodName}${!isChainCompleted ? ', halved because incomplete production chain' : ''} (+${scoreDelta})`
 		};
 	};
 
@@ -78,7 +103,7 @@ function getComplexFoodConfiguration(foodName: string): ItemScoringMetadata
 	return {
 		category: 'complex_food' as const,
 		baseScores: [2, 1, 1, 1], // Base scores that sum up per tier
-		tierReasons: [`Base complex food bonus (+2)`, `Additional tier 1 bonus (+1)`, `Additional tier 2 bonus (+1)`, `Additional tier 3 bonus (+1)`],
+		tierReasons: [`Base complex food bonus`, `Additional tier 1 bonus`, `Additional tier 2 bonus`, `Tier 3 Complex Food is extremely efficient`],
 		scoringRules: [perSpeciesPerTierRule(foodName), chainCompletionRule(foodName)]
 	};
 }
@@ -226,11 +251,25 @@ export function calculateBuildingScore(building: ProductionBuilding, context: Sc
 		// If this is a new chain or improved tier, calculate the score difference
 		if (existingTier < newTier)
 		{
-			// Sum the base scores from the tier after existing up to new tier
-			for (let t = existingTier + 1; t <= newTier; t++)
+			// For complex foods, sum up all tiers and show only highest tier reason
+			if (itemData.category === 'complex_food')
 			{
-				tierScore += itemData.baseScores[t] || 0;
-				result.reasoning.push(`${recipe.output} ${itemData.tierReasons[t]}`);
+				// Sum up all tier scores
+				for (let t = 0; t <= newTier; t++)
+				{
+					tierScore += itemData.baseScores[t] || 0;
+				}
+				// Only show the highest tier reason
+				result.reasoning.push(`${recipe.output} ${itemData.tierReasons[newTier]} (+${tierScore})`);
+			}
+			else
+			{
+				// For other items, just use the highest tier score
+				tierScore = itemData.baseScores[newTier] || 0;
+				if (tierScore > 0)
+				{
+					result.reasoning.push(`${recipe.output} ${itemData.tierReasons[newTier]} (+${tierScore})`);
+				}
 			}
 			result.breakdowns.tierBonus += tierScore;
 		}

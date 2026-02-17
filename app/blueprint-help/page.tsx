@@ -18,7 +18,7 @@ import BuildingsDropdown from '@/components/BuildingsDropdown';
 import ItemIcon from '@/components/ItemIcon';
 import SpeciesDropdown from '@/components/SpeciesDropdown';
 import SpeciesNeeds from '@/components/SpeciesNeeds';
-import TierSpan from '@/components/TierSpan';
+import TierSpan from '@/components/TierSpan';``
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -29,6 +29,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/compon
 import { calculateBuildingScore } from '@/utils/buildingScoring';
 import { calculateDifferences } from '@/utils/calculateDifferences';
 import { findProductionChainsWithTiers } from '@/utils/findProductionChainsWithTiers';
+import { getScoreColor } from '@/utils/text/getScoreColor';
 
 const defaultList = ['Crude Workstation', 'Makeshift Post', 'Field Kitchen'];
 
@@ -379,9 +380,27 @@ const BlueprintDraftPage = () =>
 															<div className='flex flex-col gap-1'>
 																<span className='text-slate-400'>Score breakdown:</span>
 																<ul className='list-disc list-inside text-slate-200 ml-2 space-y-1'>
-																	{score.reasoning.map((reason, i) => (
-																		<li key={i}>{reason}</li>
-																	))}
+																	{score.reasoning.map((reason, i) =>
+																	{
+																		const scoreMatch = reason.match(/\(([+-][\d.]+)\)$/);
+																		const score = scoreMatch ? parseFloat(scoreMatch[1]) : 0;
+																		const reasonText = reason.replace(/\([+-][\d.]+\)$/, '').trim();
+
+																		return (
+																			<li key={i} className='flex items-baseline gap-2'>
+																				<span
+																					className={cn('font-medium')}
+																					style={{
+																						color: getScoreColor(score)
+																					}}
+																				>
+																					{score > 0 ? '+' : ''}
+																					{score}
+																				</span>
+																				<span className='text-slate-300'>- {reasonText}</span>
+																			</li>
+																		);
+																	})}
 																</ul>
 															</div>
 														</div>
